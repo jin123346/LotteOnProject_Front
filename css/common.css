@@ -422,6 +422,296 @@ input[type=search] {
     background-color: #ef2a23;
     
 }
+#mainArea{
+    width: 100%;
+    height: auto;
+}
+#mainArea > .mainWrapper{
+    width: 100%;
+    height: auto;
+    
+}
+#mainArea > .mainWrapper > *{
+    display: inline-block;
+    vertical-align: top; /* Align elements to the top */
+}
+
+
+#mainArea .aside.market{
+    height: 1000px;
+    width: 200px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    margin-top: 10px ;
+  }
+
+
+  /*asdie  */
+
+.aside.market .cate_aside li{
+    width: 170px;
+    height: 30px;
+    border: 1px solid #757575;
+    line-height: 30px;
+    text-align: left;
+    text-indent: 10px;
+    margin: 0 auto;
+
+}
+.aside.market .cate_aside li:nth-child(1){
+    margin-top: 10px;
+}
+.aside.market .cate_aside li {
+    margin-bottom: 10px;
+}
+
+.aside.market .cate_aside li > a > img {
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+/* Best product container */
+.aside.market .bestProduct {
+    width: 170px;
+    height: auto;
+    border: 1px solid #f8f7f798;
+    background-color: #f8f7f798;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.aside.market .bestProduct span {
+    margin-top: 2px;
+    line-height: 12px;
+}
+
+.aside.market .bestProduct span > img:nth-child(1) {
+    width: 17px;
+    height: 17px;
+}
+
+/* First product */
+.aside.market .bestProduct .products.first {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #000;
+    width: 160px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+.aside.market .bestProduct .products.first .productimg.first {
+    width: 160px;
+    height: 120px;
+    border: 1px solid brown;
+    margin: 0 auto;
+    position: relative;
+}
+
+.aside.market .bestProduct .products.first .productimg.first p {
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration-line: underline;
+    color: #ef2a23;
+}
+
+.aside.market .bestProduct .products.first .product-name {
+    font-size: 10px;
+}
+
+.aside.market .bestProduct .products.first .original-price {
+    font-size: 10px;
+    margin-top: 0px;
+    color: #666;
+    text-decoration: line-through;
+}
+
+.aside.market .bestProduct .products.first .discounted-price {
+    color: red;
+    font-size: 10px;
+    display: flex;
+    margin-top: 0px;
+}
+
+.aside.market .bestProduct .products.first .discounted-price p {
+    display: inline-block;
+}
+
+.aside.market .bestProduct .products.first .discount-rate {
+    font-size: 10px;
+}
+
+.aside.market .bestProduct .products.first .final-price {
+    font-size: 8px;
+    color: black;
+}
+
+/* Other products (smaller items) */
+.aside.market .bestProduct .products {
+    display: flex;
+    width: 160px;
+    height: 70px;
+    margin-top: 5px;
+}
+
+.aside.market .bestProduct .products .productimg {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #0a0101;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.aside.market .bestProduct .products .productimg .product-quantity {
+    position: absolute;
+    top: -3px;
+    left: 1px;
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration-line: underline;
+    color: #ef2a23;
+}
+
+.aside.market .bestProduct .products .productInfo {
+    width: 80px;
+    height: 50px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.aside.market .bestProduct .products .product-name {
+    font-size: 7px;
+    margin-bottom: 0px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+}
+
+.original-price {
+    font-size: 7px;
+    color: #666;
+    text-decoration: line-through;
+}
+.aside.market .bestProduct .products.discounted-price  *{
+    display: inline-flex;
+    flex-direction: row;
+}
+.aside.market .bestProduct .products  .discounted-price {
+    flex-direction: row;
+    color: red;
+    font-size: 7px;
+    display: flex;
+    margin-bottom: 0px;
+}
+.aside.market .bestProduct .products  .discounted-price p {
+    font-size: 7px;
+}
+
+.discount-rate {
+    margin-right: 3px;
+}
+
+.discount-arrow {
+    font-size: 7px;
+}
+
+.final-price {
+    font-size: 8px;
+    color: black;
+}
+
+
+.aside.market .bestProduct .products.first .discounted-price p{
+    display: inline-block;
+}
+
+.aside.market .bestProduct .products.first .discount-rate {
+    font-size: 10px;
+}
+
+.aside.market .bestProduct .products.first  .final-price {
+    font-size: 8px;
+    color: black;
+} */
+
+
+#mainArea .mainWrapper .section{
+    /* Subtract the aside's width and some padding/margin */
+    
+    width: calc(100% - 210px); /* Subtract the aside's width and some padding/margin */
+    box-sizing: border-box; /* Ensure proper width calculation */
+
+     /* Ensure proper width calculation */
+}
+
+
+#mainArea .section .sectionWrapper{
+    border: 1px solid #eee;
+    margin-top: 10px;
+    width: 990px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#mainArea .section .sectionWrapper #h3_list{
+    font-size: 20px;
+    float: left; /* Ensure the title stays on the left */
+
+    
+}
+#mainArea .section .sectionWrapper #h3_list::after{
+    /* display: block;
+    content: ""; 
+    clear: both; 
+    width: 700px;
+    margin-top: 5px; */
+    
+}
+#mainArea .section .sectionWrapper .sub_tit{
+    box-sizing: border-box;
+    position: relative;
+    width: 970px;
+    height: 30px;
+    border-bottom: 2px solid #494949;
+
+}
+
+
+#mainArea .section .location{ 
+    float: right;
+    margin-right: 30px;
+    top: 0px;
+    margin-left: 10px;
+    margin-top:10px; 
+    height: 17px; 
+    font-size: 12px; 
+    font-weight: 400; 
+    line-height: 14.52px; 
+    text-align: left;}
+#mainArea .section .location span{color:#0a0101;
+padding-left: 2px;}
+#mainArea .section .location span strong{color:#0a0101; font-weight: 700;}
+
+#mainArea .section .location span:after{display: inline-block; content: ">" ; clear: both;
+padding-left:2px;}
+#mainArea .section .location span:last-child::after{
+    content:"";
+}
+
 
 
 
