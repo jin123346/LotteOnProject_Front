@@ -1,0 +1,575 @@
+body{}
+
+#wrapper{
+    width: 100%;
+    height: auto;
+}
+#layout{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+#layout > #skipNav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#layout > #skipNav a {
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 150px;
+    border: 1px solid #000;
+    background: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center
+}
+#header{width: 100%; height: 178px;}
+#header > .headerIn{
+    width: 1200px;
+    margin:0 auto; 
+    position: relative;
+}
+#header > .headerIn  .logoArea {
+    line-height: 48px
+}
+#header > .headerIn  .logoArea > h1 { }
+#header > .headerIn  .logoArea  a {
+    display: block;
+    min-height: 48px
+}
+#header > .headerIn  .logoArea   p {  
+     text-indent: -9999px; 
+}
+#header > .headerIn  .logoArea  img {
+    display: inline-block;
+    width: auto;
+    height: 38px
+}
+
+/* utill (HOME|로그인|회원가입|고객센터) */
+#header .util{ position: relative; width: 100%; height: 34px; text-align: left}
+#header .util , #header .util ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+#header .util ul{
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-right:5px;
+}
+.headerIn .util  ul > li{
+    margin-left: 15px;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: -.2px;
+    color: #757575; 
+     display: inline-block;
+    position: relative}
+.headerIn .util ul > li > a{
+    color: inherit;
+}
+.headerIn .util ul > li img{
+    position: relative;
+    width: auto;
+    height: 17px
+}
+
+.headerIn .util ul li:nth-child(1):before{display: none;} /* HOME 왼쪽 | 삭제 */
+#header .main{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+   
+    text-align: left;
+    padding: 15px 0 16px;
+    height: 60px;
+}
+.headerIn .innerContent{
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#header > .headerIn .searchWideArea{
+    margin-left: 57px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.headerIn .main .searchArea {
+    width: 450px;
+    height: 48px;
+    padding: 8px 43px 8px 20px;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: inherit;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.blind, .hiddenTxt {
+    overflow: hidden;
+    display: inline-block;
+    border: 0;
+    margin: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    position: absolute;
+    top: 0 !important;
+    left: 0 !important;
+}
+#header > .headerIn .main .searchArea input {
+    padding: 0 28px 0 0;
+    height: auto;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: -.3px;
+    color: #333;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+}
+input[type=search] {
+    -webkit-appearance: textfield;
+}
+
+#header .main .searchArea.on .btnSearchInner {
+    background-color: #ef2a23;
+    border: none;
+}
+#header .main .searchArea .btnSearchInner {
+    box-sizing: border-box;
+    top: 8px;
+    right: 15px;
+    opacity: 1;
+    width: 28px;
+    height: 28px;
+    background-image: none;
+}
+
+#header .searchWideArea .searchArea .btnSearchInner{
+    background: url(/images/common/icon_search_black.svg) no-repeat 50%;
+    background-size: 26px auto;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 9px;
+    right: 14px;
+}
+#header .searchWideArea .searchArea .btnSearchInner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(/images/common/icon_search_mask.png);
+    background-size: 28px;
+    z-index: 10;
+}
+
+/* button Area */
+#header .main .buttonArea {
+    margin: 7px -12px 0 auto;
+    font-size: 0;
+    text-align: right;
+}
+
+#header .main .buttonArea li {
+    position: relative;
+    display: inline-block;
+    width: 74px;
+    font-size: 13px;
+    line-height: 1.46;
+    letter-spacing: -.3px;
+    text-align: center;
+    color: #333;
+    vertical-align: top;
+}
+
+#header .main .buttonArea li a.chat,#header .main .buttonArea li button.chat {
+    overflow: visible;
+    position: relative;
+}
+
+
+#header .main .buttonArea li button.chat {
+    overflow: visible;
+    position: relative;
+    border: none;
+    background-color: #ffffff;
+}
+#header .main .buttonArea li .lottie_chat, #header .main .buttonArea li button.chat .lottie_chat {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0 -18px;
+    width: 36px;
+    height: 36px;
+    
+}
+#header .main .buttonArea li a.heart, #header .main .buttonArea li button.heart {
+    background-image: url(/images/common/icon_heart_black.svg);
+}
+#header .main .buttonArea li a.my, #header .main .buttonArea li button.my {
+    background-image: url(/images/common/icon_my_black.svg);
+}
+#header .main .buttonArea li a.bag,#header .main .buttonArea li a.cart, #header .main .buttonArea li button.bag, #header .main .buttonArea li button.cart {
+    position: relative;
+    background-image: url(/images/common/icon_my_black.svg);
+}
+#header .main .buttonArea li a, #header .main .buttonArea li button {
+    display: block;
+    width: 100%;
+    padding-top: 37px;
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    background-position: center -1px;
+}
+
+
+#header .header_hr {
+    height: 1px;
+    width: 99999px;
+    margin: 0px;
+    margin-left:-9999px;
+    border: none;
+    background-color: #eee;
+}
+
+/* nav */
+#header .sub {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+#header .sub .innerContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+#header  .sub .category {
+    display: inline-block;
+    position: relative;
+    width: 904px;
+    height: 50px;
+}
+
+#header .sub .category .moreViewWrap {
+    float: left;
+}
+#header .sub .category.on .moreView {
+    color: #fff;
+    background-color: #ef2a23;
+    border: 1px solid #ef2a23;
+}
+#header .sub .category button.moreView {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 50px;
+    margin-right: 40px;
+    vertical-align: top;
+    overflow: visible;
+}
+
+#header .sub .category button.moreView .bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 2px;
+    margin: -1px 0 0 -14px;
+    background-color: #fff;
+}
+#header .sub .category button.moreView .bar:after, #header .sub .category button.moreView .bar:before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+#header .sub .category button.moreView .bar:after {
+    top: 8px;
+}
+
+
+
+#header .sub .category .menu {
+    position: relative;
+    display: inline-block;
+    width: 738px;
+    height: 50px;
+    overflow: hidden;
+}
+
+#header .sub .category .menu .menuInner ul {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 0;
+    white-space: nowrap;
+}
+
+#header .sub .category .menu .menuInner ul li:first-child {
+    margin-left: 0;
+}
+
+#header .sub .category .menu .menuInner ul li {
+    display: inline-block;
+    margin-left: 60px;
+    font-size: 20px;
+    line-height: 50px;
+    color: #333;
+    vertical-align: bottom;
+    font-size: 16px;
+}
+
+#header .sub .category .active,#header .sub .category .active button {
+    font-weight: 700;
+}
+#header .sub .category .menu .menuInner ul li a {
+    font-size: 16px;
+}
+
+#header .sub .trending {
+    position: relative;
+    width: 236px;
+    height: 30px;
+    padding: 10px 0;
+    line-height: 30px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+#header .sub .trending:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    width: 1px;
+    background-color: #eee;
+}
+
+#header .sub .trending .preview {
+    position: relative;
+    padding: 0 25px;
+}
+
+.trending .preview[data-v-202b6f61] {
+    width: 236px;
+    height: 34px;
+    padding: 0 0 0 25px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#header .sub .trending .moreView {
+    position: absolute;
+    z-index: 1;
+    top: 54%;
+    right: -56px;
+    border: none;
+    width: 18px;
+    height: 18px;
+    margin-top: -12px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+    background-image: url(/images/common/icon_search_down.svg);
+}
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+.btnMenuClose{
+    border: none;
+}
+
+#layout .headerOn{
+    height: 2px;
+    width: 99999px;
+    margin: -1px;
+    margin-left:-9999px;
+    border: none;
+    background-color: #ef2a23;
+    
+}
+
+
+
+
+/* General Footer Styles */
+#footer {
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footerTopMenu {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+
+.footerTopMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footerTopMenu .ft_nav{
+    margin-left: 20px;
+}
+
+.footerTopMenu ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footerTopMenu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.footerTopMenu ul li.bold a {
+    font-weight: bold;
+}
+
+.footerTopMenu hr {
+    margin: 20px 0;
+    border-color: #eaeaea;
+}
+
+/* Company Info and Customer Center Styles */
+.companyInfo {
+    display: flex;
+    justify-content: space-between; /* Align the company and customer info side by side */
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+.companyInfo .infoWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left:40px;
+}
+.logoArea img {
+    width: 150px;
+    height: auto;
+    margin-left: 20px;
+
+}
+
+.company, .customer {
+    margin-left: 20px;
+    width: 45%; /* Split company and customer info 50/50 */
+}
+
+.company ul, .customer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.company h3, .customer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.company ul li, .customer ul li {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.customer .stringLine.withList .faqListWrap{
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    border-bottom: 1px solid #f0efef;
+}
+
+/* For customer service details (contact numbers, email) */
+.stringLine p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.faqListWrap li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.faqListWrap li a {
+    text-decoration: none;
+    color: #0056b3;
+    font-size: 14px;
+}
+
+.faqListWrap li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer bottom info */
+.footerInfo {
+    text-align: left;
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+}
+
+.footerInfo p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .companyInfo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .company, .customer {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 20px;
+    }
+
+    .footerTopMenu ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .faqListWrap li {
+        display: block;
+        margin: 5px 0;
+    }
+}
