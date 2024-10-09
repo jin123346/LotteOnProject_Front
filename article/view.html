@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>글보기</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <script th:src="@{/js/utils.js}"></script>
+    <style>
+.main-view{
+    width: 100%;
+    height: auto;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+.view-box{
+    width: 600px;
+    height: auto;
+    border-bottom: 1px solid;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.view-inbox{
+    width: 600px;
+
+    height: auto;
+    border: 1px solid;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+      <div id="header"></div>
+    </header>
+    <main class="main-view">
+        <div class="view-box">
+            <h3>공지사항 보기</h3>
+           <div class="view-inbox">
+            <table border="0">
+                <tr>
+                    <th>유형</th>
+                    <td>
+                        고객서비스
+                    </td>
+                </tr>
+                <tr>
+                    <th>제목</th>
+                    <td><input type="text" name="title" th:value="${articleDTO.title}" readonly/></td>
+                </tr>
+                <tr>
+                    <th>내용</th>
+                    <td>
+                        <textarea name="content" readonly></textarea>
+                    </td>
+                </tr>
+            </table>
+           </div>
+        </div>
+    </main>
+    <footer>
+     <div id="footer"></div>
+    </footer>
+</div>
+</body>
+<script>
+    fetch('/css/footer.html')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+         
+  
+      fetch('/css/header.html') // 헤더 파일 경로
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading header:', error));
+      
+      
+      // 체크박스 전체 선택 기능
+          const selectAllCheckbox = document.getElementById('select-all');
+          const checkboxes = document.querySelectorAll('.checkbox-item');
+  
+          selectAllCheckbox.addEventListener('change', function () {
+              checkboxes.forEach(checkbox => {
+                  checkbox.checked = selectAllCheckbox.checked;
+              });
+          });
+      </script>
+</html>
