@@ -225,7 +225,7 @@
     color: black;
 } */
 
-#mainArea .mainWrapper .list{
+#mainArea .mainWrapper .section{
     /* Subtract the aside's width and some padding/margin */
     
     width: calc(100% - 210px); /* Subtract the aside's width and some padding/margin */
@@ -235,20 +235,20 @@
 }
 
 
-#mainArea .list .sectionWrapper{
+#mainArea .section .sectionWrapper{
     border: 1px solid #eee;
     margin-top: 10px;
     width: 990px;
     padding: 20px;
     box-sizing: border-box;
 }
-#mainArea .list .sectionWrapper #h3_list{
+#mainArea .section .sectionWrapper #h3_list{
     font-size: 20px;
     float: left; /* Ensure the title stays on the left */
 
     
 }
-#mainArea .list .sectionWrapper #h3_list::after{
+#mainArea .section .sectionWrapper #h3_list::after{
     /* display: block;
     content: ""; 
     clear: both; 
@@ -256,7 +256,7 @@
     margin-top: 5px; */
     
 }
-#mainArea .list .sectionWrapper .sub_tit{
+#mainArea .section .sectionWrapper .sub_tit{
     box-sizing: border-box;
     position: relative;
     width: 970px;
@@ -266,7 +266,7 @@
 }
 
 
-#mainArea .list .location{ 
+#mainArea .section .location{ 
     float: right;
     margin-right: 30px;
     top: 0px;
@@ -277,13 +277,13 @@
     font-weight: 400; 
     line-height: 14.52px; 
     text-align: left;}
-#mainArea .list .location span{color:#0a0101;
+#mainArea .section .location span{color:#0a0101;
 padding-left: 2px;}
-#mainArea .list .location span strong{color:#0a0101; font-weight: 700;}
+#mainArea .section .location span strong{color:#0a0101; font-weight: 700;}
 
-#mainArea .list .location span:after{display: inline-block; content: ">" ; clear: both;
+#mainArea .section .location span:after{display: inline-block; content: ">" ; clear: both;
 padding-left:2px;}
-#mainArea .list .location span:last-child::after{
+#mainArea .section .location span:last-child::after{
     content:"";
 }
 
