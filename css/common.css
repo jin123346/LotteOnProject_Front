@@ -5,7 +5,7 @@ body{}
     height: auto;
 }
 #layout{
-    width: 1200px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
 }
@@ -248,18 +248,17 @@ input[type=search] {
 
 #header .header_hr {
     height: 1px;
-    width: 99999px;
     margin: 0px;
-    margin-left:-9999px;
     border: none;
     background-color: #eee;
 }
 
 /* nav */
 #header .sub {
+    margin: 0 auto;
     vertical-align: top;
-    display: inline-block;
     width: 100%;
+    max-width: 1200px;
     text-align: left;
 }
 #header .sub .innerContent {
@@ -415,9 +414,9 @@ input[type=search] {
 
 #layout .headerOn{
     height: 2px;
-    width: 99999px;
+    width: 100%;
     margin: -1px;
-    margin-left:-9999px;
+   
     border: none;
     background-color: #ef2a23;
     
@@ -429,6 +428,9 @@ input[type=search] {
 #mainArea > .mainWrapper{
     width: 100%;
     height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+
     
 }
 #mainArea > .mainWrapper > *{
@@ -721,6 +723,11 @@ padding-left:2px;}
     background-color: #f9f9f9;
     padding: 20px 0;
     font-family: Arial, sans-serif;
+    width: 100%;
+}
+.footerWrapper{
+    width: 1200px;
+    margin: 0 auto;
 }
 
 .footerTopMenu {
@@ -754,16 +761,18 @@ padding-left:2px;}
     font-weight: bold;
 }
 
-.footerTopMenu hr {
+#footer hr {
     margin: 20px 0;
-    border-color: #eaeaea;
+    border-color: #f5f2f299;
+    width: 100%;
+    
 }
 
 /* Company Info and Customer Center Styles */
 .companyInfo {
     display: flex;
-    justify-content: space-between; /* Align the company and customer info side by side */
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     padding: 20px 0;
 }
 
