@@ -1,93 +1,6 @@
 <link rel="stylesheet" href="/css/reset.css">
 <link rel="stylesheet" href="/css/common.css">
-<style>
-    /* CSS */
-    .categoryMenu {
-        display: none;
-        position: absolute;
-        width: 100%;
-        background-color: white;
-        z-index: 100;
-        border: 1px solid #ccc;
-    }
 
-    .menuVisible .categoryMenu {
-        display: block;
-        width: 300px;
-        top: 28px;
-        left: -17px;
-        border: 1px solid #ef2a23;
-        height: 1000px;
-    }
-
-    .categoryMenu ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .categoryMenu ul li {
-        padding: 10px;
-        border-bottom: 1px solid #ccc;
-    }
-
-    .categoryMenu ul li a {
-        text-decoration: none;
-        color: black;
-    }
-
-    .categoryMenu ul li:hover {
-        background-color: #f2f2f2;
-    }
-
-    /* Style the "View All" button */
-    .moreView {
-        cursor: pointer;
-        background-color: #ef2a23;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-    }
-
-    .moreView:focus {
-        outline: none;
-    }
-
-    .bar {
-        width: 20px;
-        height: 2px;
-        background-color: white;
-        margin: 5px auto;
-        position: relative;
-    }
-
-    .bar:before, .bar:after {
-        content: '';
-        width: 20px;
-        height: 2px;
-        background-color: white;
-        position: absolute;
-        left: 0;
-        transition: transform 0.3s ease;
-    }
-
-    .bar:before {
-        top: -6px;
-    }
-
-    .bar:after {
-        top: 6px;
-    }
-
-    .menuVisible .bar:before {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .menuVisible .bar:after {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-</style>
 
 <div id="layout">
     <div id="skipNav">
@@ -175,13 +88,99 @@
                             <span class="bar">
                                  <!-- Dropdown Menu -->
                                 <div class="categoryMenu">
-                                    <ul>
-                                        <li><a href="#">카테고리 1</a></li>
-                                        <li><a href="#">카테고리 2</a></li>
-                                        <li><a href="#">카테고리 3</a></li>
-                                        <li><a href="#">카테고리 4</a></li>
-                                        <li><a href="#">카테고리 5</a></li>
+                                    <ul class="main-menu">
+                                        <li class="menu-item">
+                                            <a href="#">패션</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">남성패션</a></li>
+                                                <li><a href="#">여성패션</a></li>
+                                                <li><a href="#">키즈패션</a></li>
+                                                <li><a href="#">패션잡화</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">의류</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">남성의류</a></li>
+                                                <li><a href="#">여성의류</a></li>
+                                                <li><a href="#">아동의류</a></li>
+                                                <li><a href="#">언더웨어</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">뷰티</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">기초화장</a></li>
+                                                <li><a href="#">색조화장</a></li>
+                                                <li><a href="#">헤어제품</a></li>
+                                                <li><a href="#">이너뷰티</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">가구/인테리어</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">소파</a></li>
+                                                <li><a href="#">침대/매트리스</a></li>
+                                                <li><a href="#">주방가구</a></li>
+                                                <li><a href="#">수납장</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">가전</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">생활가전</a></li>
+                                                <li><a href="#">주방가전</a></li>
+                                                <li><a href="#">TV/영상가전</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">디지털</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">노트북/PC/태블릿 </a></li>
+                                                <li><a href="#">모니터/프린터/복합기</a></li>
+                                                <li><a href="#">휴대폰/스마트기기</a></li>
+                                                <li><a href="#">음향기기/이어폰</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">생필품</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">생활용품 </a></li>
+                                                <li><a href="#">건강용품</a></li>
+                                                <li><a href="#">주방용품</a></li>
+                                                <li><a href="#">세탁/욕실용품</a></li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li class="menu-item">
+                                            <a href="#">도서</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">국내도서 </a></li>
+                                                <li><a href="#">외국도서</a></li>
+                                                <li><a href="#">중고도서</a></li>
+                                                <li><a href="#">음반/LP</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">문구</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">필기도구 </a></li>
+                                                <li><a href="#">문구용폼</a></li>
+                                                <li><a href="#">사무용품</a></li>
+                                                <li><a href="#">데스크용품</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a href="#">취미</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">꽃/가드닝 </a></li>
+                                                <li><a href="#">악기/음향기기</a></li>
+                                                <li><a href="#">공예용품</a></li>
+                                                <li><a href="#">피규어/프라모델</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
+                                    
                                 </div>
                             </span>
                         </button>

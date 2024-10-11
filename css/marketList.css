@@ -15,43 +15,111 @@
 
 #mainArea .aside.market{
     height: 1000px;
-    width: 200px;
+    width: 300px;
     box-sizing: border-box;
-    border: 1px solid #eee;
     margin-top: 10px ;
   }
 
 
   /*asdie  */
 
-.aside.market .cate_aside li{
-    width: 170px;
-    height: 30px;
-    border: 1px solid #757575;
+.aside.market .cate_aside ul li{
+    width: 280px;
+    height: auto;
     line-height: 30px;
     text-align: left;
     text-indent: 10px;
-    margin: 0 auto;
-
+    margin-left: 10px;
 }
-.aside.market .cate_aside li:nth-child(1){
-    margin-top: 10px;
+.aside.market .cate_aside .lnb-item .sub-menu li{
+    height: 10px;
+    margin-left: 20px;
+    
+}
+.aside.market .cate_aside{
+    align-self:center ;
 }
 .aside.market .cate_aside li {
     margin-bottom: 10px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 10px;
 }
+.aside.market .cate_aside li a{
+    line-height: 20px;
+}
+
+.aside.market .cate_aside li ul{
+    height: auto;
+}
+.aside.market .cate_aside li ul li{
+    height: 20px;
+    width: auto;
+    margin-top: 5px;
+    margin-left: 25px;
+    line-height: 20px;
+}
+
 
 .aside.market .cate_aside li > a > img {
     box-sizing: border-box;
     width: 20px;
     height: 20px;
-    margin-top: 5px;
     margin-right: 5px;
+    margin-top: 5px;
 }
+/* New Styles for Submenu Toggle */
+
+/* Initially hide all sub-menus */
+.aside.market .cate_aside .lnb-item .sub-menu {
+    display: none;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+/* .aside.market .cate_aside .lnb-item .hidden{
+    display: none;
+} */
+
+.aside.market .cate_aside .lnb-item .sub-menu li {
+    height: 10px;
+}
+
+/* Show the submenu when the parent has an 'open' class */
+.aside.market .cate_aside .lnb-item.open .sub-menu {
+    display: block;
+}
+
+/* Styling for the main lnb-item links */
+.aside.market .cate_aside .lnb-item > a {
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styling for sub-menu links */
+.aside.market .cate_aside .lnb-item .sub-menu a {
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+}
+
+.aside.market .cate_aside .lnb-item .sub-menu a:hover {
+    color: #ef2a23;
+}
+
+/* Hover and active states for main categories */
+.aside.market .cate_aside .lnb-item > a:hover {
+    background-color: #efefef;
+    color: #ef2a23;
+}
+
+
 
 /* Best product container */
 .aside.market .bestProduct {
-    width: 170px;
+    width: 280px;
     height: auto;
     border: 1px solid #f8f7f798;
     background-color: #f8f7f798;
@@ -75,15 +143,15 @@
     flex-direction: column;
     align-items: flex-start;
     color: #000;
-    width: 160px;
-    height: 150px;
+    width: 280px;
+    height: auto;
     margin: 0 auto;
     margin-top: 5px;
 }
 
 .aside.market .bestProduct .products.first .productimg.first {
-    width: 160px;
-    height: 120px;
+    width: 240px;
+    height: 180px;
     border: 1px solid brown;
     margin: 0 auto;
     position: relative;
@@ -100,21 +168,25 @@
 }
 
 .aside.market .bestProduct .products.first .product-name {
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .aside.market .bestProduct .products.first .original-price {
-    font-size: 10px;
     margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 4px;
     color: #666;
     text-decoration: line-through;
 }
 
 .aside.market .bestProduct .products.first .discounted-price {
     color: red;
-    font-size: 10px;
+    font-size: 25px;
     display: flex;
     margin-top: 0px;
+    margin-bottom: 5px;
 }
 
 .aside.market .bestProduct .products.first .discounted-price p {
@@ -122,26 +194,27 @@
 }
 
 .aside.market .bestProduct .products.first .discount-rate {
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .aside.market .bestProduct .products.first .final-price {
-    font-size: 8px;
+    font-size: 15px;
     color: black;
 }
 
 /* Other products (smaller items) */
 .aside.market .bestProduct .products {
     display: flex;
-    width: 160px;
-    height: 70px;
+    width: 280px;
+    height: 100px;
     margin-top: 5px;
+    margin-left: 15px;
 }
 
 .aside.market .bestProduct .products .productimg {
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     border: 1px solid #0a0101;
     margin-top: 5px;
     margin-left: 5px;
@@ -159,17 +232,18 @@
 }
 
 .aside.market .bestProduct .products .productInfo {
-    width: 80px;
-    height: 50px;
-    font-size: 10px;
+    width: 150px;
+    height: auto;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     margin-top: 8px;
+    margin-left: 20px;
 }
 
 .aside.market .bestProduct .products .product-name {
-    font-size: 7px;
-    margin-bottom: 0px;
+    font-size: 15px;
+    margin-bottom: 2px;
 }
 
 .price {
@@ -195,7 +269,7 @@
     margin-bottom: 0px;
 }
 .aside.market .bestProduct .products  .discounted-price p {
-    font-size: 7px;
+    font-size: 15px;
 }
 
 .discount-rate {
@@ -217,18 +291,19 @@
 }
 
 .aside.market .bestProduct .products.first .discount-rate {
-    font-size: 10px;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 .aside.market .bestProduct .products.first  .final-price {
-    font-size: 8px;
+    font-size: 20px;
     color: black;
-} */
+} 
 
 #mainArea .mainWrapper .section{
     /* Subtract the aside's width and some padding/margin */
     
-    width: calc(100% - 210px); /* Subtract the aside's width and some padding/margin */
+    width: calc(100% - 310px); /* Subtract the aside's width and some padding/margin */
     box-sizing: border-box; /* Ensure proper width calculation */
 
      /* Ensure proper width calculation */
@@ -238,7 +313,7 @@
 #mainArea .section .sectionWrapper{
     border: 1px solid #eee;
     margin-top: 10px;
-    width: 990px;
+    width: 890px;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -259,7 +334,7 @@
 #mainArea .section .sectionWrapper .sub_tit{
     box-sizing: border-box;
     position: relative;
-    width: 970px;
+    width: 870px;
     height: 30px;
     border-bottom: 2px solid #494949;
 
