@@ -428,7 +428,7 @@ input[type=search] {
     display: none;
     position: relative;
     width: 100%;
-    background-color: #ef2a23;
+    background-color: #f2f2f2;
     z-index: 100;
     border: 1px solid #ccc;
 }
@@ -445,10 +445,11 @@ input[type=search] {
 
 .menuVisible .categoryMenu {
     display: block;
-    width: 200px;
+    width: 300px;
     top: 26px; 
     left: -16px;
-    border: 2px solid #ef2a23;
+    border-left: 2px solid #ef2a23;
+    border-top:2px solid #ef2a23;
     height: auto;
 }
 
@@ -456,7 +457,7 @@ input[type=search] {
 .menu-item a {
     display: block;
     padding: 10px;
-    background: #f4f4f4;
+    background: #ffff;
     text-decoration: none;
     color: #333;
     height: 50px;
@@ -803,11 +804,11 @@ input[type=search] {
     
 }
 #mainArea .section .sectionWrapper #h3_list::after{
-    /* display: block;
+    display: block;
     content: ""; 
     clear: both; 
-    width: 700px;
-    margin-top: 5px; */
+    /* width: 700px; */
+    margin-top: 5px;
     
 }
 #mainArea .section .sectionWrapper .sub_tit{
@@ -847,6 +848,7 @@ padding-left:2px;}
 
 /* General Footer Styles */
 #footer {
+    margin-top: 20px;
     background-color: #f9f9f9;
     padding: 20px 0;
     font-family: Arial, sans-serif;
