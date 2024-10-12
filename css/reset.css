@@ -11,6 +11,9 @@ a{color:#111; text-decoration: none;}
 img{border:none; vertical-align: top;}
 ul, ol{list-style:none;}
 address{font-style: normal;}
+table{
+    border-spacing: none;
+}
 /* clearfix */
 .cf{}
 .cf::after {content: ""; display: block; clear: both;}
@@ -23,3 +26,19 @@ input:active{outline: none;}
 input:focus{outline: none;}
 select:active{outline:none;}
 select:focus{outline: none;}
+
+table {
+    table-layout: fixed;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}

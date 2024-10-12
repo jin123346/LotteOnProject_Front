@@ -1,5 +1,5 @@
 #mainArea .aside.market{
-    height: 1000px;
+    height: auto;
     width: 300px;
     box-sizing: border-box;
     margin-top: 10px ;
@@ -23,6 +23,7 @@
 }
 .aside.market .cate_aside{
     align-self:center ;
+    overflow-y: hidden;
 }
 .aside.market .cate_aside li {
     margin-bottom: 10px;
