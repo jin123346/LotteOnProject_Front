@@ -790,10 +790,12 @@ input[type=search] {
 }
 
 
+
+
 #mainArea .section .sectionWrapper{
     border: 1px solid #eee;
     margin-top: 10px;
-    width: 990px;
+    width: 100%;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -814,7 +816,7 @@ input[type=search] {
 #mainArea .section .sectionWrapper .sub_tit{
     box-sizing: border-box;
     position: relative;
-    width: 970px;
+    width: calc(100%-20px);
     height: 30px;
     border-bottom: 2px solid #494949;
 
@@ -823,7 +825,7 @@ input[type=search] {
 
 #mainArea .section .location{ 
     float: right;
-    margin-right: 30px;
+    /* margin-right: 30px; */
     top: 0px;
     margin-left: 10px;
     margin-top:10px; 
@@ -844,7 +846,12 @@ padding-left:2px;}
 
 
 
-
+select[readonly] {
+    pointer-events: none;
+    -webkit-appearance: none;
+    border: none;
+    background-color: inherit;
+  }
 
 /* General Footer Styles */
 #footer {
@@ -853,6 +860,8 @@ padding-left:2px;}
     padding: 20px 0;
     font-family: Arial, sans-serif;
     width: 100%;
+    box-sizing: border-box;
+    height: 440; /* 명시적으로 footer 높이를 설정 */
 }
 .footerWrapper{
     width: 1200px;
