@@ -289,12 +289,12 @@
 
                             <!-- 장바구니 table -->
                              <form action="#" id="product_order">
-                               
+                                <h4 calss="info_tit">주문상품</h4>
+
                                 <table class="productOrder">
                                     <colgroup style="width: 1100px; table-layout: fixed;">
-                                        <col style="width: 2%;">
                                         <col style="width: 45%;">
-                                        <col style="width: 7%;">
+                                        <col style="width: 9%;">
                                         <col style="width: 10%;">
                                         <col style="width: 8%;">
                                         <col style="width: 8%;">
@@ -302,7 +302,6 @@
                                         <col style="width: 22%;">
                                     </colgroup>
                                     <tr>
-                                        <th><input type="checkbox" name="select" id=""></th>
                                         <th>상품</th>
                                         <th>수량</th>
                                         <th>판매가</th>
@@ -313,7 +312,66 @@
                                     </tr>
                                     <!-- 반복부분 -->
                                     <tr>
-                                        <td><input type="checkbox" name="select" id=""></td>
+                                        <td>
+                                            <div><img src="" alt=""></div>
+                                            <div>
+                                                <span>상품명</span>
+                                                <p id="product_option"> [ 옵션 : 크림 / 66 Size ]</p>
+                                            </div>
+                                        </td>
+                                        <td >
+                                            <div class="qnt">
+                                                <input type="number" name="quantity" placeholder="1" readonly>
+                                            </div>
+                                        </td>
+                                        <td><span class="price">30000</span></td>
+                                        <td>10%</td>
+                                        <td><span class="price">300</span></td>
+                                        <td><span class="price">3000</span></td>
+                                        <td><span class="price">29500</span></td>
+                                    </tr>
+                                    <!-- 반복부분 -->
+                                    <tr>
+                                        <td>
+                                            <div><img src="" alt=""></div>
+                                            <div>
+                                                <span>상품명</span>
+                                                <p id="product_option"> [ 옵션 : 크림 / 66 Size ]</p>
+                                            </div>
+                                        </td>
+                                        <td >
+                                            <div class="qnt">
+                                                <input type="number" name="quantity" placeholder="1" readonly>
+                                            </div>
+                                        </td>
+                                        <td><span class="price">30000</span></td>
+                                        <td>10%</td>
+                                        <td><span class="price">300</span></td>
+                                        <td><span class="price">3000</span></td>
+                                        <td><span class="price">29500</span></td>
+                                    </tr>
+                                    <!-- 반복부분 -->
+                                    <tr>
+                                        <td>
+                                            <div><img src="" alt=""></div>
+                                            <div>
+                                                <span>상품명</span>
+                                                <p id="product_option"> [ 옵션 : 크림 / 66 Size ]</p>
+                                            </div>
+                                        </td>
+                                        <td >
+                                            <div class="qnt">
+                                                <input type="number" name="quantity" placeholder="1" readonly>
+                                            </div>
+                                        </td>
+                                        <td><span class="price">30000</span></td>
+                                        <td>10%</td>
+                                        <td><span class="price">300</span></td>
+                                        <td><span class="price">3000</span></td>
+                                        <td><span class="price">29500</span></td>
+                                    </tr>
+                                    <!-- 반복부분 -->
+                                    <tr>
                                         <td>
                                             <div><img src="" alt=""></div>
                                             <div>
@@ -448,7 +506,7 @@
 
 
                          <!-- aside -->
-                            <aside class="finalOrder_window">
+                            <aside class="finalOrder_window scroll">
                                 <section class="finalOrderAsideWrapper">
                                     <h3>최종결제정보 </h3>
                                     <div class="orderQnt">
@@ -572,23 +630,33 @@
     <div id="addressSelectModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>배송지 선택</h2>
+            <h2 >배송지 선택</h2>
             <div class="address-list">
                 <div class="address-item">
-                    <input type="radio" id="address1" name="address" checked>
-                    <label for="address1">하진희</label>
-                    <p>[47566] 부산 연제구 온천천남로 110, 51동 506호(연산동, 한양아파트)</p>
-                    <p>010-5595-8375</p>
-                    <button class="edit-btn">수정</button>
-                    <button class="delete-btn">삭제</button>
+                    <div class="address-info">
+                        <input type="radio" id="address1" name="address" checked>
+                        <label for="address1">하진희</label>
+                        <p>[47566]<br> 부산 연제구 온천천남로 110, 51동 506호(연산동, 한양아파트)</p>
+                        <p>010-5595-8375</p>
+                    </div>
+                    
+                    <div class="address-btn">
+                        <button class="edit-btn">수정</button>
+                        <button class="delete-btn">삭제</button>
+                    </div>
+                    
                 </div>
                 <div class="address-item">
-                    <input type="radio" id="address2" name="address">
-                    <label for="address2">하진희</label>
-                    <p>[47566] 부산 연제구 온천천남로 110, 51동 506호(연산동, 한양아파트)</p>
-                    <p>010-5595-8375</p>
-                    <button class="edit-btn">수정</button>
-                    <button class="delete-btn">삭제</button>
+                    <div class="address-info">
+                        <input type="radio" id="address2" name="address">
+                        <label for="address2">하진희</label>
+                        <p>[47566] 부산 연제구 온천천남로 110, 51동 506호(연산동, 한양아파트)</p>
+                        <p>010-5595-8375</p>
+                    </div>
+                    <div class="address-btn">
+                        <button class="edit-btn">수정</button>
+                        <button class="delete-btn">삭제</button>
+                    </div>
                 </div>
                 <button class="new-address-btn">새 배송지 추가</button>
             </div>
@@ -647,35 +715,77 @@
             });
 
 
+            const aside = document.querySelector('aside');
+            const sectionWrapper = document.querySelector('.sectionWrapper');
+            const sectionHeight = sectionWrapper.offsetHeight;
+            console.log(sectionWrapper)
+            console.log(sectionHeight)
+            const headerHeight = 188; // 헤더 높이
+            const topHeight=headerHeight+sectionHeight;
+            const footer = document.querySelector('footer');
+            const footerHeight = 440; // 푸터 높이
+            const asideHeight = aside.offsetHeight; // aside 높이
+            console.log('asdieHeight:'+asideHeight)
+            function handleAsideScroll() {
+                const scrollPosition = window.scrollY; // 현재 스크롤 위치
+                console.log(scrollPosition)
+                const footerTop = footer.getBoundingClientRect().top + window.scrollY; // Footer의 상단 위치
+                console.log('footerTop:'+footerTop);
+                // 스크롤 위치가 헤더 아래에 있고, 푸터에 도달하기 전이면 aside에 scroll 클래스를 추가
+                if (scrollPosition <= topHeight && (scrollPosition + asideHeight + 50) < footerTop ) {
+                    aside.classList.remove('scroll');
+                    // aside.style.position = 'fixed';
+                    // aside.style.top = `${headerHeight}px`; // 헤더 아래에 고정
+                    aside.style.bottom = ''; // 푸터 닿지 않음
+                } else if ((scrollPosition + asideHeight + 50) >= footerTop) {
+                    // 푸터에 도달하면 aside를 푸터 상단에서 멈추게 하기
+                    aside.classList.add('scroll');
+                    aside.style.position = 'absolute';
+                    aside.style.top = `${footerTop - asideHeight - 50}px`;  // 푸터 상단에 고정
+                    // console.log('asdide top : '+`${footerTop - asideHeight - 50}px`)
+                } else {
+                    aside.classList.add('scroll');
+                    aside.style.position = ''; // 초기 위치로 돌아감
+                    aside.style.top = ''; // 원래 위치로 초기화
+                }
+            }
+
+            // 스크롤할 때마다 실행
+            window.addEventListener('scroll', handleAsideScroll);
+            // 화면 크기가 변경될 때도 실행
+            window.addEventListener('resize', handleAsideScroll);
 
 
-                // 배송지 선택 모달
-                const addressSelectModal = document.getElementById("addressSelectModal");
-                const addressRegisterModal = document.getElementById("addressRegisterModal");
-                const closeAddressSelect = addressSelectModal.querySelector(".close");
-                const closeAddressRegister = addressRegisterModal.querySelector(".close");
-                
-                const editButtons = document.querySelectorAll(".edit-btn");
 
-                // 배송지 선택 모달 열기
-                document.querySelector('.address_change').addEventListener('click', function () {
-                    addressSelectModal.style.display = "block";
-                });
 
-                // 모달 닫기 버튼 클릭 시 닫기
-                closeAddressSelect.addEventListener('click', function () {
+
+            // 배송지 선택 모달
+            const addressSelectModal = document.getElementById("addressSelectModal");
+            const addressRegisterModal = document.getElementById("addressRegisterModal");
+            const closeAddressSelect = addressSelectModal.querySelector(".close");
+            const closeAddressRegister = addressRegisterModal.querySelector(".close");
+            
+            const editButtons = document.querySelectorAll(".edit-btn");
+
+            // 배송지 선택 모달 열기
+            document.querySelector('.address_change').addEventListener('click', function () {
+                addressSelectModal.style.display = "block";
+            });
+
+            // 모달 닫기 버튼 클릭 시 닫기
+            closeAddressSelect.addEventListener('click', function () {
+                addressSelectModal.style.display = "none";
+            });
+
+            closeAddressRegister.addEventListener('click', function () {
+                addressRegisterModal.style.display = "none";
+            });
+
+            // 모달 외부 클릭 시 닫기
+            window.addEventListener('click', function (event) {
+                if (event.target == addressSelectModal) {
                     addressSelectModal.style.display = "none";
-                });
-
-                closeAddressRegister.addEventListener('click', function () {
-                    addressRegisterModal.style.display = "none";
-                });
-
-                // 모달 외부 클릭 시 닫기
-                window.addEventListener('click', function (event) {
-                    if (event.target == addressSelectModal) {
-                        addressSelectModal.style.display = "none";
-                    }
+                }
                 if (event.target == addressRegisterModal) {
                     addressRegisterModal.style.display = "none";
                 }
