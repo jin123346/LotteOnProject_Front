@@ -727,9 +727,7 @@ input[type=search] {
 }
 
 .price {
-    display: flex;
     align-items: center;
-    margin-bottom: 0.2rem;
 }
 
 .original-price {
