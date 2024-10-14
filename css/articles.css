@@ -1,9 +1,4 @@
 /* 통합 */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0 auto;
-    width: 1200px; /* 필요에 따라 조정 */
-}
 .article-navi {
     width: 100%;
     height: auto;
@@ -16,7 +11,9 @@ body {
 }
 .article-main {
     display: flex;
-    width: 1140px;
+    flex-direction: column;
+    width: 1200PX;
+    margin: 0 auto;
     height: auto;
     box-sizing: border-box;
     margin-bottom: 30px;
@@ -25,6 +22,12 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+.article-in{
+    display: flex;
+    width: auto;
+    height: auto;
+
 }
 
 /* aricleView css */
@@ -75,6 +78,7 @@ a {
 
 .view-coment > p {
     margin-left: 10px;
+    
 }
 
 
@@ -100,23 +104,22 @@ a {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    
 }
 
-.pagination a {
-    padding: 10px;
-    margin: 0 5px;
-    text-decoration: none;
-}
 
-.pagination a:hover {
-    background-color: #f1f1f1;
-}
 
 .list-btn {
     width: 100px;
     height: 40px;
     border: 1px solid;
+    font-size: 20px;
+    display: flex;               /* Flexbox 사용 */
+    justify-content: center;     /* 가로 중앙 정렬 */
+    align-items: center;         /* 세로 중앙 정렬 */
+    background-color: #ccc;
 }
+    
 
 /* articleList css */
 .article-box {
