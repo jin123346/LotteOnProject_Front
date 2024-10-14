@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>customer main</title>
+
+    <style>
+        *{margin: 0; padding:0; font-family: '고딕', sans-serif; font-size: 12px; font-weight: 400; box-sizing: border-box;}
+        html{color:#111; position:relative;}
+        html, body{height:100%;}
+        ol,ul {list-style: none}
+        a {text-decoration: none; color: inherit;}
+
+        #wrapper {
+            width: 100%;
+            height: auto;
+
+        }
+        main {
+            width: 1200px;
+            height: auto;
+            position: relative;
+            margin: 0 auto;
+
+        }
+        #navi {width: 1200px; height: 50px; border-top: 1px solid rgb(199,199,199);}
+        #navi p {font-size: 15px; font-weight: bold; margin-top: 13px;}
+
+        #container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            border-top: 1px solid rgb(199,199,199);
+        }
+        /*어사이드*/
+        #aside {
+            width: 200px;
+            border-right: 1px solid rgb(199, 199, 199);
+            box-sizing: border-box;
+
+        }
+        #aside h1 {font-size: large; font-weight: bold; text-align: center; margin: 20px 20px 40px;}
+            .aside_list ul li {overflow: hidden; padding: 16px 0; border-bottom: 1px solid rgb(194, 194, 194); width:140px; margin-left: 10px;}
+            .aside_list ul li:nth-of-type(1) a{font-weight: bold; text-decoration: underline;}
+
+            .active {line-height: 24px;}
+            .active:hover {text-decoration: underline; font-weight: bold;}
+        
+        /*메인*/
+        #service {flex-grow: 1;
+                  min-width: 0;
+                  width: 1000px;
+        }
+        .hidden {display: none;}
+
+
+        /*회원 , 회원관련 자주 묻는 질문입니다.*/
+        h2 {margin: 30px 40px 0px; font-weight: bold; font-size: large;}
+        .title p {color: rgb(117, 117, 117); margin: 10px 40px 20px;}
+
+        /*첫번째 자주 묻는 질문*/
+        h2{font-weight: bold; font-size: large; margin: 30px 40px 0px}
+        .first_list {border: 1px solid rgb(197, 197, 197); border-radius: 7px; margin: 20px 40px;}
+        .first_li {height: 50px; border-bottom: 1px solid rgb(197, 197, 197);}
+        .first_li:last-child {border-bottom: none;}
+
+        .first_list li a {display: inline-block; margin: 15px 20px; font-weight: 500; font-size: 13px;}
+        .first_li span {color: rgb(17, 86, 165); font-weight: bold;}
+        .first_show {text-align: center;}
+
+        /*hover 추가*/
+        .first_li a:hover {background: linear-gradient(to top, #ffe0e0 50%, transparent 50%);}
+
+
+        /*두번째 자주 묻는 질문*/
+        .second_list {border: 1px solid rgb(197, 197, 197); border-radius: 7px; margin: 20px 40px;}
+        .second_li {height: 50px; border-bottom: 1px solid rgb(197, 197, 197);}
+        .second_li:last-child {border-bottom: none;}
+        
+        .second_list li a {display: inline-block; margin: 15px 20px; font-weight: 500; font-size: 13px;}
+        .second_li span {color: rgb(17, 86, 165); font-weight: bold;}
+        .second_show {text-align: center;}
+
+        /*hover 추가*/
+        .second_li a:hover {background: linear-gradient(to top, #ffe0e0 50%, transparent 50%);}
+
+        </style>
+
+
+
+
+    <script>
+        //기본 3개출력 , 더보기 버튼을 눌렀을 때 최대 10개까지 출력되도록
+        window.onload = function(){
+            function AllShowMore(showClass, liClass, TextClass){
+            const showMore = document.querySelector(showClass + ' .showMore');
+            const liClasses = document.querySelectorAll(liClass);
+            let showing = false;
+            
+            //index 3이상은 모두 hidden 처리
+            liClasses.forEach((liClass, index) => {
+                if (index >= 3) {
+                    liClass.classList.add("hidden");
+                }
+            });
+
+            //3이상 10이하
+            showMore.addEventListener('click', function(e){
+                e.preventDefault();
+                showing = !showing //showing이 true로 보여지고 있는 상태 (클릭이 되었다는 의미)
+
+                liClasses.forEach((liClass, index) => {
+                    if(index >=3 && index < 10){
+                        if(!showing){
+                        liClass.classList.add("hidden");
+                        }else {
+                            liClass.classList.remove("hidden");
+                        }   
+                    }
+                })
+
+                showMore.textContent = showing ? "간단히 보기" : TextClass;
+            });
+        }
+        AllShowMore('.first_show','.first_li',"더보기");
+        AllShowMore('.second_show','.second_li',"더보기");
+        
+    }
+    </script>
+
+</head>
+<body>
+    <div id="wrapper">
+        <header></header>
+        <main>
+            <section id="navi"><p>홈 > 자주 묻는 질문</p></section>
+            <div id="container">
+                <div id="aside">
+                    <h1>자주 묻는 질문</h1>
+                    <div class="aside_list">
+                        <ul>
+                            <li>
+                                <a class="active" href="#">회원</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">쿠폰 / 이벤트</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">주문 / 결제</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">배송</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">취소 / 반품 / 교환</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">여행 / 숙박 / 항공</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">안전거래</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="service">
+                    <div class="title">
+                        <h2>회원</h2>
+                        <p>회원 관련 자주 묻는 질문입니다.</p>
+                    </div>
+                    <div class="first_container">
+                        <h2>가입</h2>
+                        <ul class="first_list">
+                            <li class="first_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="first_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="first_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="first_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="first_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="first_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="first_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="first_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="first_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="first_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="first_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="first_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="first_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li>
+                                <div class="first_show">
+                                    <a href="#" class="showMore">더보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="second_container">
+                        <h2>탈퇴</h2>
+                        <ul class="second_list">
+                            <li class="second_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="second_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="second_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="second_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="second_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="second_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="second_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="second_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="second_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="second_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="second_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="second_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li class="second_li"><a href="#"><span>Q .</span> 개인회원과 법인회원에 차이가 있나요 ?</a></li>
+                            <li>
+                                <div class="second_show">
+                                    <a href="#" class="showMore">더보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
