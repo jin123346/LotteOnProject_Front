@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>article-view</title>
+    <title>article-regi-view</title>
     <link rel="stylesheet" href="/css/articles.css">
 </head>
 
 <body>
 
-    <header>
+
+    <head>
         <div id="header"></div>
-    </header>
+    </head>
 
     <main class="article-main">
         <div class="article-navi">
@@ -20,21 +21,20 @@
                 <a href="#">홈</a> 〉 <a href="#">공지상황</a>
             </div>
         </div>
+
         <div class="article-in">
             <aside id="aside">
-
             </aside>
 
             <div class="view-box">
                 <div class="view-coment">
-                    <h3>전체</h3>
-                    <p>공지사항 전체 내용 입니다.</p>
+                    <h3>회원</h3>
+                    <p>회원돤련 자주묻는 질문 입니다.</p>
                 </div>
                 <table class="view-div">
                     <div class="title-box">
                         <tr>
-                            <td class="view-title">공지사항: 2024년 하반기 학사 일정 안내<br>
-                                <span class="view-data">2024.10.10</span> <!-- 날짜 추가 -->
+                            <td class="view-title">Q. 개인회원과 법인회원에 차이가 있나요<br>
                             </td>
                         </tr>
                     </div>
@@ -80,11 +80,12 @@
                     </tr>
                 </table>
                 <div class="pagination">
-                    <a class="list-btn" href="../article/articleeList.html">목록</a>
+                    <button class="list-btn" href="#">목록</button>
                 </div>
             </div>
         </div>
     </main>
+
     <footer>
         <div id="footer"></div>
     </footer>
@@ -115,7 +116,7 @@
             .catch(error => console.error('Error loading header:', error));
 
 
-        fetch('../include/aside.html') // 사이드 파일 경로
+        fetch('../include/regiAside.html') // 사이드 파일 경로
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
@@ -129,7 +130,7 @@
 
 
 
-       
+  
     </script>
 
 
