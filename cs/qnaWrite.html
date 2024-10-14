@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>customer main</title>
+
+    <style>
+        *{margin: 0; padding:0; font-family: '고딕', sans-serif; font-size: 12px; font-weight: 400; box-sizing: border-box;}
+        html{color:#111; position:relative;}
+        html, body{height:100%;}
+        ol,ul {list-style: none}
+        a {text-decoration: none; color: inherit;}
+
+        #wrapper {
+            width: 100%;
+            height: auto;
+
+        }
+        main {
+            width: 1200px;
+            height: auto;
+            position: relative;
+            margin: 0 auto;
+
+        }
+        #navi {width: 1200px; height: 50px; border-top: 1px solid rgb(199,199,199);}
+        #navi p {font-size: 15px; font-weight: bold; margin-top: 13px;}
+
+        #container {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            border-top: 1px solid rgb(199,199,199);
+        }
+
+        /*asdie*/
+        #aside {
+            width: 200px;
+            border-right: 1px solid rgb(199, 199, 199);
+            box-sizing: border-box;
+
+        }
+        #aside h1 {font-size: large; font-weight: bold; text-align: center; margin: 20px 20px 40px;}
+            .aside_list ul li {overflow: hidden; padding: 16px 0; border-bottom: 1px solid rgb(194, 194, 194); width:140px; margin-left: 10px;}
+            .aside_list ul li:nth-of-type(1) a{font-weight: bold; text-decoration: underline;}
+
+            .active {line-height: 24px;}
+            .active:hover {text-decoration: underline; font-weight: bold;}
+        
+        /*메인*/
+        #service {flex-grow: 1;
+                  min-width: 0;
+                  width: 1000px;
+        }
+        .hidden {display: none;}
+
+
+        /*회원 , 회원관련 문의 내용입니다.*/
+        h2 {margin: 30px 40px 0px; font-weight: bold; font-size: large;}
+        .title p {color: rgb(117, 117, 117); margin: 10px 40px 20px;}
+
+        /*전체 테이블*/
+        table {width: 900px; height: auto; margin: 40px; border-top: 1px solid rgb(155, 155, 155); border-bottom: 1px solid rgb(155,155,155); border-collapse: collapse;}
+        td {padding: 15px;}
+        td:nth-of-type(1) {font-weight: 900; font-size: 13px;}
+
+        /*각 tr border 설정*/
+        .type {border-bottom: 1px solid rgb(155,155,155);}
+        .title {border-bottom: 1px solid rgb(155,155,155);}
+
+        /*각 tr 높이 넓이 설정*/
+        .first_choice , .second_choice {height: 30px;}
+        .texts {width: 550px; height: 30px; padding: 5px;}
+        .contents {width: 550px; height: 300px; resize: none; padding: 5px;}
+
+        /*취소하기 등록하기*/
+        .btn {width: 900px; display: flex; justify-content: center;}
+        button {margin : 0 5px; width: 80px; height: 35px; border: none; cursor: pointer; color: white;}
+        .cansel {background-color: #bfbfbf;}
+        .insert {background-color: #8EB4E3;}
+
+        .cansel:hover {background-color: rgb(131, 131, 131);}
+        .insert:hover {background-color: #6f8db1;}
+
+
+        </style>
+
+
+</head>
+<body>
+    <div id="wrapper">
+        <header></header>
+        <main>
+            <section id="navi"><p>홈 > 문의하기</p></section>
+            <div id="container">
+                <div id="aside">
+                    <h1>문의하기</h1>
+                    <div class="aside_list">
+                        <ul>
+                            <li>
+                                <a class="active" href="#">회원</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">쿠폰 / 이벤트</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">주문 / 결제</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">배송</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">취소 / 반품 / 교환</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">여행 / 숙박 / 항공</a>
+                            </li>
+                            <li>
+                                <a class="active" href="#">안전거래</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="service">
+                    <div class="title">
+                        <h2>회원</h2>
+                        <p>회원 관련 문의 내용입니다.</p>
+                    </div>
+                    <form class="qnawirte">
+                        <table>
+                            <colgroup>
+                                <col style="width: 150px">
+                                <col style="width: 750px">
+                            </colgroup>
+                            <tr class="type">
+                                <td>문의유형</td>
+                                <td>
+                                    <select class="first_choice">
+                                        <option value="1">가입</option>
+                                        <option value="2">취소/반품/교환</option>
+                                        <option value="3">주문/결제</option>
+                                        <option value="4">쿠폰/이벤트</option>
+                                    </select>
+                                    <select class="second_choice">
+                                        <option value="1">가입</option>
+                                        <option value="2">취소/반품/교환</option>
+                                        <option value="3">주문/결제</option>
+                                        <option value="4">쿠폰/이벤트</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="title">
+                                <td>제목</td>
+                                <td>
+                                    <input type="text" class="texts" placeholder="제목을 입력하세요">
+                                </td>
+                            </tr>
+                            <tr class="content">
+                                <td>내용</td>
+                                <td>
+                                    <textarea class="contents" placeholder="내용을 입력하세요" ></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <div class="btn">
+                        <button class="cansel">취소하기</button>
+                        <button class="insert">등록하기</button>
+                    </div>
+                </div>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
