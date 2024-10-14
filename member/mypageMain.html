@@ -156,10 +156,10 @@
 
 
         .Review-table th:nth-child(1) {width: 80px}
-        .Review-table th:nth-child(2) {width: 160px}
+        .Review-table th:nth-child(2) {width: 210px}
         .Review-table th:nth-child(3) {width: 300px}
-        .Review-table th:nth-child(4) {width: 140px}
-        .Review-table th:nth-child(5) {width: 170px}
+        .Review-table th:nth-child(4) {width: 130px}
+        .Review-table th:nth-child(5) {width: 130px}
 
         .inquiry-table th:nth-child(1) {width: 70px}
         .inquiry-table th:nth-child(2) {width: 100px}
@@ -195,6 +195,12 @@
             float: left;
             margin-left: 50px   ;
         }
+        .eximg2 > img{
+            width: 100px;
+            height: 98px;
+            float: left;
+            margin-left: 30px   ;
+        }
         .Pinf {
             display: flex;               /* Flexbox 사용 */
             flex-direction: column;      /* 세로 정렬 */
@@ -212,6 +218,22 @@
             font-weight: 700;
             margin: 5px;
             text-decoration: underline;
+        }
+
+        .Pinf2 {
+            display: flex;               /* Flexbox 사용 */
+            flex-direction: column;      /* 세로 정렬 */
+            align-items: flex-start;     /* 왼쪽 정렬 */
+            justify-content: center;      /* 수직 중앙 정렬 (부모 요소의 높이에 따라 다름) */
+            text-align: center;
+            height: 100px;              /* 필요에 따라 높이 설정 */
+            margin-left: 40px;          /* 왼쪽에 10px 여백 추가 */
+        }
+        .Pinf2 >p {
+            font-size: 12px;
+            font-weight: 400;
+            margin: 5px;
+                
         }
         td button{
             position: relative;
@@ -326,6 +348,7 @@
             right: 115px;
         }
     </style>
+    
      <link rel="stylesheet" href="/css/reset.css">
      <link rel="stylesheet" href="/css/common.css">
 
@@ -395,7 +418,7 @@
                                         <img src="./img/ch.png" alt="상품 이미지">
                                     </div>
                                     <div class="Pinf">
-                                        <a href="" id="openModal">주문번호: 123456</a>
+                                        <a href="">주문번호: 123456</a>
                                         <a href="">회사명: ABC 회사</a>
                                         <a href="">상품명</a>
                                         <p>수량: 2</p>
@@ -465,7 +488,15 @@
                             </tr>
                             <tr class="tr3">
                                 <td><data value="">1</data></td>
-                                <td><data value="">상품번호 / 상품명</data></td>
+                                <td><data value=""> 
+                                    <div class="eximg2">
+                                        <img src="./img/ch.png" alt="상품 이미지">
+                                    </div>
+                                    <div class="Pinf2">
+                                        <p>상품번호<br> 123456</p>
+                                        <p>상품명<br> 치킨</p>
+                                    </div>
+                                </data></td>
                                 <td><data value="">배송이 빠릅니다. 잘사용하겠습니다.</data></td>    
                                 <td><data value="">평점</data></td> 
                                 <td><data value="">2022-12-10</data></td> 
