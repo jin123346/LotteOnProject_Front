@@ -1,6 +1,8 @@
 #mainArea > .mainWrapper.order  .orderSection{
     display: flex;
-   
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px;
     width: 1200px;
 }
 
@@ -223,6 +225,7 @@
     border: 1px solid #999;
     background-color: #ffff;
     border-radius: 2px;
+    
 }
 
 .btn-group .returnCart:hover{
@@ -246,6 +249,7 @@
     box-sizing: border-box;
     border-left: 1px solid #eee;
     height: auto;
+    margin-bottom: 20px;
 }
 
 .orderSection .orderInfo h4{

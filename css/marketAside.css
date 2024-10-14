@@ -8,7 +8,114 @@
 
   /*asdie  */
 
-.aside.market .cate_aside ul li{
+/* 기본 스타일
+.aside.market {
+    height: auto;
+    width: 300px;
+    box-sizing: border-box;
+    margin-top: 10px;
+} */
+
+/* 카테고리 항목 */
+.aside.market .cate_aside {
+    align-self: center;
+    width: 100%;
+    /* overflow-y: hidden; */
+}
+
+.aside.market .cate_aside ul li {
+    line-height: 30px;
+    text-align: left;
+    text-indent: 10px;
+    margin: 10px;
+    height: auto;
+}
+
+.aside.market .cate_aside li a {
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    color: #333;
+    background-color: #fff; /* 기본 배경색 */
+    cursor: pointer;
+}
+.aside.market .cate_aside ul li .lnb-item a{
+    font-weight: 400;
+}
+
+.aside.market .cate_aside li > a > img {
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.aside.market .cate_aside li ul {
+    height: auto;
+}
+
+.aside.market .cate_aside li ul li {
+    height: auto;
+    margin-top: 5px;
+    margin-left: 25px;
+    line-height: 20px;
+}
+
+/* 서브메뉴 스타일 */
+.aside.market .cate_aside .lnb-item .lnb-sub-menu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-left: 50px;
+    margin-bottom: 15px;
+    transition: all 0.03s ease;
+}
+
+.aside.market .cate_aside .lnb-item.open .lnb-sub-menu {
+    max-height: 500px;
+    opacity: 1;
+    transition: all 0.1s ease;
+}
+
+.aside.market .cate_aside .lnb-item .lnb-sub-menu li {
+    height: 10px;
+}
+
+.aside.market .cate_aside .lnb-item.open .lnb-sub-menu a:nth-child(1) {
+    font-weight: 700;
+}
+
+.aside.market .cate_aside .lnb-item.open .lnb-sub-menu li {
+    line-height: 15px;
+    height: 15px;
+    font-weight: 400;
+}
+
+/* 서브메뉴 링크 스타일 */
+.aside.market .cate_aside .lnb-item .lnb-sub-menu a {
+    font-size: 15px;
+    color: #666;
+    text-decoration: none;
+}
+
+.aside.market .cate_aside .lnb-item .lnb-sub-menu a:hover {
+    color: #ef2a23;
+    font-size: 17px;
+}
+
+/* 메인 카테고리 Hover 및 Active 스타일 */
+.aside.market .cate_aside .lnb-item > a:hover {
+    /* background-color: #efefef; */
+    color: #ef2a23;
+    opacity: 80%;
+    transition: all 0.3s ease;
+}
+
+
+/* .aside.market .cate_aside ul li{
     width: 280px;
     height: auto;
     line-height: 30px;
@@ -33,7 +140,8 @@
 }
 .aside.market .cate_aside li a{
     line-height: 20px;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .aside.market .cate_aside li ul{
@@ -58,29 +166,51 @@
 /* New Styles for Submenu Toggle */
 
 /* Initially hide all sub-menus */
-.aside.market .cate_aside .lnb-item .lnb-sub-menu {
-    display: none;
+/* .aside.market .cate_aside .lnb-item .lnb-sub-menu {
+    max-height: 0;
+    overflow: hidden;
     margin-left: 10px;
-    margin-top: 10px;
-}
+    margin-top: -10px;
+    margin-bottom: 15px;
+    opacity: 0;                
+    transition: all 0.3s ease; 
+} */
 
 /* .aside.market .cate_aside .lnb-item .hidden{
     display: none;
-} */
+} 
 
 .aside.market .cate_aside .lnb-item .lnb-sub-menu li {
     height: 10px;
 }
 
-/* Show the submenu when the parent has an 'open' class */
+/* Show the submenu when the parent has an 'open' class 
 .aside.market .cate_aside .lnb-item.open .lnb-sub-menu {
-    display: block;
+    /* display: block;
     height: auto;
     margin-left: 10px;
     margin-top: -10px;
     margin-bottom: 15px;
     box-sizing: border-box;
+    max-height: 500px;
+    opacity: 1;                 
+    transition: all 0.3s ease;  
+} */
+
+/* Add hover effects 
+.aside.market .cate_aside .lnb-item > a:hover {
+    background-color: #efefef;
+    color: #ef2a23;
+    transition: all 0.3s ease;
 }
+
+/* .aside.market .cate_aside .lnb-item .toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.aside.market .cate_aside .lnb-item.open .toggle-icon {
+    transform: rotate(180deg); /* 클릭 시 아이콘이 180도 회전 
+
 .aside.market .cate_aside .lnb-item.open .lnb-sub-menu a:nth-child(1){
     font-weight: 700;
 }
@@ -89,30 +219,44 @@
     height: 15px;
     font-weight: 400;
 }
-/* Styling for the main lnb-item links */
+/* Styling for the main lnb-item links
 .aside.market .cate_aside .lnb-item > a {
-    font-weight: bold;
+    font-weight: 400;
     color: #333;
     text-decoration: none;
     cursor: pointer;
+
+    background-color: #fff; /* 기본 배경색 
+    transition: background-color 0.3s ease;  /* 배경색 전환 효과 
 }
 
-/* Styling for sub-menu links */
+/* Styling for sub-menu links 
 .aside.market .cate_aside .lnb-item .lnb-sub-menu a {
     font-size: 14px;
     color: #666;
     text-decoration: none;
+   
+
+
+}
+
+
+.aside.market .cate_aside .lnb-item a{
+
+    text-decoration: none;
+    transition: all 0.3s ease;  /* Smooth transition 
+    cursor: pointer;
 }
 
 .aside.market .cate_aside .lnb-item .lnb-sub-menu a:hover {
     color: #ef2a23;
 }
 
-/* Hover and active states for main categories */
+/* Hover and active states for main categories 
 .aside.market .cate_aside .lnb-item > a:hover {
     background-color: #efefef;
     color: #ef2a23;
-}
+} */
 
 
 
@@ -168,6 +312,9 @@
 
 .aside.market .bestProduct .products.first .product-name {
     font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+
 }
 
 .aside.market .bestProduct .products.first .original-price {
@@ -251,10 +398,12 @@
     margin-bottom: 0.2rem;
 }
 
-.original-price {
-    font-size: 7px;
+.aside.market .original-price {
+    font-size: 15px;
+    margin-top: 5px;
     color: #666;
     text-decoration: line-through;
+    margin-right: 5px;
 }
 .aside.market .bestProduct .products.discounted-price  *{
     display: inline-flex;
@@ -279,10 +428,6 @@
     font-size: 7px;
 }
 
-.final-price {
-    font-size: 8px;
-    color: black;
-}
 
 
 .aside.market .bestProduct .products.first .discounted-price p{
@@ -297,6 +442,8 @@
 .aside.market .bestProduct .products.first  .final-price {
     font-size: 20px;
     color: black;
+    height: 20px;
+    line-height: 20px;
 } 
 
 
@@ -304,14 +451,19 @@
 /* hover */
 .cate_aside ul > li:hover{
     /* color:#ef2a23; */
-    font-weight: 900;   
+    font-weight: 900;  
+    
   }
   .cate_aside ul > .active a{
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 900;
   }
   .aside.market .cate_aside .lnb-item.open .lnb-sub-menu .active > a{
       color:#ef2a23;
-      font-size: 15px;
+      font-size: 17px;
       font-weight: 700;
+  }
+
+  .aside.market .cate_aside .lnb-item.open .lnb-sub-menu .active > a:hover{
+    opacity: 20%;
   }

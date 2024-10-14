@@ -740,7 +740,7 @@
                 } else if ((scrollPosition + asideHeight + 50) >= footerTop) {
                     // 푸터에 도달하면 aside를 푸터 상단에서 멈추게 하기
                     aside.classList.add('scroll');
-                    aside.style.position = 'absolute';
+                    // aside.style.position = 'absolute';
                     aside.style.top = `${footerTop - asideHeight - 50}px`;  // 푸터 상단에 고정
                     // console.log('asdide top : '+`${footerTop - asideHeight - 50}px`)
                 } else {
