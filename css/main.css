@@ -1,38 +1,38 @@
-#mainArea{
+.mainArea{
     width: 100%;
+    max-width: 1500px; /* 최대 너비 설정 */
     height: auto;
+    margin: 0 auto; /* 가운데 정렬 */
 }
-#mainArea > .mainWrapper{
+
+.mainArea > .mainWrapper{
     width: 100%;
+    max-width: 1400px; /* 최대 너비 설정 */
     height: auto;
-    
+    margin: 0 auto; /* 가운데 정렬 */
 }
-#mainArea > .mainWrapper > *{
+
+.mainArea > .mainWrapper > *{
     display: inline-block;
     vertical-align: top; /* Align elements to the top */
 }
 
 
-
-
-#mainArea .mainWrapper .section{
+.mainArea .mainWrapper .section{
     /* Subtract the aside's width and some padding/margin */
-    
-    width: calc(100% - 310px); /* Subtract the aside's width and some padding/margin */
+
     box-sizing: border-box; /* Ensure proper width calculation */
 
      /* Ensure proper width calculation */
 }
 
-
-#mainArea .section .sectionWrapper{
+.mainArea .section .sectionWrapper{
     border: 1px solid #eee;
     margin-top: 10px;
-    width: 890px;
+    width: 1400px;
     padding: 20px;
     box-sizing: border-box;
 }
-
 
 
 /* sub main */
@@ -62,7 +62,7 @@
 
 /* Slide styles */
 .slide {
-    min-width: 100%;
+    min-width: 1180px;
     box-sizing: border-box;
 }
 
@@ -113,6 +113,7 @@
 .slider-pagination .dot.active {
     background-color: #717171;
 }
+
 
 /* Hit products slider container */
 .hit-products-slider {
@@ -212,7 +213,7 @@
     margin-bottom: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
-    text-align: center;
+    text-align: left;
 }
 
 .product-item img {
@@ -305,6 +306,7 @@
 
 .product-container .product-details {
     flex-grow: 1;
+    
 }
 
 
@@ -318,7 +320,7 @@
 .product-container .price-info {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-content: center;
     flex-wrap: nowrap;
 }
@@ -381,7 +383,8 @@
     padding: 10px;
     /* border: 1px solid #ddd; */
     background-color: #f9f9f9;
-    width: 100%;
+    width: 80%;
+    margin: auto;
     box-sizing: border-box;
 }
 
