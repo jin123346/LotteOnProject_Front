@@ -15,56 +15,47 @@
             font-weight: 400;
         }
 
+        /*asdie*/
         #aside {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* 수평 중앙 정렬 */
             width: 200px;
-            height: 600px;
-            max-height: 600px;
-        }
+            border-right: 1px solid rgb(199, 199, 199);
+            box-sizing: border-box;
 
-        .aside_list {
-            width: 100%; /* aside의 너비에 맞추기 */
-            text-align: left; /* 리스트 텍스트를 왼쪽으로 정렬 */
         }
+        #aside h1 {font-size: large; font-weight: bold; text-align: center; margin: 20px 20px 40px;}
+            .aside_list ul li {overflow: hidden; padding: 16px 0; border-bottom: 1px solid rgb(194, 194, 194); width:140px; margin-left: 10px;}
+            .aside_list ul li:nth-of-type(1) a{font-weight: bold; text-decoration: underline;}
 
-        .asd {
-            margin: 20px 0; 
-            font-size: 25px;
-            text-align: center; 
-            font-weight: bold;
-        }
-
-        .aside_list > ul > li {
-            margin: 15px 0px 10px 0px;
-            margin-left:  55px; /* 리스트 아이템 간격 조정 */
-        }
-        .aside_list > ul > li > a {
-            font-size: 18px;
-        }
-        .aside_list .active{}
+            .active {line-height: 24px;}
+            .active:hover {text-decoration: underline; font-weight: bold;}
+            
     </style>
-</head>
+</head> 
 <body>
     <div id="aside">
-        <h3 class="asd">공지사항</h3>
-        <div class="aside_list ">
+        <h1>문의하기</h1>
+        <div class="aside_list">
             <ul>
                 <li>
-                    <a class="active" href="#">전체</a>
+                    <a class="active" href="#">회원</a>
                 </li>
                 <li>
-                    <a class="active" href="#">고객서비스</a>
+                    <a class="active" href="#">쿠폰 / 이벤트</a>
+                </li>
+                <li>
+                    <a class="active" href="#">주문 / 결제</a>
+                </li>
+                <li>
+                    <a class="active" href="#">배송</a>
+                </li>
+                <li>
+                    <a class="active" href="#">취소 / 반품 / 교환</a>
+                </li>
+                <li>
+                    <a class="active" href="#">여행 / 숙박 / 항공</a>
                 </li>
                 <li>
                     <a class="active" href="#">안전거래</a>
-                </li>
-                <li>
-                    <a class="active" href="#">위해상품</a>
-                </li>
-                <li>
-                    <a class="active" href="#">이벤트당첨</a>
                 </li>
             </ul>
         </div>
