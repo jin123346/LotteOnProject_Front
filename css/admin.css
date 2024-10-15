@@ -36,10 +36,6 @@
 
 }
 
-#adminAside {
-    margin-left: 50px;
-}
-
 .article-box {
     flex-grow: 1;
 }
@@ -54,8 +50,9 @@
 
 .article-box h3 {
     margin: 20px 0px 10px 30px;
-    font-size: 1.5em;
+    font-size: 20px;
     color: #333;
+    font-weight: bold;
 }
 
 .article-title {
@@ -63,8 +60,6 @@
     border-top: 1px solid #ccc;
     padding-top: 20px;
     padding-bottom: 5px;
-
-
 }
 
 
@@ -89,11 +84,7 @@
 
 
 
-.article {
-    flex-grow: 1;
-    font-size: 1.1em;
-    color: inherit;
-}
+
 
 .checkbox {
     margin-left: 10px;
@@ -105,21 +96,22 @@
     width: 45px;
 }
 
-.number, .number-box{width: 40px; text-align: center; font-size: 18px;}
-.type,.type-box{width: 47px; text-align: center; font-size: 18px;}
-.type2, .type-box2{width: 50px; text-align: center; font-size: 18px;}
-.views, .views-box{width: 50px; text-align: center; font-size: 18px;}
-.date, .date-box{width: 100px; text-align: center; font-size: 15px;}
-.manage, .manage-box {width: 100px; text-align: center; font-size: 18px;
-}
-
-
+.number{width: 40px; text-align: center; font-size: 15px;  margin-right: 10px;}
+.type, .type2{flex: 0 0 50px; text-align: center; font-size: 15px;  margin-right: 10px;}
+.views{flex: 0 0 40px; text-align: center; font-size: 15px;  margin-right: 10px;}
+.date{flex: 0 0 100px; text-align: center; font-size: 15px;  margin-right: 10px;}
+.manage {flex: 0 0 100px; text-align: center; font-size: 15px;  margin-right: 10px;}
 .title {
-    flex-grow: 1;
+    flex: 1;
     text-align: center;
+    overflow: hidden; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+    max-width: 410px;
+    
     
 }
-
 .manage a {
     color: #ff6347;
     margin: 0 5px;
@@ -149,18 +141,27 @@
 }
 
 .btn-delete {
-    width: 95px;
-    height: 35px;
-    margin-left: 30px;
-    border: 1px solid #f0f0f0;
+    display: flex;              /* Flexbox로 변경 */
+    justify-content: center;    /* 가로 방향 중앙 정렬 */
+    align-items: center;        /* 세로 방향 중앙 정렬 */
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    margin: 100px 10px 50px 5px;
+    background: #ddd;
+    text-decoration: none; 
 }
 
 .btn-Write {
-    width: 95px;
-    height: 35px;
-    margin-right: 10px;
-    background: skyblue;
-    border: 1px solid skyblue;
+    display: flex;              /* Flexbox로 변경 */
+    justify-content: center;    /* 가로 방향 중앙 정렬 */
+    align-items: center;        /* 세로 방향 중앙 정렬 */
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    margin: 100px 10px 50px 5px;
+    background: #ddd;
+    text-decoration: none; 
 }
 
 
@@ -169,11 +170,7 @@
 * {
     font-size: 20px;
 }
-#aside {
-    width: 200px;
-    height: 600px;
-    border: 1px solid;
-}
+
 .zero{
     width: 100%;
     height: 60px;
@@ -245,14 +242,139 @@
 .btn-controller{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
-.delete-btn, .register-btn, .list-btn{
+.delete-btn, .register-btn{
     width: 100px;
     height: 40px;
     font-size: 18px;
     margin: 100px 10px 50px 5px;
     background: #ddd;
+    
+    
 
 }
-.list-btn{margin-right: 30px;}
+.list-btn,.delete-btn, .register-btn, .btn-ok{
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    margin: 100px 10px 50px 5px;
+    background: #ddd;
+}
+
+
+
+/* qna-list css */
+
+.coment-box h3{
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.qna-number{width: 40px; text-align: center; font-size: 15px;  margin-right: 10px;}
+.qna-type, .qna-type2{flex: 0 0 70px; text-align: center; font-size: 15px;  margin-right: 10px;}
+.qna-write{
+    flex: 0 0 70px;
+    text-align: center; 
+    font-size: 15px;  
+    margin-right: 10px;
+    overflow: hidden; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.qna-date{flex: 0 0 100px; text-align: center; font-size: 15px;  margin-right: 10px;}
+.qna-status {flex: 0 0 100px; text-align: center; font-size: 15px;  margin-right: 10px;}
+.qna-title {
+    width: 410px;
+    text-align: center;
+    overflow: hidden; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 10px;   
+}
+
+
+
+/* riply css */
+.reply-box{
+    width: calc(100%-200px);
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+.coment-box{    
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    
+}
+.reply-coment{
+    margin-top: 40px;
+    margin-left: 30px;
+}
+.reply-table{
+    width: 100%;
+    align-items: center;
+    border-top: 2px solid;
+}
+
+.reply-content,
+.reply-answer,
+.reply-title,
+.reply-type,
+.reply-nontent{
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+    padding: 15px 0 15px 10px  ; 
+
+
+}
+.reply-type div:nth-child(1),
+.reply-title div:nth-child(1),
+.reply-content div:nth-child(1),
+.reply-answer div:nth-child(1) {
+    width: 70px/* 원하는 너비 설정 */;
+}
+.reply-contents{
+    resize: none;
+    width: 600px;
+    min-height: 100px;
+    max-height: 400px;
+}
+
+
+
+
+.reoly-btn-controoler{
+    width: 100%;
+    height: auto;
+    justify-content: flex-end;
+    display: flex;
+    margin: 100px 0 0 0 ;
+}
+
+.replt-btn-list,.replt-btn-delete,.replt-btn-ok{
+    display: flex;              /* Flexbox로 변경 */
+    justify-content: center;    /* 가로 방향 중앙 정렬 */
+    align-items: center;        /* 세로 방향 중앙 정렬 */
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    background: #ccc;
+    margin-right: 10px;
+
+}
+
+
 
