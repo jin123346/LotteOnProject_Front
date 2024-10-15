@@ -139,7 +139,7 @@
 /* Product pricing */
 .product-price {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0px;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -150,6 +150,10 @@
     font-size: 18px;
     font-weight: bold;
     color: #000;
+}
+.sale-prices{
+    display: flex;
+    gap: 5px;
 }
 
 .original-price {
@@ -205,6 +209,7 @@
     font-size: 12px;
     color: gold;
 }
+
 
 
 
