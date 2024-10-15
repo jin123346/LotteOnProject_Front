@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    // price 클래스를 가진 모든 요소를 선택
+    const priceElements = document.querySelectorAll('.price');
+        
+    // 각 price 요소에 대해 반복하여 처리
+    priceElements.forEach(priceElement => {
+        let priceValue = priceElement.textContent.trim().replace(/[^0-9]/g, ''); // 숫자가 아닌 문자를 제거
+        priceValue = parseInt(priceValue, 10); // 정수로 변환
+
+        if (!isNaN(priceValue)) { // 변환된 값이 NaN이 아닌 경우에만 적용
+            priceElement.textContent = priceValue.toLocaleString();  // 천단위로 쉼표 추가
+        }
+    });
+
+
+    
     // Script for toggling the category menu
     // const viewAllButton = document.getElementById('viewAllButton');
     // const categoryMenu = document.querySelector('.categoryMenu');

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카테고리 관리</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 동일하게 유지 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.category-add {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-add label {
+    margin-right: 10px;
+}
+
+.category-add input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+.category-add button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.category-add button:hover {
+    background-color: #218838;
+}
+
+.category-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.category-item {
+    padding: 10px;
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    border: 1px solid #e9ecef;
+    position: relative;
+    border-radius: 4px;
+}
+
+.category-item .category-title {
+    font-weight: bold;
+}
+
+.category-item button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 4px 8px;
+    border: none;
+    background-color: #ffc107;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.category-item .delete-btn {
+    background-color: #dc3545;
+}
+
+.category-item button:hover {
+    opacity: 0.8;
+}
+
+.subcategory {
+    margin-left: 20px;
+}
+
+.subcategory .category-item {
+    margin-bottom: 5px;
+}
+    </style>
+</head>
+<body> 
+    <div class="container">
+        <h1>카테고리 관리</h1>
+    
+        
+        <!-- 카테고리 추가 -->
+        <div class="category-add">
+            <h2>카테고리 추가</h2>
+            <label for="category-level">카테고리 레벨:</label>
+            <select id="category-level">
+                <option value="1">1차 카테고리</option>
+                <option value="2">2차 카테고리</option>
+                <option value="3">3차 카테고리</option>
+            </select>
+
+            <label for="parent-category">상위 카테고리:</label>
+            <select id="parent-category">
+                <option value="none">상위 카테고리 선택</option>
+                <!-- 상위 카테고리 항목은 JavaScript로 동적으로 추가 -->
+            </select>
+
+            <input type="text" id="category-name" placeholder="카테고리 이름">
+            <button id="add-category-btn">카테고리 추가</button>
+        </div>
+
+        <!-- 카테고리 목록 -->
+        <div class="category-list">
+            <h2>카테고리 목록</h2>
+            <ul id="category-container">
+                <li class="category-item" data-level="1" data-id="cat1">
+                    <span class="category-title">패션·의류·뷰티</span>
+                    <button class="edit-btn">편집</button>
+                    <button class="delete-btn">삭제</button>
+                    <ul class="subcategory">
+                        <li class="category-item" data-level="2" data-id="cat2-1">
+                            <span class="category-title">패션</span>
+                            <button class="edit-btn">편집</button>
+                            <button class="delete-btn">삭제</button>
+                            <ul class="subcategory">
+                                <li class="category-item" data-level="3" data-id="cat3-1"><span class="category-title">남성패션</span></li>
+                                <li class="category-item" data-level="3" data-id="cat3-2"><span class="category-title">여성패션</span></li>
+                            </ul>
+                        </li>
+                        <li class="category-item" data-level="2" data-id="cat2-2">
+                            <span class="category-title">의류</span>
+                            <button class="edit-btn">편집</button>
+                            <button class="delete-btn">삭제</button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <script>
+
+document.getElementById('add-category-btn').addEventListener('click', function() {
+    const categoryName = document.getElementById('category-name').value.trim();
+    const categoryLevel = document.getElementById('category-level').value;
+    const parentCategory = document.getElementById('parent-category').value;
+
+    if (!categoryName) {
+        alert('카테고리 이름을 입력해주세요.');
+        return;
+    }
+
+    // 카테고리 추가할 위치 결정
+    let targetParent;
+    if (categoryLevel === '1') {
+        targetParent = document.getElementById('category-container');
+    } else if (parentCategory !== 'none') {
+        targetParent = document.querySelector(`.category-item[data-id="${parentCategory}"] .subcategory`);
+    }
+
+    if (!targetParent) {
+        alert('상위 카테고리를 선택하거나 먼저 추가하세요.');
+        return;
+    }
+
+    // 새로운 카테고리 항목 추가
+    const newCategoryItem = document.createElement('li');
+    newCategoryItem.classList.add('category-item');
+    newCategoryItem.setAttribute('data-level', categoryLevel);
+    newCategoryItem.setAttribute('data-id', `cat${categoryLevel}-${Date.now()}`); // 유니크 ID 생성
+    newCategoryItem.innerHTML = `
+        <span class="category-title">${categoryName}</span>
+        <button class="edit-btn">편집</button>
+        <button class="delete-btn">삭제</button>
+        ${categoryLevel !== '3' ? '<ul class="subcategory"></ul>' : ''}
+    `;
+
+    targetParent.appendChild(newCategoryItem);
+
+    // 카테고리 편집 및 삭제 기능 추가
+    addEditDeleteFunctionality(newCategoryItem);
+
+    // 입력 초기화
+    document.getElementById('category-name').value = '';
+    updateParentCategoryOptions(); // 상위 카테고리 목록 업데이트
+});
+
+// 편집 및 삭제 기능 추가하는 함수
+function addEditDeleteFunctionality(categoryItem) {
+    const editBtn = categoryItem.querySelector('.edit-btn');
+    const deleteBtn = categoryItem.querySelector('.delete-btn');
+
+    editBtn.addEventListener('click', function() {
+        const newCategoryName = prompt('카테고리 이름을 수정하세요:', categoryItem.querySelector('.category-title').innerText);
+        if (newCategoryName) {
+            categoryItem.querySelector('.category-title').innerText = newCategoryName;
+        }
+    });
+
+    deleteBtn.addEventListener('click', function() {
+        if (confirm('이 카테고리를 삭제하시겠습니까?')) {
+            categoryItem.remove();
+            updateParentCategoryOptions(); // 상위 카테고리 목록 업데이트
+        }
+    });
+}
+
+// 상위 카테고리 선택 옵션 업데이트
+function updateParentCategoryOptions() {
+    const parentCategorySelect = document.getElementById('parent-category');
+    parentCategorySelect.innerHTML = '<option value="none">상위 카테고리 선택</option>';
+
+    const categories = document.querySelectorAll('.category-item[data-level="1"], .category-item[data-level="2"]');
+    categories.forEach(category => {
+        const level = category.getAttribute('data-level');
+        const title = category.querySelector('.category-title').innerText;
+        const id = category.getAttribute('data-id');
+        parentCategorySelect.innerHTML += `<option value="${id}">${level}차 - ${title}</option>`;
+    });
+}
+
+// 페이지 로드 시 초기 상위 카테고리 옵션 설정
+document.addEventListener('DOMContentLoaded', updateParentCategoryOptions);
+
+// 기존 카테고리에도 편집/삭제 기능 추가
+document.querySelectorAll('.category-item').forEach(addEditDeleteFunctionality);
+
+    </script>
+</body>
+</html>
