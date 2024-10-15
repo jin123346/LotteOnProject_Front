@@ -5,7 +5,7 @@ body{}
     height: auto;
 }
 #layout{
-    width: 1200px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
 }
@@ -248,18 +248,17 @@ input[type=search] {
 
 #header .header_hr {
     height: 1px;
-    width: 99999px;
     margin: 0px;
-    margin-left:-9999px;
     border: none;
     background-color: #eee;
 }
 
 /* nav */
 #header .sub {
+    margin: 0 auto;
     vertical-align: top;
-    display: inline-block;
     width: 100%;
+    max-width: 1200px;
     text-align: left;
 }
 #header .sub .innerContent {
@@ -319,7 +318,7 @@ input[type=search] {
 #header .sub .category .menu {
     position: relative;
     display: inline-block;
-    width: 738px;
+    width: 70%;
     height: 50px;
     overflow: hidden;
 }
@@ -415,13 +414,142 @@ input[type=search] {
 
 #layout .headerOn{
     height: 2px;
-    width: 99999px;
+    width: 100%;
     margin: -1px;
-    margin-left:-9999px;
+   
     border: none;
     background-color: #ef2a23;
     
 }
+
+/* header categoryMenu */
+/* CSS */
+.categoryMenu {
+    display: none;
+    position: relative;
+    width: 100%;
+    background-color: #f2f2f2;
+    z-index: 100;
+    border: 1px solid #ccc;
+}
+.main-menu {
+    list-style: none;
+    padding: 0;
+    margin: 1.2px;
+
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menuVisible .categoryMenu {
+    display: block;
+    width: 300px;
+    top: 26px; 
+    left: -16px;
+    border-left: 2px solid #ef2a23;
+    border-top:2px solid #ef2a23;
+    height: auto;
+}
+
+
+.menu-item a {
+    display: block;
+    padding: 10px;
+    background: #ffff;
+    text-decoration: none;
+    color: #333;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.menu-item a:hover {
+    background: #ef2a23;
+    color: white;
+}
+
+/* Sub-menu (hidden by default) */
+.sub-menu {
+    list-style: none;
+    position: absolute;
+    left: 100%;  /* Position the submenu next to the main menu */
+    top: 0;
+    display: none;  /* Hidden by default */
+    background: white;
+    min-width: 200px;
+    border: 1px solid #ccc;
+}
+
+/* Show submenu on hover */
+.menu-item:hover .sub-menu {
+    display: block;
+}
+
+/* Sub-menu links styling */
+.sub-menu li a {
+    padding: 10px;
+    display: block;
+    background: white;
+    color: #333;
+}
+
+.sub-menu li a:hover {
+    background: #f1f1f1;
+}
+
+/* Style the "View All" button */
+.moreView {
+    cursor: pointer;
+    background-color: #ef2a23;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+}
+
+.moreView:focus {
+    outline: none;
+}
+
+.bar {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin: 5px auto;
+    position: relative;
+}
+
+.bar:before, .bar:after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.bar:before {
+    top: -6px;
+}
+
+.bar:after {
+    top: 6px;
+}
+
+.menuVisible .bar:before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menuVisible .bar:after {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+
+/* main */
 #mainArea{
     width: 100%;
     height: auto;
@@ -429,6 +557,9 @@ input[type=search] {
 #mainArea > .mainWrapper{
     width: 100%;
     height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+
     
 }
 #mainArea > .mainWrapper > *{
@@ -438,8 +569,8 @@ input[type=search] {
 
 
 #mainArea .aside.market{
-    height: 1000px;
-    width: 200px;
+    height: auto;
+    width: 300px;
     box-sizing: border-box;
     border: 1px solid #eee;
     margin-top: 10px ;
@@ -448,7 +579,7 @@ input[type=search] {
 
   /*asdie  */
 
-.aside.market .cate_aside li{
+/* .aside.market .cate_aside li{
     width: 170px;
     height: 30px;
     border: 1px solid #757575;
@@ -471,13 +602,12 @@ input[type=search] {
     height: 20px;
     margin-top: 5px;
     margin-right: 5px;
-}
+} */
 
 /* Best product container */
 .aside.market .bestProduct {
     width: 170px;
     height: auto;
-    border: 1px solid #f8f7f798;
     background-color: #f8f7f798;
     margin: 0 auto;
     margin-top: 10px;
@@ -597,9 +727,7 @@ input[type=search] {
 }
 
 .price {
-    display: flex;
     align-items: center;
-    margin-bottom: 0.2rem;
 }
 
 .original-price {
@@ -660,10 +788,12 @@ input[type=search] {
 }
 
 
+
+
 #mainArea .section .sectionWrapper{
     border: 1px solid #eee;
     margin-top: 10px;
-    width: 990px;
+    width: 100%;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -674,17 +804,17 @@ input[type=search] {
     
 }
 #mainArea .section .sectionWrapper #h3_list::after{
-    /* display: block;
+    display: block;
     content: ""; 
     clear: both; 
-    width: 700px;
-    margin-top: 5px; */
+    /* width: 700px; */
+    margin-top: 5px;
     
 }
 #mainArea .section .sectionWrapper .sub_tit{
     box-sizing: border-box;
     position: relative;
-    width: 970px;
+    width: calc(100%-20px);
     height: 30px;
     border-bottom: 2px solid #494949;
 
@@ -693,7 +823,7 @@ input[type=search] {
 
 #mainArea .section .location{ 
     float: right;
-    margin-right: 30px;
+    /* margin-right: 30px; */
     top: 0px;
     margin-left: 10px;
     margin-top:10px; 
@@ -714,13 +844,26 @@ padding-left:2px;}
 
 
 
-
+select[readonly] {
+    pointer-events: none;
+    -webkit-appearance: none;
+    border: none;
+    background-color: inherit;
+  }
 
 /* General Footer Styles */
 #footer {
+    margin-top: 20px;
     background-color: #f9f9f9;
     padding: 20px 0;
     font-family: Arial, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    height: 440; /* 명시적으로 footer 높이를 설정 */
+}
+.footerWrapper{
+    width: 1200px;
+    margin: 0 auto;
 }
 
 .footerTopMenu {
@@ -754,16 +897,18 @@ padding-left:2px;}
     font-weight: bold;
 }
 
-.footerTopMenu hr {
+#footer hr {
     margin: 20px 0;
-    border-color: #eaeaea;
+    border-color: #f5f2f299;
+    width: 100%;
+    
 }
 
 /* Company Info and Customer Center Styles */
 .companyInfo {
     display: flex;
-    justify-content: space-between; /* Align the company and customer info side by side */
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     padding: 20px 0;
 }
 
@@ -772,6 +917,7 @@ padding-left:2px;}
     flex-direction: row;
     flex-wrap: nowrap;
     margin-left:40px;
+    width: 80%;
 }
 .logoArea img {
     width: 150px;
@@ -780,9 +926,12 @@ padding-left:2px;}
 
 }
 
-.company, .customer {
-    margin-left: 20px;
-    width: 45%; /* Split company and customer info 50/50 */
+.company {
+    margin-left: 50px;
+    width: 80%; /* Split company and customer info 50/50 */
+}
+ .customer {
+    width: 50%; /* Split company and customer info 50/50 */
 }
 
 .company ul, .customer ul {
@@ -802,15 +951,16 @@ padding-left:2px;}
 }
 
 .customer .stringLine.withList .faqListWrap{
-    margin-bottom: 5px;
-    margin-top: 2px;
+    margin-bottom: 10px;
+    margin-top: 5px;
     width: 100%;
     border-bottom: 1px solid #f0efef;
+    box-sizing: border-box;
 }
 
 /* For customer service details (contact numbers, email) */
 .stringLine p {
-    margin: 5px 0;
+    margin: 5px 0px;
     font-size: 14px;
     color: #333;
 }
@@ -818,12 +968,18 @@ padding-left:2px;}
 .faqListWrap li {
     display: inline-block;
     margin-right: 15px;
+    margin-top: 5px;
 }
 
 .faqListWrap li a {
+    box-sizing: border-box;
     text-decoration: none;
-    color: #0056b3;
+    background-color: #e7e8e9;
+    color: #999;
     font-size: 14px;
+    border: 1px solid #999;
+    line-height: 15px;
+    padding: 2px 5px;
 }
 
 .faqListWrap li a:hover {
