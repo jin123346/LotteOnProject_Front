@@ -149,150 +149,82 @@
             margin-left: auto;
         }
 
-        /* 테이블 헤더 왼쪽 정렬 */
-        .a_status tr th, 
-        .o_status tr th, 
-        .admin_notice tr th, 
-        .admin_inquire tr th {
-            text-align: left;
-        }
+        #admin_version div:nth-of-type(1) {width: 900px; margin: 0 auto; padding: 3px;}
+        #admin_version div:nth-of-type(2) {width: 900px; margin: 0 auto; padding: 3px;}
+        #admin_version div:nth-of-type(2) p {width: 900px; margin: 3px auto 0; padding: 3px;}
+        .admin_version_table {width: 900px; margin: 3px auto 40px; padding: 3px;}
 
-        /* 운영상황 */
-        .a_status {
-            width: 900px;
-            border-collapse: collapse;
+        #admin_site div {width: 900px; margin: 3px auto;  padding: 3px;}
+        .admin_site_table {width: 900px; margin: 0 auto; padding: 3px;}
+        #admin_site div:nth-of-type(3) {margin-bottom: 40px; padding: 3px;}
+
+        #admin_logo div {width: 900px; margin: 3px auto;  padding: 3px;}
+        .admin_logo_table {width: 900px; margin: 0 auto;  padding: 3px;}
+        #admin_logo div:nth-of-type(3) {margin-bottom: 40px; padding: 3px;}
+
+        #admin_company_info div {width: 900px; margin: 3px auto;  padding: 3px;}
+        .admin_company_info_table {width: 900px; margin: 0 auto;  padding: 3px;}
+        #admin_company_info div:nth-of-type(3) {margin-bottom: 40px; padding: 3px;}
+
+        #admin_cs_info div {width: 900px; margin: 3px auto;  padding: 3px;}
+        .admin_cs_info_table {width: 900px; margin: 0 auto;  padding: 3px;}
+        #admin_cs_info div:nth-of-type(3) {margin-bottom: 40px; padding: 3px;}
+
+        #copy_light div {width: 900px; margin: 3px auto;  padding: 3px;}
+        .copy_light_table {width: 900px; margin: 0 auto; padding: 3px;}
+        #copy_light div:nth-child(3)  {margin-bottom: 40px; padding: 3px;}
+
+        input[type="text"] {width: 450px;     border-radius: 4px; /* 모서리 둥글게 하기 */
+            border: 0.3px solid #424242; /* 경계선 색상 */ padding: 3px;}
+
+
+        .admin_version_table,
+        .admin_site_table,
+        .admin_logo_table,
+        .admin_company_info_table,
+        .admin_cs_info_table,
+        .copy_light_table {
             table-layout: fixed; 
-            margin: 0px auto;
-            border-radius: 8px;
-            overflow: hidden; /* 모서리 둥글게 하기 */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 그림자 효과 */
-
-        }
-
-        .a_status tr:nth-of-type(2) {
-            background: rgba(66, 61, 61, 0.1); 
-        }
-
-        .a_status th, 
-        .a_status td {
-            border: 1px solid rgba(172, 172, 172, 0.5);
-            padding: 10px;
-            text-align: center; 
-        }
-
-        .a_status th {
-            background-color: #f8f8f8; /* 헤더 배경 색 */
-            font-weight: bold; 
-        }
-
-        .a_status tr:hover {
-            background-color: rgba(240, 240, 240, 0.5); /* 마우스 오버 시 효과 */
-        }
-
-        .a_status tr:nth-of-type(2) p:nth-of-type(2) {
-            color: red;
-        }
-
-        .a_status tr:nth-of-type(2) {
-            font-weight: bold;
-        }
-
-        /* 주문상황 */
-        .o_status {
-            width: 900px;
-            border-collapse: collapse; 
-            margin: 20px auto;
-            border-radius: 8px;
-            overflow: hidden; /* 모서리 둥글게 하기 */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /*그림자 효과*/
-        }
-
-        .o_status tr:nth-of-type(2) {
-            background: rgba(66, 61, 61, 0.1);
-        }
-
-        .o_status th, 
-        .o_status td {
-            border: 1px solid rgba(172, 172, 172, 0.5);
-            padding: 10px;
-            text-align: center;
-        }
-
-        .o_status th {
-            background-color: #f8f8f8; /* 헤더 배경 색 */
-        }
-
-        .o_status tr:hover {
-            background-color: rgba(240, 240, 240, 0.5); /* 마우스 오버 시 효과 */
-        }
-
-        .o_status tr:nth-of-type(2) p:nth-of-type(2) {
-            color: red;
-        }
-
-        .o_status tr:nth-of-type(2) {
-            font-weight: bold;
-        }
-
-        /* 공지사항, 고객문의 */
-        #admin_notice_admin_inquire {
-            width: 900px;
-            margin: 20px auto; 
-            display: flex; 
-            justify-content: space-between; 
-        }
-
-        .admin_notice, 
-        .admin_inquire {
-            width: 420px; 
             border-collapse: collapse;
             border-radius: 8px;
             overflow: hidden; /* 모서리 둥글게 하기 */
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 그림자 효과 */
+
+
         }
 
-        .admin_notice td, 
-        .admin_inquire td {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 50px;
-        }
+        .admin_version_table td,
+        .admin_site_table td,
+        .admin_logo_table td,
+        .admin_company_info_table td,
+        .admin_cs_info_table td,
+        .copy_light_table td {
+    border: 1px solid rgb(172, 172, 172); /* 셀 경계 색상 및 두께 설정 */
+    padding: 8px; /* 셀 안쪽 여백 설정 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
+    
+}
+        .admin_version_table tr,
+        .admin_site_table tr,
+        .admin_logo_table tr,
+        .admin_company_info_table tr,
+        .admin_cs_info_table tr,
+        .copy_light_table tr{
+    border: 1px solid rgb(255, 255, 255); /* 셀 경계 색상 및 두께 설정 */
+    padding: 8px; /* 셀 안쪽 여백 설정 */
+    text-align: left; /* 텍스트 왼쪽 정렬 */
 
-        .admin_notice th, 
-        .admin_notice td, 
-        .admin_inquire th, 
-        .admin_inquire td {
-            border-bottom: 1px dotted rgba(172, 172, 172, 0.5); 
-            padding: 10px;
-        }
+}
 
-        .admin_notice th:nth-of-type(1), 
-        .admin_notice th:nth-of-type(2) {
-            border-bottom: 1px solid rgba(172, 172, 172, 0.5); 
-            background-color: #f8f8f8; /* 헤더 배경 색 */
-        }
+#admin_version > div:nth-of-type(2),
+#admin_site > div,
+#admin_logo > div,
+#admin_company_info > div,
+#admin_cs_info > div,
+#copy_light > div { border-radius: 8px;
+                    overflow: hidden; /* 모서리 둥글게 하기 */}
 
-        /* 공지사항, 고객문의 전체보기 오른쪽 정렬 */
-        .admin_notice tr th:nth-of-type(2), 
-        .admin_inquire tr th:nth-of-type(2) {
-            text-align: right; 
-            border-bottom: 1px solid rgba(172, 172, 172, 0.5); 
-            padding: 10px;
-        }
-
-        .admin_inquire tr th:nth-of-type(1) {
-            text-align: left; 
-            border-bottom: 1px solid rgba(172, 172, 172, 0.5); 
-            padding: 10px;
-        }
-
-        /* 아이디 날짜 가운데 정렬 */
-        .admin_notice td:nth-of-type(2), 
-        .admin_inquire td:nth-of-type(2), 
-        .admin_inquire td:nth-of-type(3) {
-            text-align: center;
-        }
+                    .basic_modi {text-align: right;}
 
 
         /*footer*/
@@ -374,176 +306,186 @@
                 </div>
             <div id="admin_service">
                 <section id="admin_navi">
-                        <p>관리자 메인</p>
-                        <p><a href="#">HOME</a> > 관리자 메인</p>
+                        <p>기본설정</p>
+                        <p><a href="#">HOME</a> > 환경설정 > 기본설정</p>
                 </section>
-                <article id="admin_status">
-                    <table class="a_status">
+                <article id="admin_version">
+                    <div>버전 정보</div>
+                    <div><p>현재 사이트 버전입니다.</p></div>
+                    <table class="admin_version_table">
+                        <colgroup>
+                            <col style="width: 150px">
+                            <col style="width: 750px">
+                        </colgroup>
                         <tr>
-                            <th colspan="10">운영현황</th>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <p>주문건수</p><br>
-                                <p><a href="#">300</a></p>
-                            </td>
-                            <td colspan="2">
-                                <p>주문금액</p><br>
-                                <p><a href="#">300</a></p>
-                            </td>
-                            <td colspan="2">
-                                <p>회원가입</p><br>
-                                <p><a href="#">300</a></p>
-                            </td>
-                            <td colspan="2">
-                                <p>방문자 수</p><br>
-                                <p><a href="#">300</a></p>
-                            </td>
-                            <td colspan="2">
-                                <p>신규 게시물</p><br>
-                                <p><a href="#">300</a></p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>pc</p>
-                                <p>mobile</p>
-                            </td>
-                            <td>
-                                <p>60</p>
-                                <p>70</p>
-                            </td>
-                            <td>
-                                <p>pc</p>
-                                <p>mobile</p>
-                            </td>
-                            <td>
-                                <p>60</p>
-                                <p>70</p>
-                            </td>
-                            <td>
-                                <p>pc</p>
-                                <p>mobile</p>
-                            </td>
-                            <td>
-                                <p>60</p>
-                                <p>70</p>
-                            </td>
-                            <td>
-                                <p>pc</p>
-                                <p>mobile</p>
-                            </td>
-                            <td>
-                                <p>60</p>
-                                <p>70</p>
-                            </td>
-                            <td>
-                                <p>pc</p>
-                                <p>mobile</p>
-                            </td>
-                            <td>
-                                <p>60</p>
-                                <p>70</p>
-                            </td>
+                            <td>사이트 버전</td>
+                            <td>1.1.1 스폰지밥</td>
                         </tr>
                     </table>
                 </article>
-                <article id="order_status">
-                    <table class="o_status">
+                <article id="admin_site">
+                    <div>사이트</div>
+                    <div>브라우저 탭, 헤더 및 푸터 노출 정보입니다.</div>
+                    <table class="admin_site_table">
+                        <colgroup>
+                            <col style="width: 150px;">
+                            <col style="width: 750px">
+                        </colgroup>
                         <tr>
-                            <th colspan="5">주문현황</th>
+                            <td>제목</td>
+                            <td>
+                                <input type="text" placeholder="ex:LotteON">
+                            </td>
                         </tr>
                         <tr>
+                            <td>부제</td>
                             <td>
-                                <p>입금대기</p><br>
-                                <p><a href="#">300</a></p>
-                            </td>
-                            <td>
-                                <p>배송준비</p><br>
-                                <p><a href="#">300</a></p>
-                            </td>
-                            <td>
-                                <p>취소요청</p><br>
-                                <p><a href="#">300</a></p>
-                            </td>
-                            <td>
-                                <p>교환요청</p><br>
-                                <p><a href="#">300</a></p>
-                            </td>
-                            <td>
-                                <p>반품요청</p><br>
-                                <p><a href="#">300</a></p>
+                                <input type="text" placeholder="ex: 더 나은 쇼핑을 위한 선택">
                             </td>
                         </tr>
                     </table>
+                    <div class="basic_modi">
+                        <button>수정하기</button>
+                    </div>
                 </article>
-                <article id="admin_notice_admin_inquire">
-                        <table class="admin_notice">
-                            <colgroup>
-                                <col style="width: 750px">
-                                <col style="width: 150px">
-                            </colgroup>
-                            <tr>
-                                <th>공지사항</th>
-                                <th><a href="#">전체보기</a></th>
-                            </tr>
-                            <tr>
-                                <td><a href="#">[안내] 해외결제사 창 문자주의ddddddddddddddddddddddddddddddddddddddddddddddd</a></td>
-                                <td>22.10.31</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">[안내] 해외결제사 창 문자주의ddddddddddddddddddddddddddddddddddddddddddddddd</a></td>
-                                <td>22.10.31</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">[안내] 해외결제사 창 문자주의ddddddddddddddddddddddddddddddddddddddddddddddd</a></td>
-                                <td>22.10.31</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">[안내] 해외결제사 창 문자주의ddddddddddddddddddddddddddddddddddddddddddddddd</a></td>
-                                <td>22.10.31</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">[안내] 해외결제사 창 문자주의ddddddddddddddddddddddddddddddddddddddddddddddd</a></td>
-                                <td>22.10.31</td>
-                            </tr>
-                        </table>
-                        <table class="admin_inquire">
-                            <colgroup>
-                                <col style="width: 600px">
-                                <col style="width: 150px"> 
-                                <col style="width: 150px"> 
-                            </colgroup>
-                            <tr>
-                                <th>고객문의</th>
-                                <th colspan="2"><a href="#">전체보기</a></th>
-                            </tr>
-                            <tr>
-                                <td><a href="#">[가입] 가입 문의 내용ddddddddddddddddddddddddddd</a></td>
-                                <td>wlgus59**</td>
-                                <td>20.12.11</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">[가입] 가입 문의 내용ddddddddddddddddddddddddddd</a></td>
-                                <td>wlgus59**</td>
-                                <td>20.12.11</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">[가입] 가입 문의 내용ddddddddddddddddddddddddddd</a></td>
-                                <td>wlgus59**</td>
-                                <td>20.12.11</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">[가입] 가입 문의 내용ddddddddddddddddddddddddddd</a></td>
-                                <td>wlgus59**</td>
-                                <td>20.12.11</td>
-                            </tr>
-                            <tr>
-                                <td><a href="#">[가입] 가입 문의 내용ddddddddddddddddddddddddddd</a></td>
-                                <td>wlgus59**</td>
-                                <td>20.12.11</td>
-                            </tr>
-                        </table>
+                <article id="admin_logo">
+                    <div>로고</div>
+                    <div>브라우저 탭, 헤더 및 푸터 노출 로고입니다.</div>
+                    <table class="admin_logo_table">
+                        <colgroup>
+                            <col style="width: 150px">
+                            <col style="width: 750px">
+                        </colgroup>
+                        <tr>
+                            <td>헤더 로고</td>
+                            <td>
+                                <input type="file" class="admin_logo1_image" placeholder="선택된 파일 없음">
+                                <span><p>크기 370 x 76 권장</p></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>푸터 로고</td>
+                            <td>
+                                <input type="file" class="admin_logo2_image" placeholder="선택된 파일 없음">
+                                <span><p>크기 155 x 36 권장</p></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>파비콘</td>
+                            <td>
+                                <input type="file" class="admin_logo3_image" placeholder="선택된 파일 없음">
+                                <span><p>크기 32 x 32 권장</p></span>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="basic_modi">
+                        <button >수정하기</button>
+                    </div>
+                </article>
+                <article id="admin_company_info">
+                    <div>기업 정보</div>
+                    <div>푸터에 노출되는 기업 정보입니다.</div>
+                    <table class="admin_company_info_table">
+                        <colgroup>
+                            <col style="width: 150px">
+                            <col style="width: 750px">
+                        </colgroup>
+                        <tr>
+                            <td>상호명</td>
+                            <td>
+                                <input type="text" placeholder="ex: 롯데쇼핑 주식회사">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>대표이사</td>
+                            <td>
+                                <input type="text" placeholder="ex: 홍길동">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>사업자 등록번호</td>
+                            <td>
+                                <input type="text" placeholder="ex: 123-12-12345">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>통신 판매업 신고</td>
+                            <td>
+                                <input type="text" placeholder="ex: 2024-서울강남-1234">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>기본주소</td>
+                            <td>
+                                <input type="text" placeholder="ex: 서울특별시 강남구 머시기동">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>상세주소</td>
+                            <td>
+                                <input type="text" placeholder="ex: 삼성동, 머시기 빌딩 7층">
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="basic_modi">
+                        <button>수정하기</button>
+                    </div>
+                </article>
+                <article id="admin_cs_info">
+                    <div>고객센터 정보</div>
+                    <div>푸터에 노출되는 고객센터 정보입니다.</div>
+                    <table class="admin_cs_info_table">
+                        <colgroup>
+                            <col style="width: 200px">
+                            <col style="width: 700px">
+                        </colgroup>
+                        <tr>
+                            <td>전화번호</td>
+                            <td>
+                                <input type="tel" placeholder="ex: 02-1234-1234">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>업무시간</td>
+                            <td>
+                                <input type="text" placeholder="평일 09:00 ~ 18:00">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>이메일</td>
+                            <td>
+                                <input type="email" placeholder="lotte@naver.com">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>전자금융거래 분쟁담당</td>
+                            <td>
+                                <input type="tel" placeholder="1234-1234">
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="basic_modi">
+                        <button>수정하기</button>
+                    </div>
+                </article>
+                <article id="copy_light">
+                    <div>카피 라이트</div>
+                    <div>푸터에 노출되는 카피라이트 정보입니다.</div>
+                    <table class="copy_light_table">
+                        <colgroup>
+                            <col style="width: 150px">
+                            <col style="width: 750px">
+                        </colgroup>
+                        <tr>
+                            <td>카피 라이트</td>
+                            <td>
+                                <input type="text" placeholder="ex: Copyright@LotteUp 머시기">
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="basic_modi">
+                        <button>수정하기</button>
+                    </div>
                 </article>
             </div>
         </div>
@@ -554,6 +496,9 @@
         </footer>
     </div>
 </body>
+
+
+
 <script>
     document.querySelectorAll('.admin_menu > li').forEach(menu => {
         const submenu = menu.querySelector('.admin_sub_menu');
