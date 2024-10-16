@@ -764,6 +764,21 @@ input[type=search] {
     align-items: center;
 }
 
+.price::after{
+    content: "원";
+    margin-left:2px
+}
+
+.price.minus::before{
+    content: "-";
+    margin-right: 4px;
+}
+
+.price.strong{
+    font-size: 14px;
+    font-weight: 500;
+}
+
 .original-price {
     font-size: 7px;
     color: #666;

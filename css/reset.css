@@ -14,6 +14,14 @@ address{font-style: normal;}
 table{
     border-spacing: none;
 }
+textarea{
+    overflow: auto;
+    vertical-align: top;
+    font-family: NotoSansKR,Malgun Gothic,arial,sans-serif;
+    color: #333;
+    padding: 0;
+    outline: none;
+}
 /* clearfix */
 .cf{}
 .cf::after {content: ""; display: block; clear: both;}
