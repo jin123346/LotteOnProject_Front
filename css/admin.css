@@ -33,6 +33,7 @@
     max-height: 3500px;
     margin: 0 auto;
     overflow: hidden;
+    margin-right: 30px;
 
 }
 
@@ -147,7 +148,7 @@
     width: 100px;
     height: 40px;
     font-size: 18px;
-    margin: 100px 10px 50px 5px;
+    margin: 100px 30px 50px 30px;
     background: #ddd;
     text-decoration: none; 
 }
@@ -159,7 +160,7 @@
     width: 100px;
     height: 40px;
     font-size: 18px;
-    margin: 100px 10px 50px 5px;
+    margin: 100px 0px 50px 5px;
     background: #ddd;
     text-decoration: none; 
 }
@@ -377,4 +378,107 @@
 }
 
 
+/* 통합 write css */
+.write-box{
+    width: calc(100%-200px);
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    
+}
 
+.coment-box{    
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    
+}
+.write-coment{
+    margin-top: 40px;
+    margin-left: 30px;
+}
+.write-table{
+    width: 100%;
+    align-items: center;
+    border-top: 2px solid;
+    margin-top: 80px;
+}
+
+.write-type,
+.write-title{
+    width: auto;
+    height: 50px;
+    border-bottom: 0.9px solid #D9D9D9;
+    display: flex;
+    align-items: center;
+    padding: 15px 0 15px 10px  ; 
+
+}
+.write-input{
+    width: auto;
+    height: auto;
+    border-bottom: 0.9px solid #D9D9D9;
+    display: flex;
+    align-items: center;
+    padding: 15px 0 15px 10px  ; 
+
+}
+.first_choice{width: 100px; height: 30px; font-size: 15px;}
+.second_choice{width: 100px; height: 30px; margin-left: 10px; font-size: 15px;}
+.write-type div:nth-child(1),
+.write-title div:nth-child(1),
+.write-content div:nth-child(1),
+.write-input div:nth-child(1) {
+    font-size: 18px;
+    font-weight: bold;
+    width: 100px/* 원하는 너비 설정 */;
+}
+.write-title input{width: 600px; height: 40px; font-size: 15px; border: 2px solid #D9D9D9;}
+
+
+.write-btn-controoler{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    margin: 80px 0 0 0 ;
+}
+.write-btn-cancel,
+.write-btn-regip,
+.write-btn-modify{
+    display: flex;              /* Flexbox로 변경 */
+    justify-content: center;    /* 가로 방향 중앙 정렬 */
+    align-items: center;        /* 세로 방향 중앙 정렬 */
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    background: #ccc;
+    margin-right: 10px;
+
+}
+
+
+/* 각 내용 입력창 */
+.faq-contents{
+    resize: none;
+    width: 600px;
+    min-height: 250px;
+    max-height: 500px;
+    border: 2px solid #D9D9D9;
+}
+.notice-contents{
+    resize: none;
+    width: 600px;
+    min-height: 250px;
+    max-height: 500px;
+    border: 2px solid #D9D9D9;
+}
+.faq-contents{
+    resize: none;
+    width: 600px;
+    min-height: 250px;
+    max-height: 500px;
+    border: 2px solid #D9D9D9;
+}
