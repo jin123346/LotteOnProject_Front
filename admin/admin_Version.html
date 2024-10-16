@@ -200,42 +200,157 @@
         #admin_Version div:nth-of-type(1) {width: 900px; margin: 0 auto; padding: 3px;}
         #admin_Version div:nth-of-type(2) {width: 900px; margin: 0 auto; padding: 3px;}
         #admin_Version div:nth-of-type(2) p {width: 900px; margin: 3px auto 0; padding: 3px;}
-        .admin_Version_table {width: 900px; margin: 3px auto 40px; padding: 3px;}
+
 
         .admin_Version_table{
-            table-layout: fixed; 
+            width: 900px;
             border-collapse: collapse;
+            table-layout: fixed; 
+            margin: 3px auto 20px;
             border-radius: 8px;
+            padding: 3px;
             overflow: hidden; /* 모서리 둥글게 하기 */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 그림자 효과 */}
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); }/* 그림자 효과 */
+
 
     .admin_Version_table td{
     height: 30px;
-    border: 1px solid rgb(172, 172, 172); /* 셀 경계 색상 및 두께 설정 */
-    padding: 8px; /* 셀 안쪽 여백 설정 */
-    text-align: center; /* 텍스트 왼쪽 정렬 */}
+    padding: 15px; /* 셀 안쪽 여백 설정 */
+    text-align: center; /* 텍스트 왼쪽 정렬 */
+    border-top: 1px solid rgba(172, 172, 172, 0.5);
+    }
 
-    .admin_Version_table th {text-align: center; border: 1px solid rgb(172, 172, 172); height: 30px;}
+
+    .admin_Version_table th {text-align: center; background-color: rgb(226,232,238); height: 30px;}
 
     .admin_Version_table tr{
-    border: 1px solid rgb(255, 255, 255); /* 셀 경계 색상 및 두께 설정 */
-    padding: 8px; /* 셀 안쪽 여백 설정 */
+    padding: 12px; /* 셀 안쪽 여백 설정 */
     text-align: left; /* 텍스트 왼쪽 정렬 */}
 
 
-    #admin_Version > div:nth-of-type(2){ border-radius: 8px;
-                    overflow: hidden; /* 모서리 둥글게 하기 */}
+    #admin_Version > div:nth-of-type(2){ border-radius: 8px; overflow: hidden; /* 모서리 둥글게 하기 */}
 
-                    .basic_modi {text-align: right;}
 
-        .btn {margin: 0 auto; width: 900px; display: flex; justify-content: space-between;}
-        .btn button {width: 60px; height: 30px;}
+        .btn {margin: 0 auto; width: 900px; display: flex; justify-content: space-between; margin-bottom: 10px;}
+        .btn button {cursor: pointer; width: 60px; height: 35px; background-color: #81a6d3; border: none; color: white; border-radius: 6px;}
         
+        .top1 {font-weight: bold; font-size: 14px;}
+        .top2 {width: auto; padding: 3px; background: linear-gradient(to top, #cdd8e6 50%, transparent 50%);}
+
+
+        /* modal */
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: white;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 화면 중앙에 정렬 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 700px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content table{   
+    border-top: none;
+    width: 95%;
+    max-width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-shadow: 1px 1px 1px 2px rgb(226, 226, 226); ;
+ 
+}
+.modal-content .header{
+    background-color: #e23;
+}
+.modal-content .header h3{
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 500;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+td:first-child {
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    cursor: pointer;
+}
+
+input[type="datetime"] {
+    cursor: pointer;
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #007bff; /* 포커스 시 테두리 색상 */
+    outline: none;
+}
 
 
 
+/* 닫기 버튼 */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
-
+button[type="submit"] {
+    width: 130px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 290px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+button[type="submit"]:hover {
+    background-color: #45A049;
+}
 
 
 
@@ -395,7 +510,7 @@
                                 <td>0.0.01snapchat</td>
                                 <td>wlgus59**</td>
                                 <td>2020.10.13. 17:12:00</td>
-                                <td>[확인]</td>
+                                <td><a href="#" id="openModalBtn">[확인]</a></td>
                             </tr>
                             <tr>
                                 <td><input type="checkbox"></td>
@@ -432,18 +547,80 @@
                         </table>
                         <div class="btn">
                             <button>선택삭제</button>
-                            <button>등록</button>
+                            <button><a href="#">등록</a></button>
                         </div>
                     </article>
-                    <footer id="admin_footer">
-                        <div>머시기저시기</div>
-                        <div>Copyright 3조</div>
-                    </footer>
                 </section>
-
-
+                <footer id="admin_footer">
+                    <div>머시기저시기</div>
+                    <div>Copyright 3조</div>
+                </footer>
             </div>
 
+        </div>
+
+        <div id="orderModal" class="modal">
+            <div class="modal-content">
+                <div class="header">
+                    <span class="close" style="cursor:pointer; float: right;">&times;</span>
+                    <h3>배너등록</h3>
+                </div>
+                <table>
+                    <colgroup>
+                        <col style="width: 15%;">
+                        <col style="width: 50%;">
+                    </colgroup>
+                    <tr>
+                        <td>배너이름</td>
+                        <td>
+                            <input type="text" placeholder="배너이름 입력">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>배너크기</td>
+                        <td>
+                            <input type="text" placeholder="배너크기 입력">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>배경색</td>
+                        <td>
+                            <input type="text" placeholder="배너 배경색 입력">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>배너링크</td>
+                        <td>
+                            <input type="text" placeholder="배너링크 입력">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>배너위치</td>
+                        <td>
+                            <select>
+                                <option value="1">옵션1</option>
+                                <option value="2">옵션2</option>
+                                <option value="3">옵션3</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>노출날짜</td>
+                        <td>
+                            <input type="date"> ~ <input type="date">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>노출시간</td>
+                        <td>
+                            <input type="datetime"> ~ <input type="datetime">
+                        </td>
+                    </tr>
+                </table>
+                <div>
+                    <button type="submit">등록하기</button>
+                </div>
+            </div>
         </div>
 
         </main>
@@ -498,4 +675,25 @@ document.getElementById('toggle-aside').addEventListener('click', function(e) {
     }
 });
 </script>
+
+<script>
+    // 모달 열고 닫는 기능 구현
+    var modal = document.getElementById("orderModal");
+       var btn = document.getElementById("openModalBtn");
+       var span = document.getElementsByClassName("close")[0];
+       // 버튼을 클릭하면 모달을 엽니다.
+       btn.onclick = function() {
+           modal.style.display = "block";
+       }
+       // 닫기 버튼을 클릭하면 모달을 닫습니다.
+       span.onclick = function() {
+           modal.style.display = "none";
+       }
+       // 모달 외부를 클릭하면 모달을 닫습니다.
+       window.onclick = function(event) {
+           if (event.target == modal) {
+               modal.style.display = "none";
+           }
+       }
+    </script>
 </html>
