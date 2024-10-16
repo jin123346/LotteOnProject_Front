@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>article-view</title>
+    <title>cs-notice-view</title>
     <link rel="stylesheet" href="/css/articles.css">
+    <script src="../../js/include.js"></script>
 </head>
 
 <body>
@@ -88,52 +89,6 @@
     <footer>
         <div id="footer"></div>
     </footer>
-    <script>
-        fetch('../include/footer.html')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading footer:', error));
-
-
-        fetch('../include/header.html') // 헤더 파일 경로
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading header:', error));
-
-
-        fetch('../include/aside.html') // 사이드 파일 경로
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.text();
-            })
-            .then(data => {
-                document.getElementById('aside').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading aside:', error));
-
-
-
-       
-    </script>
-
-
-
-</body>
+    </body>
 
 </html>

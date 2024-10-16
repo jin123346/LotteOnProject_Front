@@ -431,7 +431,10 @@ input[type=search] {
     background-color: #f2f2f2;
     z-index: 100;
     border: 1px solid #ccc;
+    transition: max-height 0.5s cubic-bezier(0.22, 1.61, 0.36, 1); /* 부드러운 확장 효과 */
+
 }
+
 .main-menu {
     list-style: none;
     padding: 0;
@@ -448,9 +451,11 @@ input[type=search] {
     width: 300px;
     top: 26px; 
     left: -16px;
-    border-left: 2px solid #ef2a23;
-    border-top:2px solid #ef2a23;
+    border: 2px solid #ef2a23;
+    transition: max-height 0.5s cubic-bezier(0.22, 1.61, 0.36, 1); /* 촤라락 효과 */
+
     height: auto;
+    transition: max-height 0.5s ease-in-out;
 }
 
 
@@ -463,11 +468,15 @@ input[type=search] {
     height: 50px;
     line-height: 50px;
     font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* 메뉴 항목에 부드러운 전환 */
+
 }
 
 .menu-item a:hover {
     background: #ef2a23;
     color: white;
+    transform: translateX(10px); /* 호버 시 약간의 이동 */
+
 }
 
 /* Sub-menu (hidden by default) */
@@ -493,10 +502,22 @@ input[type=search] {
     display: block;
     background: white;
     color: #333;
+    width: 200px;
+    transition: transform 0.2s ease; /* 서브메뉴의 부드러운 효과 */
+
+}
+
+.main-menu .sub-menu li a {
+
+    width: 300px;
+    
 }
 
 .sub-menu li a:hover {
     background: #f1f1f1;
+    color: #ef2a23;
+    transform: scale(1.05); /* 서브메뉴에 확대 효과 */
+
 }
 
 /* Style the "View All" button */
@@ -546,8 +567,21 @@ input[type=search] {
 .menuVisible .bar:after {
     transform: rotate(-45deg) translate(5px, -5px);
 }
+/* 애니메이션 효과 추가 */
+@keyframes menuDrop {
+    0% {
+        max-height: 0;
+        opacity: 0;
+    }
+    100% {
+        max-height: 800px;
+        opacity: 1;
+    }
+}
 
-
+.categoryMenu {
+    animation: menuDrop 0.5s ease-out forwards;
+}
 
 /* main */
 #mainArea{
