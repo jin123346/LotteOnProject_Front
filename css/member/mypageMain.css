@@ -70,8 +70,8 @@ main {
     justify-content: flex-start;
 }
 
-.con{
-
+#container > div:first-of-type{
+    border-left: 1px solid #ddd;
 }
 
 aside {
@@ -80,7 +80,6 @@ aside {
     height: auto;
     display: flex; /* Flexbox 사용 */
     justify-content: center; /* 수직 중앙 정렬 */
-    border-right:1px solid #ccc;
 }
 
 aside > ul {
