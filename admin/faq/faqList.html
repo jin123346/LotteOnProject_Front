@@ -7,8 +7,8 @@
     <title>faq게시판 리스트</title>
     <link rel="stylesheet" href="/css/admin.css">
     <script src="../../js/include.js"></script>
+    <script src="../../js/admin.js"></script>
     <style>
-
     </style>
 </head>
 
@@ -26,9 +26,9 @@
                 <div class="navi-container">
                     <h3>자주묻는질문 목록</h3>
                     <div class="navi">
-                      <a href="">HOME</a> > <a href="">고객센터</a> > <a href="">자주묻는질문</a>
+                        <a href="">HOME</a> > <a href="">고객센터</a> > <a href="">자주묻는질문</a>
                     </div>
-                  </div>
+                </div>
                 <div class="article-title">
                     <select id="customer-service1" name="customer-service">
                         <option value="service">고객 서비스</option>
@@ -64,14 +64,14 @@
                         <div class="number">1</div>
                         <div class="type">회원</div>
                         <div class="type2">가입</div>
-                        <div class="title"><a href="/article/view?no=1">[롯데숏핑] 구매회원 이용약관 계정 안내 (시행일: 0000년00월00일)</a></div>
+                        <div class="title"><a href="/article/view?no=1">[롯데숏핑] 구매회원 이용약관 계정 안내 (시행일: 0000년00월00일)</a>
+                        </div>
                         <div class="views">100</div>
                         <div class="date">2024.07.16</div>
-                        <div class="manage"><a href="/article/edit?no=1">수정</a> | <a
-                                href="/article/delete?no=1">삭제</a>
+                        <div class="manage"><a href="/article/edit?no=1">수정</a> | <a href="/article/delete?no=1">삭제</a>
                         </div>
                     </div>
-                    
+
                 </div>
 
 
@@ -116,14 +116,14 @@
                 document.getElementById('header').innerHTML = data;
             })
             .catch(error => console.error('Error loading header:', error));
-            fetch('../../include/adminAside.html') // 헤더 파일 경로
+        fetch('../../include/adminAside.html') // 헤더 파일 경로
             .then(response => {
                 return response.text();
             })
             .then(data => {
                 document.getElementById('adminAside').innerHTML = data;
             })
-            .catch(error => console.error('Error loading header:', error));
+            .catch(error);
 
 
 
@@ -142,7 +142,6 @@
             }
         });
     </script>
-    <script src="../js/admin.js"></script>
 </body>
 
 </html>
