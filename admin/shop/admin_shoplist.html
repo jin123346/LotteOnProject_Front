@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>admin Main</title>
-
+    <title>shop list</title>
+    <link rel="stylesheet" href="/css/shoplistmodal.css">
 </head>
 <style>
-         *{margin: 0; padding:0; font-family: '고딕', sans-serif; box-sizing: border-box; font-size: 12px;}
+        *{margin: 0; padding:0; font-family: '고딕', sans-serif; box-sizing: border-box; font-size: 12px;}
         html{color:#111; position:relative;}
         html, body{height:100%;}
         ol,ul {list-style: none}
         a {text-decoration: none; color: inherit;}
         .hidden {display: none;}
 
-        #wrapper {width: 100%; height: auto; display: flex; flex-direction: column;}
+        #wrapper {width: 100%; height: auto;}
         
 
 
@@ -23,8 +23,6 @@
         #admin_top {width: 1200px; margin: 0 auto; display: flex; height: 100px;}
         /*로고 + 홈, 로그인, 로그아웃*/
         .top_log {display: block;  width: 150px; height: 30px; margin: 20px;}
-
-
 
 
         /*메인*/
@@ -87,12 +85,13 @@
         .admin_menu > li:hover {
             background-color: #e0e0e0; /* 호버 시 배경색 변경 */
         }
-        .admin_menu > li:nth-child(4) .admin_sub_menu > li:nth-child(2) > a {
+
+        .admin_menu > li:nth-child(2) .admin_sub_menu > li:nth-child(1) > a {
              text-decoration: underline;
         }
 
-        /* 서브 메뉴 */
-        .admin_sub_menu {
+         /* 서브 메뉴 */
+         .admin_sub_menu {
             visibility: hidden;
             padding: 5px;
             padding-left: 20px;
@@ -126,8 +125,7 @@
             width: 1000px;
             background-color: rgb(247,249,252);
         }
-
-.admin_gate { 
+        .admin_gate { 
     height: 65px;
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -172,8 +170,8 @@
 }
 
 
-        /* 내비게이션 */
-        #admin_navi {
+           /* 내비게이션 */
+           #admin_navi {
             width: 900px;
             height: auto;
             
@@ -199,6 +197,89 @@
         #admin_navi p:nth-of-type(2) {
             margin-left: auto;
         }
+        
+
+
+
+        .admin_banner {
+            width: 900px;
+            background-color: #bdbdbd;
+            height: 50px;
+
+            margin: 20px auto;
+        }
+        .banner_menu {
+            display: flex;
+            justify-content: left;
+        }
+        .banner_menu li {
+            width: 90px;
+            display: flex;
+            height: 50px;
+            margin: 0 auto;
+            color: rgb(24, 24, 24);
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner_menu li:hover {
+            color: #ddd;
+        }
+
+        #admin_banner_main div {font-weight: bold; margin: 10px auto; width: 900px;}
+        .admin_banner_table {width: 900px; border-collapse: collapse; border-top: 1px solid black;}
+        .admin_banner_table td, th {border-bottom: 1px solid rgb(196, 196, 196); height: 80px; text-align: center;}
+        .admin_banner_table th {height: 50px;}
+        
+
+        button{cursor: pointer;}
+        .list_button {width: 900px; height: 250px; margin: 20px auto; display: flex; }
+        .list_button button:nth-of-type(1) {width: 80px; height: 35px; margin-top: 150px;}
+        .list_button button:nth-of-type(2){margin-left: auto; margin-top: 150px; width: 80px; height: 35px; background: #8EB4E3;color: white;  border: none;}
+
+        .status{
+            text-align: right;
+        }
+        .status-icon-running, .status-text-running{
+            color: #00B050;
+        }
+        .status-icon-paused, .status-text-paused{
+            color: #FF0000;
+        }
+        .status-icon-standby, .status-text-standby{
+            color: #0070C0;
+        }
+        #shopsearch {
+            width: 95px;
+            height: 33px;
+        }
+        #search{
+            width: 145px;
+            height: 33px;
+        }
+        #serachbtn{
+            width: 62px;
+            height: 33px;
+            color: #FFFFFF;
+            background: #BFBFBF;
+            border: none;
+        }
+        
+
+
+
+      /*footer*/
+      #admin_footer {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        background: #ffffff ;
+        box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1); /* 하단 그림자 */
+        }
+
         /*접고 열기*/
 #admin_service {
     width: 1000px; /* 기본 너비 */
@@ -227,103 +308,6 @@
     overflow: hidden;
 }
 
-        #admin_version div:nth-of-type(1) {width: 900px; margin: 0 auto; padding: 3px;}
-        #admin_version div:nth-of-type(2) {width: 900px; margin: 0 auto; padding: 3px;}
-        #admin_version div:nth-of-type(2) p {width: 900px; margin: 3px auto 0; padding: 3px;}
-        .admin_version_table {width: 900px; margin: 3px auto 40px; padding: 3px;}
-
-        #admin_site div {width: 900px; margin: 3px auto;  padding: 3px;}
-        .admin_site_table {width: 900px; margin: 0 auto; padding: 3px;}
-        #admin_site div:nth-of-type(3) {margin-bottom: 40px; padding: 3px;}
-
-        #admin_logo div {width: 900px; margin: 3px auto;  padding: 3px;}
-        .admin_logo_table {width: 900px; margin: 0 auto;  padding: 3px;}
-        #admin_logo div:nth-of-type(3) {margin-bottom: 40px; padding: 3px;}
-
-        #admin_company_info div {width: 900px; margin: 3px auto;  padding: 3px;}
-        .admin_company_info_table {width: 900px; margin: 0 auto;  padding: 3px;}
-        #admin_company_info div:nth-of-type(3) {margin-bottom: 40px; padding: 3px;}
-
-        #admin_cs_info div {width: 900px; margin: 3px auto;  padding: 3px;}
-        .admin_cs_info_table {width: 900px; margin: 0 auto;  padding: 3px;}
-        #admin_cs_info div:nth-of-type(3) {margin-bottom: 40px; padding: 3px;}
-
-        #copy_light div {width: 900px; margin: 3px auto;  padding: 3px;}
-        .copy_light_table {width: 900px; margin: 0 auto; padding: 3px;}
-        #copy_light div:nth-child(3)  {margin-bottom: 40px; padding: 3px;}
-
-        input[type="text"], input[type="file"] {width: 236px; height: 30px; border: 0.3px solid #424242; /* 경계선 색상 */ padding: 3px; margin: 2px;}
-        input[type="file"] {border: 1px solid black; }
-        input.custom-width {width: 300px; /* 원하는 너비로 조정 */}
-        
-        .top1 {font-weight: bold; font-size: 14px;}
-        .top2 {width: auto; padding: 3px; background: linear-gradient(to top, #cdd8e6 50%, transparent 50%);}
-
-
-        .admin_version_table,
-        .admin_site_table,
-        .admin_logo_table,
-        .admin_company_info_table,
-        .admin_cs_info_table,
-        .copy_light_table {
-            table-layout: fixed; 
-            border-collapse: collapse;
-            border-radius: 8px;
-            overflow: hidden; /* 모서리 둥글게 하기 */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 그림자 효과 */
-        }
-        .admin_version_table td:nth-child(1),
-        .admin_site_table td:nth-child(1),
-        .admin_company_info_table td:nth-child(1){background: rgb(226,232,238);}
-
-        .admin_version_table td:nth-child(2),
-        .admin_site_table td:nth-child(2),
-        .admin_company_info_table td:nth-child(2){background: #fbfdff;}
-
-
-        .admin_version_table td,
-        .admin_site_table td,
-        .admin_logo_table td,
-        .admin_company_info_table td,
-        .admin_cs_info_table td,
-        .copy_light_table td {
-    border: 1px solid rgb(172, 172, 172); /* 셀 경계 색상 및 두께 설정 */
-    padding: 8px; /* 셀 안쪽 여백 설정 */
-    text-align: left; /* 텍스트 왼쪽 정렬 */
-    
-}
-                .admin_version_table tr,
-                .admin_site_table tr,
-                .admin_logo_table tr,
-                .admin_company_info_table tr,
-                .admin_cs_info_table tr,
-                .copy_light_table tr{border: 1px solid rgb(255, 255, 255); /* 셀 경계 색상 및 두께 설정 */
-                    padding: 8px; /* 셀 안쪽 여백 설정 */
-                    text-align: left; /* 텍스트 왼쪽 정렬 */
-                    }
-
-                    #admin_version > div:nth-of-type(2),
-                    #admin_site > div,
-                    #admin_logo > div,
-                    #admin_company_info > div,
-                    #admin_cs_info > div,
-                    #copy_light > div { border-radius: 8px;overflow: hidden; /* 모서리 둥글게 하기 */}
-
-                    .basic_modi {text-align: right;}
-
-                    #classification{
-                        width: 140px;
-                        height: 30px;
-                    }
-
-
-        /*footer*/
-        #admin_footer {width: 100%; height: auto; margin: 0 auto; background: #ff0000d2 ;}
-        .etcexplanation{width: 900px; height: 70px; overflow: hidden; margin: 0 auto; background: #ffffcc;}
-        .etcexplanation p{font-size: 14px; font-weight: 400; line-height: 17px; margin: 30px 30px;}
-        .regbox{width: 900px; margin: 0 auto; margin-bottom: 80px; padding: 3px; text-align: right; }
-        .regbutton{width: 80px; height: 35px; margin-top: 5px; background: #8eb4e3; color: white; border: none; cursor: pointer; }
-
 </style>
 <body>
     <div id="wrapper">
@@ -331,7 +315,7 @@
             <div id="admin_container">
                 <div id="admin_aside">
                     <div id="admin_aside_list">
-                        <img class="top_log" src="../images/sample/lotte로고(white).png" alt="로고사진">
+                        <img class="top_log" src="/images/sample/lotte로고(white).png" alt="로고사진">
                         <div class="aside_first">
                             <h2>관리자 메인</h2>
                         </div>
@@ -396,207 +380,212 @@
                 <section>
                     <div class="admin_gate">
                         <div class="left-icons">
-                            <a href="#" id="toggle-aside"><img src="../images/sample/menu.png" alt=""></a>
+                            <a href="#" id="toggle-aside"><img src="/images/sample/menu.png" alt=""></a>
                         </div>
                         <div class="right-icons">
-                            <a href="#"><img src="../images/sample/home.png" alt=""></a>
-                            <a href="#"><img src="../images/sample/login.png" alt=""></a>
-                            <a href="#"><img src="../images/sample/logout.png" alt=""></a>
+                            <a href="#"><img src="/images/sample/home.png" alt=""></a>
+                            <a href="#"><img src="/images/sample/login.png" alt=""></a>
+                            <a href="#"><img src="/images/sample/logout.png" alt=""></a>
                             <span>홍길동님</span>
                         </div>
                     </div>
                     <section id="admin_navi">
-                            <p>관리자 메인</p>
-                            <p><a href="#">HOME</a> > 관리자 메인</p>
-                    </section>
-
-                </section>
-                <article id="admin_version">
-                    <div class="top1">상품분류</div>
-                    <div><span class="top2">1차, 2차, 3차 기본분류는 반드시 선택하셔야 합니다.</span></div>
-                    <table class="admin_version_table">
+                        <p>상점목록</p>
+                        <p><a href="#">HOME</a> > 상점관리 > 상점목록</p>
+                     </section>
+              
+                <article id="admin_banner_main">
+                
+                <div>
+                    <table class="admin_banner_table">
                         <colgroup>
-                            <col style="width: 150px">
-                            <col style="width: 750px">
+                            <col style="width: 6%">
+                            <col style="width: 6%">
+                            <col style="width: 11%">
+                            <col style="width: 9%">
+                            <col style="width: 16%">
+                            <col style="width: 16%">
+                            <col style="width: 16%">
+                            <col style="width: 10%">
+                            <col style="width: 10%">
                         </colgroup>
+                        <div>
+                        <select id="shopsearch" >
+                            <option value="">상호명</option>
+                            <option value="">대표자</option>
+                            <option value="">사업자등록번호</option>
+                            <option value="">연락처</option>
+                        </select>
+                        <input id="search" type="text" placeholder="검색어 입력">
+                        <button id="serachbtn" type="button">검색</button>
+                        </div>
+                        <div class="status">
+                            <span class="status-icon-running">●</span> <span class="status-text-running">운영 중</span>
+                            <span class="status-icon-paused">●</span> <span class="status-text-paused">운영 중지</span>
+                            <span class="status-icon-standby">●</span> <span class="status-text-standby">운영 준비</span>
+                         </div>
                         <tr>
-                            <td>1차 분류</td>
-                            <td>
-                                <select id="classification" >
-                                    <option value="">1차분류 선택</option>
-                                    <option value="">여기</option>
-                                    <option value="">수정</option>
-                                    <option value="">바람</option>
-                                </select>
-                            </td>
+                            <th><input type="checkbox"></th>
+                            <th>번호</th>
+                            <th>상호명</th>
+                            <th>대표</th>
+                            <th>사업자등록번호</th>
+                            <th>통신판매업번호</th>
+                            <th>연락처</th>
+                            <th>운영</th>
+                            <th>관리</th>
                         </tr>
                         <tr>
-                            <td>2차 분류</td>
-                            <td>
-                                <select id="classification" >
-                                    <option value="">2차분류 선택</option>
-                                    <option value="">여기</option>
-                                    <option value="">수정</option>
-                                    <option value="">바람</option>
-                                </select>
-                            </td>
+                            <td><input type="checkbox"></td>
+                            <td>5</td>
+                            <td>(주)다나와</td>
+                            <td>정우성</td>
+                            <td>112-12-12345</td>
+                            <td>2024-서울강남-04433</td>
+                            <td>010-1234-1001</td>
+                            <td class="status-icon-running">●</td>
+                            <td><a href="">[중단]</a></td>
                         </tr>
                         <tr>
-                            <td>3차 분류</td>
-                            <td>
-                                <select id="classification" >
-                                    <option value="">3차분류 선택</option>
-                                    <option value="">여기</option>
-                                    <option value="">수정</option>
-                                    <option value="">바람</option>
-                                </select>
-                            </td>
+                            <td><input type="checkbox"></td>
+                            <td>4</td>
+                            <td>(주)다나와</td>
+                            <td>정우성</td>
+                            <td>112-12-12345</td>
+                            <td>2024-서울강남-04433</td>
+                            <td>010-1234-1001</td>
+                            <td class="status-icon-running">●</td>
+                            <td><a href="">[중단]</a></td>
                         </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>3</td>
+                            <td>(주)다나와</td>
+                            <td>정우성</td>
+                            <td>112-12-12345</td>
+                            <td>2024-서울강남-04433</td>
+                            <td>010-1234-1001</td>
+                            <td class="status-icon-running">●</td>
+                            <td><a href="">[중단]</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>2</td>
+                            <td>(주)다나와</td>
+                            <td>정우성</td>
+                            <td>112-12-12345</td>
+                            <td>2024-서울강남-04433</td>
+                            <td>010-1234-1001</td>
+                            <td class="status-icon-paused">●</td>
+                            <td><a href="">[재개]</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>1</td>
+                            <td>(주)다나와</td>
+                            <td>정우성</td>
+                            <td>112-12-12345</td>
+                            <td>2024-서울강남-04433</td>
+                            <td>010-1234-1001</td>
+                            <td class="status-icon-standby">●</td>
+                            <td><a href="">[중단]</a></td>
+                        </tr>
+                       
                     </table>
                 </article>
-                <article id="admin_site">
-                    <div class="top1">기본정보</div>
-                    <div><span class="top2">기본정보는 반드시 선택하셔야 합니다.</span></div>
-                    <table class="admin_site_table">
-                        <colgroup>
-                            <col style="width: 150px;">
-                            <col style="width: 750px">
-                        </colgroup>
-                        <tr>
-                            <td>상품명</td>
-                            <td>
-                                <input type="text" placeholder="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>기본설명</td>
-                            <td>
-                                <input type="text" placeholder="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>제조사</td>
-                            <td>
-                                <input type="text" placeholder="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>상품금액</td>
-                            <td>
-                                <input type="text" placeholder=""> 원
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>할인율</td>
-                            <td>
-                                <input type="text" placeholder=""> %
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>포인트</td>
-                            <td>
-                                <input type="text" placeholder=""> 원
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>재고수량</td>
-                            <td>
-                                <input type="text" placeholder=""> 개
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>배송비</td>
-                            <td>
-                                <input type="text" placeholder=""> 원
-                            </td> 
-                        </tr>
-                        <tr>
-                            <td>상품 이미지</td>
-                            <td>
-                                <input type="file" class="admin_logo1_image" placeholder="선택된 파일 없음">
-                                <span>크기 370 x 76 권장</span> <br>
-                                <input type="file" class="admin_logo1_image" placeholder="선택된 파일 없음">
-                                <span>크기 370 x 76 권장</span> <br>
-                                <input type="file" class="admin_logo1_image" placeholder="선택된 파일 없음">
-                                <span>크기 370 x 76 권장</span> <br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>상품 상세정보</td>
-                            <td>
-                                <input type="file" class="admin_logo1_image" placeholder="선택된 파일 없음">
-                                <span>크기 가로 940px, 높이제약없음, 크기최대 1MB</span> <br>
-                            </td>
-                        </tr>
-                     
-                    </table>
-                    <div class="basic_modi"></div>
-                    
-                </article>
-                
-                
-                <article id="admin_company_info">
-                    <div class="top1">상품정보 제공고시</div>
-                    <div><span class="top2">[전자상거래에 관한 상품정보 제공에 관한 고시] 항목에 의거 등록해야 되는 정보입니다.</span></div>
-                    <table class="admin_company_info_table">
-                        <colgroup>
-                            <col style="width: 150px">
-                            <col style="width: 750px">
-                        </colgroup>
-                
-                        <tr>
-                            <td>상품상태</td>
-                            <td>
-                                <input type="text" placeholder="ex: 새상품">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>부가세 면세여부</td>
-                            <td>
-                                <input type="text" placeholder="ex: 과세상품">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>영수증 발행</td>
-                            <td>
-                                <input type="text" class="custom-width" placeholder="ex: 발행가능 - 신용카드전표, 온라인현금영수증">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>사업자구분</td>
-                            <td>
-                                <input type="text" class="custom-width" placeholder="ex: 사업자 판매자">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>원산지</td>
-                            <td>
-                                <input type="text" placeholder="ex: 국내산">
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="basic_modi"></div>
-                    
-                   
-                </article>
-                <div class="etcexplanation">
-                    <p>전자상거래등에서의 상품등의 정보제공에 관한 고시에 따라 총 35개 상품군에 대해 상품 특성 등을 양식에 따라 입력할 수 있습니다. </p>
+                    <div class="list_button">
+                        <button>선택삭제</button>
+                        <button id="openModalBtn">상점등록</button>
+                    </div>
+                    <footer id="admin_footer">
+                        <div>Copyright ©LotteON.co.kr All rights reserved. LotteON ADMINISTRATOR Version 5.4.1.2 3조 project</div>
+                    </footer>
                 </div>
-                <div class="regbox">
-                    <button type="button" class="regbutton">등록하기</button>
+            </section>
+ 
+                
+            </div>
+            <div id="productModal" class="modal">
+                <div class="modal-content">
+                    <div class="header">
+                    <span class="close">&times;</span>
+                    <h3>배너등록</h3>
+                    </div>
+                    <form>
+                        <table class="modaltable">
+                            <tr>
+                                <th><label for="uid">아이디</label></th>
+                                <td>
+                                    <input type="text" id="uid" name="uid" placeholder="">
+                                    <span style="margin-left: 10px;">영문, 숫자 4~12자 설정</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="password">비밀번호</label></th>
+                                <td>
+                                    <input type="password" id="password" name="password" placeholder="">
+                                    <span style="margin-left: 10px;">영문, 숫자 , 특수문자 8~12자 설정</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="passwordConfirm">비밀번호 확인</label></th>
+                                <td><input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="비밀번호 확인"><br></td>
+                            </tr>
+            
+                         </table>
+                         <table class="modaltable">
+                            <tr>
+                                <th><label for="shopName">상호명</label></th>
+                                <td><input type="text" id="shopName" name="shopName" placeholder="상호명입력 예) (주)"><br></td>
+                            </tr>
+                            <tr>
+                                <th><label for="ownerName">대표</label></th>
+                                <td><input type="text" id="ownerName" name="ownerName" placeholder="이름입력"><br></td>
+                            </tr>
+                            <tr>
+                                <th><label for="businessNumber">사업자등록번호</label></th>
+                                <td>
+                                    <input type="text" id="businessNumber" name="businessNumber" placeholder="사업자등록번호입력">
+                                    <span style="margin-left: 10px;">- 포함 12자리 입력</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="Mailordernumber">통산판매업번호</label></th>
+                                <td>
+                                    <input type="text" id="Mailordernumber" name="Mailordernumber" placeholder="통산판매업번호입력">
+                                    <span style="margin-left: 10px;">- 포함 12자리 입력</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="phone">전화번호</label></th>
+                                <td><input type="text" id="phone" name="phone" placeholder="전화번호입력"><br></td>
+                            </tr>
+                            <tr>
+                                <th><label for="fax">팩스</label></th>
+                                <td><input type="text" id="fax" name="fax" placeholder="팩스번호입력"><br></td>
+                            </tr>
+                            <tr>
+                                <th><label for="zipcode">주소</label></th>
+                                <td>
+                                    <input type="text" id="zipcode" placeholder="우편번호입력" required><br>
+                                    <input type="text" id="address1" placeholder="기본주소입력" required><br>
+                                    <input type="text" id="address2" placeholder="상세주소입력" required>
+                                </td>
+                            </tr>
+                         </table>
+                        <button type="submit">등록하기</button>
+                    </form>
+                
+                    
+             
                 </div>
-        </div>
+            </div>
+            
         </main>
-        <footer id="admin_footer">
-            <div>머시기저시기</div>
-            <div>Copyright 3조</div>
-        </footer>
+        
     </div>
-</body>
-
-
-
-<script>
+    <script src="/js/shoplistmodal.js"></script>
+    <script>
     document.querySelectorAll('.admin_menu > li').forEach(menu => {
         const submenu = menu.querySelector('.admin_sub_menu');
         
@@ -640,7 +629,8 @@
         gate.classList.add('expanded'); // gate도 너비 늘리기
     }
 });
-
-
 </script>
+</body>
+
+
 </html>

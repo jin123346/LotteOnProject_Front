@@ -267,12 +267,27 @@ img {
 }
 
 .footer {
-  color: #fff;
+  /* color: #fff; */
   padding: 20px;
   text-align: center;
   width: 1200px;
   height: auto;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .flogoWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direct.ion: row;
+}
+
+.flogoWrapper > img {
+  margin-right: 10px;
 }
 
 .footer a {
@@ -280,6 +295,7 @@ img {
   text-decoration: none;
   margin: 0 10px;
   font-weight: 500;
+  display: inline-block;
 }
 
 .footer a:hover {

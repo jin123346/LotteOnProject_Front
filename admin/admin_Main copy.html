@@ -423,9 +423,9 @@
         }
 
 canvas {
-            width: 400px!important;
+            width: 600px!important;
             height: 200px !important;;
-            margin: 20px auto;
+            margin: 10px auto;
         }
 
 </style>
@@ -524,8 +524,8 @@ canvas {
                     </section>
                     <div class="graph">
                         <h2>집계현황</h2>
-                        <canvas id="barChart" width="400" height="200"></canvas>
-                        <canvas id="pieChart" width="400" height="200"></canvas>
+                        <canvas id="barChart" width="450" height="200"></canvas>
+                        <canvas id="pieChart" width="450" height="200"></canvas>
                     </div>
                     <article id="admin_status">
                         <table class="a_status">
@@ -795,6 +795,7 @@ document.getElementById('toggle-aside').addEventListener('click', function(e) {
                 }
             },
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 legend: {
                     display: true,
@@ -827,7 +828,8 @@ document.getElementById('toggle-aside').addEventListener('click', function(e) {
                 ],
                 borderWidth: 1
             }]
-        }
+        },
+        options: {maintainAspectRatio: false}
     });
 </script>
 </html>

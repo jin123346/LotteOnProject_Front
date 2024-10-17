@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>shop list</title>
-    <link rel="stylesheet" href="../css/shoplistmodal.css">
+    <link rel="stylesheet" href="/css/shoplistmodal.css">
 </head>
 <style>
         *{margin: 0; padding:0; font-family: '고딕', sans-serif; box-sizing: border-box; font-size: 12px;}
@@ -169,6 +169,7 @@
     margin-left: 13px; /* span과 마지막 아이콘 사이의 간격 */
 }
 
+a:hover {font-weight: bold; text-decoration: underline;}
 
            /* 내비게이션 */
            #admin_navi {
@@ -201,7 +202,7 @@
 
 
 
-        .admin_banner {
+        .admin_order {
             width: 900px;
             background-color: #bdbdbd;
             height: 50px;
@@ -229,30 +230,21 @@
             color: #ddd;
         }
 
-        #admin_banner_main div {font-weight: bold; margin: 10px auto; width: 900px;}
-        .admin_banner_table {width: 900px; border-collapse: collapse; border-top: 1px solid black;}
-        .admin_banner_table td, th {border-bottom: 1px solid rgb(196, 196, 196); height: 80px; text-align: center;}
-        .admin_banner_table th {height: 50px;}
-        
+        #admin_order_main div {font-weight: bold; margin: 10px auto; width: 900px;}
+        .admin_order_table {width: 900px; border-collapse: collapse; border-top: 1px solid black;}
+        .admin_order_table td, th {border-bottom: 1px solid rgb(196, 196, 196); height: 80px; text-align: center;}
+        .admin_order_table th {height: 50px; background-color:rgb(226,232,238);}
+        .admin_order_table td:nth-of-type(10) button {border: none; padding :5px 3px 5px 3px; background-color: #8EB4E3; color: white;}
+        .admin_order_table td:nth-of-type(8) {color: #00B050;}
+        .admin_order_table td {background-color: #fbfdff;}
 
         button{cursor: pointer;}
         .list_button {width: 900px; height: 250px; margin: 20px auto; display: flex; }
         .list_button button:nth-of-type(1) {width: 80px; height: 35px; margin-top: 150px;}
-        .list_button button:nth-of-type(2){margin-left: auto; margin-top: 150px; width: 80px; height: 35px; background: #8EB4E3;color: white;  border: none;}
+        .list_button button:nth-of-type(2){margin-left: auto; margin-top: 150px; width: 80px; height: 35px; background: #8EB4E3; color: white;  border: none;}
 
-        .status{
-            text-align: right;
-        }
-        .status-icon-running, .status-text-running{
-            color: #00B050;
-        }
-        .status-icon-paused, .status-text-paused{
-            color: #FF0000;
-        }
-        .status-icon-standby, .status-text-standby{
-            color: #0070C0;
-        }
-        #shopsearch {
+
+        #ordersearch {
             width: 95px;
             height: 33px;
         }
@@ -312,7 +304,7 @@
             <div id="admin_container">
                 <div id="admin_aside">
                     <div id="admin_aside_list">
-                        <img class="top_log" src="../images/sample/lotte로고(white).png" alt="로고사진">
+                        <img class="top_log" src="/images/sample/lotte로고(white).png" alt="로고사진">
                         <div class="aside_first">
                             <h2>관리자 메인</h2>
                         </div>
@@ -377,122 +369,122 @@
                 <section>
                     <div class="admin_gate">
                         <div class="left-icons">
-                            <a href="#" id="toggle-aside"><img src="../images/sample/menu.png" alt=""></a>
+                            <a href="#" id="toggle-aside"><img src="/images/sample/menu.png" alt=""></a>
                         </div>
                         <div class="right-icons">
-                            <a href="#"><img src="../images/sample/home.png" alt=""></a>
-                            <a href="#"><img src="../images/sample/login.png" alt=""></a>
-                            <a href="#"><img src="../images/sample/logout.png" alt=""></a>
+                            <a href="#"><img src="/images/sample/home.png" alt=""></a>
+                            <a href="#"><img src="/images/sample/login.png" alt=""></a>
+                            <a href="#"><img src="/images/sample/logout.png" alt=""></a>
                             <span>홍길동님</span>
                         </div>
                     </div>
                     <section id="admin_navi">
-                        <p>상점목록</p>
-                        <p><a href="#">HOME</a> > 상점관리 > 상점목록</p>
+                        <p>주문현황</p>
+                        <p><a href="#">HOME</a> > 주문관리 > 주문현황</p>
                      </section>
               
-                <article id="admin_banner_main">
+                <article id="admin_order_main">
                 
                 <div>
-                    <table class="admin_banner_table">
+                    <table class="admin_order_table">
                         <colgroup>
+                            <col style="width: 14%">
+                            <col style="width: 8%">
+                            <col style="width: 8%">
+                            <col style="width: 12%">
                             <col style="width: 6%">
-                            <col style="width: 6%">
-                            <col style="width: 11%">
+                            <col style="width: 10%">
+                            <col style="width: 8%">
+                            <col style="width: 8%">
+                            <col style="width: 17%">
                             <col style="width: 9%">
-                            <col style="width: 16%">
-                            <col style="width: 16%">
-                            <col style="width: 16%">
-                            <col style="width: 10%">
-                            <col style="width: 10%">
                         </colgroup>
                         <div>
-                        <select id="shopsearch" >
-                            <option value="">상호명</option>
-                            <option value="">대표자</option>
-                            <option value="">사업자등록번호</option>
-                            <option value="">연락처</option>
+                        <select id="ordersearch" >
+                            <option value="">주문번호</option>
+                            <option value="">주문자</option>
+                            <option value="">주문자명</option>
                         </select>
                         <input id="search" type="text" placeholder="검색어 입력">
                         <button id="serachbtn" type="button">검색</button>
                         </div>
-                        <div class="status">
-                            <span class="status-icon-running">●</span> <span class="status-text-running">운영 중</span>
-                            <span class="status-icon-paused">●</span> <span class="status-text-paused">운영 중지</span>
-                            <span class="status-icon-standby">●</span> <span class="status-text-standby">운영 준비</span>
-                         </div>
                         <tr>
-                            <th><input type="checkbox"></th>
-                            <th>번호</th>
-                            <th>상호명</th>
-                            <th>대표</th>
-                            <th>사업자등록번호</th>
-                            <th>통신판매업번호</th>
-                            <th>연락처</th>
-                            <th>운영</th>
-                            <th>관리</th>
+                            <th>주문번호</th>
+                            <th>주문자</th>
+                            <th>주문자명</th>
+                            <th>상품명</th>
+                            <th>주문건수</th>
+                            <th>주문합계</th>
+                            <th>결제수단</th>
+                            <th>주문상태</th>
+                            <th>주문일</th>
+                            <th>배송</th>
                         </tr>
                         <tr>
-                            <td><input type="checkbox"></td>
-                            <td>5</td>
-                            <td>(주)다나와</td>
-                            <td>정우성</td>
-                            <td>112-12-12345</td>
-                            <td>2024-서울강남-04433</td>
-                            <td>010-1234-1001</td>
-                            <td class="status-icon-running">●</td>
-                            <td><a href="">[중단]</a></td>
+                            <td><a href="#">10101212121</a></td>
+                            <td>wlgus5946</td>
+                            <td>챱챱김</td>
+                            <td>초코틴틴</td>
+                            <td>896</td>
+                            <td>9,000</td>
+                            <td>신용카드</td>
+                            <td>결제완료</td>
+                            <td>2024-12-15 12:00:00</td>
+                            <td><button id="openModalBtn">배송하기</button></td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox"></td>
-                            <td>4</td>
-                            <td>(주)다나와</td>
-                            <td>정우성</td>
-                            <td>112-12-12345</td>
-                            <td>2024-서울강남-04433</td>
-                            <td>010-1234-1001</td>
-                            <td class="status-icon-running">●</td>
-                            <td><a href="">[중단]</a></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
+                            <td><a href="#">101012121</a></td>
+                            <td>wlgus5946</td>
+                            <td>챱챱김</td>
+                            <td>신당동 장독대에 빠진 떡볶이</td>
                             <td>3</td>
-                            <td>(주)다나와</td>
-                            <td>정우성</td>
-                            <td>112-12-12345</td>
-                            <td>2024-서울강남-04433</td>
-                            <td>010-1234-1001</td>
-                            <td class="status-icon-running">●</td>
-                            <td><a href="">[중단]</a></td>
+                            <td>9,000</td>
+                            <td>신용카드</td>
+                            <td>결제완료</td>
+                            <td>2024-12-15 12:00:00</td>
+                            <td><button id="openModalBtn">배송하기</button></td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox"></td>
-                            <td>2</td>
-                            <td>(주)다나와</td>
-                            <td>정우성</td>
-                            <td>112-12-12345</td>
-                            <td>2024-서울강남-04433</td>
-                            <td>010-1234-1001</td>
-                            <td class="status-icon-paused">●</td>
-                            <td><a href="">[재개]</a></td>
+                            <td><a href="#">101012121</a></td>
+                            <td>wlgus5946</td>
+                            <td>챱챱김</td>
+                            <td>초코틴틴</td>
+                            <td>3</td>
+                            <td>9,000</td>
+                            <td>신용카드</td>
+                            <td>결제완료</td>
+                            <td>2024-12-15 12:00:00</td>
+                            <td><button id="openModalBtn">배송하기</button></td>
                         </tr>
                         <tr>
-                            <td><input type="checkbox"></td>
-                            <td>1</td>
-                            <td>(주)다나와</td>
-                            <td>정우성</td>
-                            <td>112-12-12345</td>
-                            <td>2024-서울강남-04433</td>
-                            <td>010-1234-1001</td>
-                            <td class="status-icon-standby">●</td>
-                            <td><a href="">[중단]</a></td>
+                            <td><a href="#">101012121</a></td>
+                            <td>wlgus5946</td>
+                            <td>챱챱김</td>
+                            <td>초코틴틴</td>
+                            <td>3</td>
+                            <td>9,000</td>
+                            <td>신용카드</td>
+                            <td>결제완료</td>
+                            <td>2024-12-15 12:00:00</td>
+                            <td><button id="openModalBtn">배송하기</button></td>                        
                         </tr>
-                       
+                        <tr>
+                            <td><a href="#">101012121</a></td>
+                            <td>wlgus5946</td>
+                            <td>챱챱김</td>
+                            <td>초코틴틴</td>
+                            <td>3</td>
+                            <td>9,000</td>
+                            <td>신용카드</td>
+                            <td>결제완료</td>
+                            <td>2024-12-15 12:00:00</td>
+                            <td><button id="openModalBtn">배송하기</button></td>
+                        </tr>
                     </table>
                 </article>
                     <div class="list_button">
                         <button>선택삭제</button>
-                        <button id="openModalBtn">상점등록</button>
+                        <button>상점등록</button>
                     </div>
                     <footer id="admin_footer">
                         <div>머시기저시기</div>
@@ -582,7 +574,7 @@
         </main>
         
     </div>
-    <script src="../js/shoplistmodal.js"></script>
+    <script src="/js/shoplistmodal.js"></script>
     <script>
     document.querySelectorAll('.admin_menu > li').forEach(menu => {
         const submenu = menu.querySelector('.admin_sub_menu');
