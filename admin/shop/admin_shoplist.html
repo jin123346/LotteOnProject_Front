@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>shop list</title>
-    <link rel="stylesheet" href="../css/shoplistmodal.css">
+    <link rel="stylesheet" href="/css/shoplistmodal.css">
 </head>
 <style>
         *{margin: 0; padding:0; font-family: '고딕', sans-serif; box-sizing: border-box; font-size: 12px;}
@@ -271,10 +271,13 @@
 
 
 
-       /*footer*/
-       #admin_footer {
+      /*footer*/
+      #admin_footer {
+        padding-top: 10px;
+        padding-bottom: 10px;
         width: 100%;
         background: #ffffff ;
+        box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1); /* 하단 그림자 */
         }
 
         /*접고 열기*/
@@ -312,7 +315,7 @@
             <div id="admin_container">
                 <div id="admin_aside">
                     <div id="admin_aside_list">
-                        <img class="top_log" src="../images/sample/lotte로고(white).png" alt="로고사진">
+                        <img class="top_log" src="/images/sample/lotte로고(white).png" alt="로고사진">
                         <div class="aside_first">
                             <h2>관리자 메인</h2>
                         </div>
@@ -377,12 +380,12 @@
                 <section>
                     <div class="admin_gate">
                         <div class="left-icons">
-                            <a href="#" id="toggle-aside"><img src="../images/sample/menu.png" alt=""></a>
+                            <a href="#" id="toggle-aside"><img src="/images/sample/menu.png" alt=""></a>
                         </div>
                         <div class="right-icons">
-                            <a href="#"><img src="../images/sample/home.png" alt=""></a>
-                            <a href="#"><img src="../images/sample/login.png" alt=""></a>
-                            <a href="#"><img src="../images/sample/logout.png" alt=""></a>
+                            <a href="#"><img src="/images/sample/home.png" alt=""></a>
+                            <a href="#"><img src="/images/sample/login.png" alt=""></a>
+                            <a href="#"><img src="/images/sample/logout.png" alt=""></a>
                             <span>홍길동님</span>
                         </div>
                     </div>
@@ -495,8 +498,7 @@
                         <button id="openModalBtn">상점등록</button>
                     </div>
                     <footer id="admin_footer">
-                        <div>머시기저시기</div>
-                        <div>Copyright 3조</div>
+                        <div>Copyright ©LotteON.co.kr All rights reserved. LotteON ADMINISTRATOR Version 5.4.1.2 3조 project</div>
                     </footer>
                 </div>
             </section>
@@ -582,7 +584,7 @@
         </main>
         
     </div>
-    <script src="../js/shoplistmodal.js"></script>
+    <script src="/js/shoplistmodal.js"></script>
     <script>
     document.querySelectorAll('.admin_menu > li').forEach(menu => {
         const submenu = menu.querySelector('.admin_sub_menu');
@@ -608,6 +610,25 @@
 
 
     })
+
+    document.getElementById('toggle-aside').addEventListener('click', function(e) {
+    e.preventDefault(); // 기본 링크 동작 방지
+    
+    const aside = document.getElementById('admin_aside');
+    const main = document.getElementById('admin_service');
+    const gate = document.getElementById('admin_gate'); // admin_gate 추가
+    
+    // aside가 숨겨져 있는지 여부에 따라 클래스 조정
+    if (aside.classList.contains('hidden')) {
+        aside.classList.remove('hidden'); // aside 보이기
+        main.classList.remove('expanded'); // main 원래 너비로
+        gate.classList.remove('expanded'); // gate도 원래 너비로
+    } else {
+        aside.classList.add('hidden'); // aside 숨기기
+        main.classList.add('expanded'); // main 너비 늘리기
+        gate.classList.add('expanded'); // gate도 너비 늘리기
+    }
+});
 </script>
 </body>
 
