@@ -1,0 +1,204 @@
+/* order-modal */
+
+.order-modal-main{
+    width: 850px;
+    height: auto;
+    min-height: 500px;
+    border: 1px solid;
+    margin: 0 auto;
+    
+}
+.modal-main{
+    margin: 20px;
+}
+.order-items{
+    width: auto;
+    height: auto;
+    background-color: black;
+    color: white;
+    padding: 1px 15px;
+}
+.order-details{
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+.product-info{
+    width: auto;
+    height: auto;
+    
+}
+.product-info h3{
+    margin: 0;
+}
+.pro-details{
+    width: auto;
+    height: auto;
+    display: flex;
+    border-top: 2.5px solid;
+
+}
+.details{
+    width: auto;
+    height: auto;
+    display: flex;
+}
+.total-price {
+    border-top: 1px solid #bfbfbf; /* 테두리 색상 */
+    width: auto;
+    height: auto; /* 자동 높이로 조정 */
+    display: flex;
+    justify-content: space-between; /*양쪽정렬*/
+    align-items: flex-start; /* 오른쪽으로 정렬 */
+}
+
+.pay-title {
+    margin-top: 95px;
+}
+.pay-title h3{
+    margin: 0;
+}
+
+.total-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    justify-content: center;
+    background-color: #ddd;
+    margin-left: auto;
+}
+
+.total-item {
+    align-items: center;
+    width: 250px;
+    display: flex; /* 각 항목을 가로 방향으로 정렬 */
+    justify-content: space-between; /* 항목 사이 공간을 균등하게 배치 */
+    margin-bottom: 5px; /* 항목 간 간격 */
+}
+
+.shipping{
+    width: auto;
+    height: auto;
+}
+.shipping h3{ margin: 20px 0 5px 0;}
+.shipping-flex,
+.payment-flex{
+    display: flex;
+    border-top: 2.5px solid ;
+   
+}
+.pay-total-details {
+    display: flex; /* 가로 방향으로 정렬 */
+    justify-content: space-between; /* 양쪽 끝으로 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    width: 100%; /* 부모 요소의 전체 너비 사용 */
+}
+
+.total-amount-container {
+    display: flex; /* 가로 방향으로 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+.total-amount {
+    margin-left: 300px; /* '원'과의 간격 조정 */
+}
+
+.payment-info,
+.user-info{
+    width: 150px;
+    height: auto;
+    padding: 2px 0;
+    background: #ddd;
+    line-height: 1.5; /* 줄 간격 조정 */
+    padding: 10px;
+
+}
+
+.payment-details {
+    width: 100%;
+    height: auto; /* 자동 높이 */
+    padding: 10px;
+    background: #f0e7e7;
+}
+
+.pay-details,
+.pay-id-details,
+.pay-user-details,
+.pay-total-details {
+    line-height: 1.5; /* 줄 간격 조정 */
+    width: 100%;
+    display: flex; /* 내용을 수직으로 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+}
+
+.user-details{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background: #f0e7e7;
+}
+.user-name-details,
+.user-hp-details,
+.user-addr-details{
+    line-height: 1.5; /* 줄 간격 조정 */
+    width: 100%;
+    height: auto;
+}
+
+.pro-num { width: 12%; }
+.pro-name { width: 17%; }
+.pro-seller { width: 12%; }
+.pro-price { width: 12%; }
+.pro-sell { width: 9%; }
+.pro-stock { width: 8%; }
+.pro-ship { width: 8%; } /* 배송비 비율 증가 */
+.total-pay { width: 11%; } /* 결제금액 비율 감소 */
+.pro-img { width: 10%; }
+
+.pro-num-details,
+.pro-name-details,
+.pro-seller-details,
+.pro-price-details,
+.pro-sell-details,
+.pro-stock-details,
+.pro-ship-details,
+.total-pay-details,
+.pro-img-details{
+    font-size: 15px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ddd; /* 테두리 색상 */
+}
+.pro-num-details { width: 12%; }
+.pro-name-details { width: 17%; font-size: 10px;}
+.pro-seller-details { width: 12%; }
+.pro-price-details { width: 12%; }
+.pro-sell-details { width: 9%; }
+.pro-stock-details { width: 8%; }
+.pro-ship-details { width: 8%; } /* 배송비 비율 증가 */
+.total-pay-details { width: 11%; } /* 결제금액 비율 감소 */
+.pro-img-details { width: 10%; }
+
+img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+.pro-num,
+.pro-name,
+.pro-seller,
+.pro-price,
+.pro-sell,
+.pro-stock,
+.pro-ship,
+.total-pay,
+.pro-img {
+    font-size: 15px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ddd; /* 테두리 색상 */
+}
