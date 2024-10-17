@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>shop list</title>
-    <link rel="stylesheet" href="../css/shoplistmodal.css">
+    <link rel="stylesheet" href="/css/shoplistmodal.css">
 </head>
 <style>
         *{margin: 0; padding:0; font-family: '고딕', sans-serif; box-sizing: border-box; font-size: 12px;}
@@ -241,20 +241,9 @@ a:hover {font-weight: bold; text-decoration: underline;}
         button{cursor: pointer;}
         .list_button {width: 900px; height: 250px; margin: 20px auto; display: flex; }
         .list_button button:nth-of-type(1) {width: 80px; height: 35px; margin-top: 150px;}
-        .list_button button:nth-of-type(2){margin-left: auto; margin-top: 150px; width: 80px; height: 35px; background: #8EB4E3;color: white;  border: none;}
+        .list_button button:nth-of-type(2){margin-left: auto; margin-top: 150px; width: 80px; height: 35px; background: #8EB4E3; color: white;  border: none;}
 
-        .status{
-            text-align: right;
-        }
-        .status-icon-running, .status-text-running{
-            color: #00B050;
-        }
-        .status-icon-paused, .status-text-paused{
-            color: #FF0000;
-        }
-        .status-icon-standby, .status-text-standby{
-            color: #0070C0;
-        }
+
         #ordersearch {
             width: 95px;
             height: 33px;
@@ -315,7 +304,7 @@ a:hover {font-weight: bold; text-decoration: underline;}
             <div id="admin_container">
                 <div id="admin_aside">
                     <div id="admin_aside_list">
-                        <img class="top_log" src="../images/sample/lotte로고(white).png" alt="로고사진">
+                        <img class="top_log" src="/images/sample/lotte로고(white).png" alt="로고사진">
                         <div class="aside_first">
                             <h2>관리자 메인</h2>
                         </div>
@@ -380,12 +369,12 @@ a:hover {font-weight: bold; text-decoration: underline;}
                 <section>
                     <div class="admin_gate">
                         <div class="left-icons">
-                            <a href="#" id="toggle-aside"><img src="../images/sample/menu.png" alt=""></a>
+                            <a href="#" id="toggle-aside"><img src="/images/sample/menu.png" alt=""></a>
                         </div>
                         <div class="right-icons">
-                            <a href="#"><img src="../images/sample/home.png" alt=""></a>
-                            <a href="#"><img src="../images/sample/login.png" alt=""></a>
-                            <a href="#"><img src="../images/sample/logout.png" alt=""></a>
+                            <a href="#"><img src="/images/sample/home.png" alt=""></a>
+                            <a href="#"><img src="/images/sample/login.png" alt=""></a>
+                            <a href="#"><img src="/images/sample/logout.png" alt=""></a>
                             <span>홍길동님</span>
                         </div>
                     </div>
@@ -585,7 +574,7 @@ a:hover {font-weight: bold; text-decoration: underline;}
         </main>
         
     </div>
-    <script src="../js/shoplistmodal.js"></script>
+    <script src="/js/shoplistmodal.js"></script>
     <script>
     document.querySelectorAll('.admin_menu > li').forEach(menu => {
         const submenu = menu.querySelector('.admin_sub_menu');
