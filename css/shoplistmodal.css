@@ -72,16 +72,24 @@ padding: 10px;
 
 
 /* 입력 필드 스타일 */
- input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="number"] {
+ input[type="text"], input[type="recipient"], input[type="email"], input[type="tel"], input[type="number"] {
             width: 185px;
             height: 20px;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            margin-top: 10px;
         }
         #address1, #address2 {
             width: 380px;
         }
+    select{
+        width: 185px;
+        height: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
 
  button[type="submit"] {
     width: 130px;
@@ -96,4 +104,12 @@ padding: 10px;
 
 button[type="submit"]:hover {
     background-color: #45a049;
+}
+#etc{
+    width: 380px;
+    height: 86px;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
 }
