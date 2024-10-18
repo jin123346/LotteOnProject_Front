@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>admin Main</title>
+    <title>member point</title>
     <link rel="stylesheet" href="/css/adminaside.css">
-    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="/css/memberpoint.css">
 </head>
-
 <body>
     <div id="wrapper">
         <main id="admin_main">
@@ -82,7 +81,7 @@
                         </div>
                     </div>
                 </div>
-            <div id="admin_service">    
+            <div id="admin_service">
                 <section>
                     <div class="admin_gate">
                         <div class="left-icons">
@@ -95,73 +94,76 @@
                             <span>홍길동님</span>
                         </div>
                     </div>
-                    <section id="admin_navi">
-                            <p>관리자 메인</p>
-                            <p><a href="#">HOME</a> > 관리자 메인</p>
+                     <section id="admin_navi">
+                        <p>포인트관리</p>
+                        <p><a href="#">HOME</a> > 회원관리 > 포인트목록</p>
                     </section>
-
-                    <div class="reply-box">
-                        <aside id="aside">  </aside>
-                        <div class="coment-box">
-                            <div class="navi-container">
-                                <h3>자주묻는질문 목록</h3>
-                                <div class="navi">
-                                    <a href="">HOME</a> > <a href="">고객센터</a> > <a href="">공지상황</a>
-                                </div>
-                            </div>
-                            <form class="reply-coment">
-                                <div class="reply-table">
-                                    <div class="reply-type">
-                                        <div>유형</div>
-                                        <div>
-                                            회원 - 가입
-                                        </div>
-                                    </div>
-                                    <div class="reply-title">
-                                        <div>제목</div>
-                                        <div>
-                                            개인 회원과 법인회원은 다르다.
-                                        </div>
-                                    </div>
-                                    <div class="reply-content">
-                                        <div>내용</div>
-                                        <div>
-                                            대충 내용 이 어쩌고 저쩌고 個人介入と法事介入何が違いますか<br>
-                                            대충 내용 이 어쩌고 저쩌고 個人介入と法事介入何が違いますか<br>
-                                            대충 내용 이 어쩌고 저쩌고 個人介入と法事介入何が違いますか<br>
-                                            대충 내용 이 어쩌고 저쩌고 個人介入と法事介入何が違いますか<br>
-                                        </div>
-                                    </div>
-                                    <div class="reply-answer">
-                                        <div>답변</div>
-                                        <div style="display: flex; justify-content: space-between; ">
-                                            <textarea class="reply-contents" oninput="autoResize(this)"></textarea>
-                                        </div>
-                                    </div>
-                            </form>
-                            <div class="reoly-btn-controoler">
-                                <a class="replt-btn-delete" href="#">삭제</a>
-                                <a class="replt-btn-ok" href="#">답변등록</a>
-                                <a class="replt-btn-list" href="#">목록</a>
-                            </div>
+                
+              
+                <article id="admin_banner_main">
+                
+                <div>
+                    <table class="admin_banner_table">
+                        <colgroup>
+                            <col style="width: 5%">
+                            <col style="width: 7%">
+                            <col style="width: 10%">
+                            <col style="width: 11%">
+                            <col style="width: 14%">
+                            <col style="width: 14%">
+                            <col style="width: 9%">
+                            <col style="width: 20%">
+                        </colgroup>
+                        <div>
+                        <select id="shopsearch" >
+                            <option value="">아이디</option>
+                            <option value="">이름</option>
+                            <option value="">이메일</option>
+                            <option value="">휴대폰</option>
+                        </select>
+                        <input id="search" type="text" placeholder="검색어 입력">
+                        <button id="serachbtn" type="button">검색</button>
                         </div>
+                        
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>번호</th>
+                            <th>아이디</th>
+                            <th>이름</th>
+                            <th>지급포인트</th>
+                            <th>잔여포인트</th>
+                            <th>지급내용</th>
+                            <th>지급날짜</th>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>5</td>
+                            <td>a101</td>
+                            <td>정우성</td>
+                            <td>1,000</td>
+                            <td>15,000</td>
+                            <td>구매확정 포인트 지급</td>
+                            <td>2024-10-18 09:33</td>
+
+                        </tr>
+                        
+                    </table>
+                </article>
+                    <div class="list_button">
+                        <button>선택삭제</button>
                     </div>
-
-
                 </section>
+
+                
                 <footer id="admin_footer">
                     <div>Copyright ©LotteON.co.kr All rights reserved. LotteON ADMINISTRATOR Version 5.4.1.2 3조 project</div>
                 </footer>
-
+                </div>    
             </div>
-
-        </div>
-
         </main>
-
+        
     </div>
-</body>
-<script>
+    <script>
     document.querySelectorAll('.admin_menu > li').forEach(menu => {
         const submenu = menu.querySelector('.admin_sub_menu');
         
@@ -186,11 +188,7 @@
 
 
     })
-
-
-</script>
-<script>
-document.getElementById('toggle-aside').addEventListener('click', function(e) {
+    document.getElementById('toggle-aside').addEventListener('click', function(e) {
     e.preventDefault(); // 기본 링크 동작 방지
     
     const aside = document.getElementById('admin_aside');
@@ -208,5 +206,17 @@ document.getElementById('toggle-aside').addEventListener('click', function(e) {
         gate.classList.add('expanded'); // gate도 너비 늘리기
     }
 });
+    // 전화번호 뒷부분을 잘라서 표시하는 함수
+    function hidePhoneNumber(phoneNumber) {
+            return phoneNumber.slice(0, 3) + '...';
+        }
+
+        // 전화번호 잘림 적용
+        const phoneElement = document.getElementById('phone');
+        const hiddenPhone = hidePhoneNumber(phoneElement.textContent);
+        phoneElement.textContent = hiddenPhone;
 </script>
+</body>
+
+
 </html>

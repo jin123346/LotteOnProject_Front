@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Management</title>
+    <style>
+        .category {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .category > li {
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        .subcategory {
+            list-style-type: none;
+            padding-left: 20px;
+            display: none;
+        }
+
+        .sortable {
+            border: 1px solid #ccc;
+            padding: 5px;
+            margin-bottom: 5px;
+            background-color: #f9f9f9;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label, input, select {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+    <!-- Include jQuery UI for sortable -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <h2>Category Management</h2>
+
+    <ul class="category" id="categoryList">
+        <!-- Categories will be dynamically added here -->
+    </ul>
+
+    <button id="updateOrderBtn">Update Order</button>
+
+    <h3>Add/Edit Category</h3>
+    <form id="categoryForm">
+        <input type="hidden" id="categoryId" value="">
+        <label for="parentCategory">Parent Category</label>
+        <select id="parentCategory">
+            <option value="">None (Top-level)</option>
+            <!-- Options will be dynamically added -->
+        </select>
+
+        <label for="categoryName">Category Name</label>
+        <input type="text" id="categoryName" required>
+
+        <label for="categoryLevel">Category Level</label>
+        <select id="categoryLevel" required>
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+        </select>
+
+        <button type="submit">Save</button>
+    </form>
+
+    <script>
+        let categories = [
+            { id: 1, parentId: null, name: '패션,의류,뷰티', subCategory: '', level: 1 },
+            { id: 2, parentId: 1, name: '패션', subCategory: '', level: 2 },
+            { id: 3, parentId: 2, name: '남성패션', subCategory: '남성', level: 3 },
+            { id: 4, parentId: 2, name: '여성패션', subCategory: '여성', level: 3 },
+            { id: 5, parentId: 2, name: '아동패션', subCategory: '아동', level: 3 },
+            { id: 7, parentId: 1, name: '의류', subCategory: '', level: 2 }
+        ];
+
+        // Function to render the categories list
+        function renderCategories() {
+            const categoryList = document.getElementById('categoryList');
+            categoryList.innerHTML = '';
+
+            categories.forEach(category => {
+                if (category.parentId === null) {
+                    const listItem = createCategoryItem(category);
+                    categoryList.appendChild(listItem);
+                }
+            });
+
+            // Initialize drag and drop after rendering
+            $(".sortable-list").sortable({
+                connectWith: ".sortable-list",
+                stop: function(event, ui) {
+                    updateDataIds();  // Update data ids after sorting
+                }
+            }).disableSelection();
+        }
+
+        // Create a category list item
+        function createCategoryItem(category) {
+            const li = document.createElement('li');
+            li.setAttribute('data-id', category.id);
+            li.classList.add('sortable');
+            li.textContent = category.name;
+
+            // Add edit and delete buttons
+            const editBtn = document.createElement('button');
+            editBtn.textContent = 'Edit';
+            editBtn.onclick = (e) => {
+                e.stopPropagation(); // Prevent parent click from firing
+                editCategory(category.id);
+            };
+            li.appendChild(editBtn);
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = 'Delete';
+            deleteBtn.onclick = (e) => {
+                e.stopPropagation(); // Prevent parent click from firing
+                deleteCategory(category.id);
+            };
+            li.appendChild(deleteBtn);
+
+            // Add subcategories
+            const subCategories = categories.filter(cat => cat.parentId === category.id);
+            if (subCategories.length > 0) {
+                const subUl = document.createElement('ul');
+                subUl.classList.add('subcategory', 'sortable-list');
+                subCategories.forEach(subCategory => {
+                    const subLi = createCategoryItem(subCategory);
+                    subUl.appendChild(subLi);
+                });
+                li.appendChild(subUl);
+
+                li.onclick = (e) => {
+                    e.stopPropagation(); // Prevent bubbling up
+                    subUl.classList.toggle('show');
+                };
+            }
+
+            return li;
+        }
+
+        // Function to update category options for parent category select
+        function updateParentOptions() {
+            const parentCategory = document.getElementById('parentCategory');
+            parentCategory.innerHTML = '<option value="">None (Top-level)</option>';
+
+            categories.forEach(category => {
+                const option = document.createElement('option');
+                option.value = category.id;
+                option.textContent = category.name;
+                parentCategory.appendChild(option);
+            });
+        }
+
+        // Add or edit a category
+        function addOrEditCategory(event) {
+            event.preventDefault();
+
+            const categoryId = document.getElementById('categoryId').value;
+            const parentCategory = document.getElementById('parentCategory').value;
+            const categoryName = document.getElementById('categoryName').value;
+            const categoryLevel = document.getElementById('categoryLevel').value;
+
+            if (categoryId) {
+                // Edit existing category
+                const category = categories.find(cat => cat.id == categoryId);
+                category.parentId = parentCategory ? parseInt(parentCategory) : null;
+                category.name = categoryName;
+                category.level = parseInt(categoryLevel);
+            } else {
+                // Add new category
+                const newCategory = {
+                    id: categories.length + 1,
+                    parentId: parentCategory ? parseInt(parentCategory) : null,
+                    name: categoryName,
+                    subCategory: '',
+                    level: parseInt(categoryLevel)
+                };
+                categories.push(newCategory);
+            }
+
+            document.getElementById('categoryForm').reset();
+            renderCategories();
+            updateParentOptions();
+        }
+
+        // Edit category
+        function editCategory(id) {
+            const category = categories.find(cat => cat.id == id);
+            document.getElementById('categoryId').value = category.id;
+            document.getElementById('parentCategory').value = category.parentId;
+            document.getElementById('categoryName').value = category.name;
+            document.getElementById('categoryLevel').value = category.level;
+        }
+
+        // Delete category
+        function deleteCategory(id) {
+            const index = categories.findIndex(cat => cat.id == id);
+            if (index !== -1) {
+                categories.splice(index, 1);
+                renderCategories();
+                updateParentOptions();
+            }
+        }
+
+        // Function to update the data-id attributes dynamically after sorting
+        function updateDataIds() {
+            $(".category > li").each(function (index) {
+                $(this).attr("data-id", index + 1);
+            });
+        }
+
+        document.getElementById('categoryForm').addEventListener('submit', addOrEditCategory);
+
+        // Initial rendering
+        renderCategories();
+        updateParentOptions();
+    </script>
+</body>
+</html>
