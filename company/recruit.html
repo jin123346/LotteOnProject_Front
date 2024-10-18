@@ -65,7 +65,10 @@
                     </div>
                     <div class="filter">
                         <label for="employment-type">키워드 검색</label>
-                        <input type="text" placeholder="키워드 검색">
+                        <div class="search-container">
+                            <input type="text" placeholder="키워드 검색">
+                            <img src="/images/common/icon_search_black.svg" alt="돋보기 아이콘" class="search-icon">
+                        </div>
                     </div>
                 </div>
                 <div class="job-listings">
@@ -75,7 +78,7 @@
                                 <a href="https://recruit.lotteon.com/job_posting/qbgApfZr" target="_blank"
                                     class="job-link">
                                     <h3>뷰티 (백화점, 명품) MD</h3>
-                                    <span>영업 | MD | 경력 6~12년 | 정규직 | 롯데캐어스 삼성오피스</span>
+                                    <span>영업 | MD | 경력 6~12년 | 정규직 | 롯데e커머스 삼성오피스</span>
                                 </a>
                             </div>
                             <div class="job-action">
@@ -87,7 +90,7 @@
                                 <a href="https://recruit.lotteon.com/job_posting/og6tv9rY" target="_blank"
                                     class="job-link">
                                     <h3>퍼포먼스 마케터 (Paid 광고)</h3>
-                                    <span>마케팅 | 경력 4~12년 | 정규직 | 롯데캐어스 삼성오피스</span>
+                                    <span>마케팅 | 경력 4~12년 | 정규직 | 롯데e커머스 삼성오피스</span>
                                 </a>
                             </div>
                             <div class="job-action">
@@ -99,7 +102,7 @@
                                 <a href="https://recruit.lotteon.com/job_posting/X1axuGBI" target="_blank"
                                     class="job-link">
                                     <h3>패션 MD</h3>
-                                    <span>영업 | MD | 경력 3~12년 | 정규직 | 롯데캐어스 삼성오피스</span>
+                                    <span>영업 | MD | 경력 3~12년 | 정규직 | 롯데e커머스 삼성오피스</span>
                                 </a>
                             </div>
                             <div class="job-action">
@@ -186,5 +189,20 @@
         </footer>
     </main>
 </body>
-
+<!-- JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const target = document.querySelector('.mainbackgoroud');
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            target.classList.add('show');
+          }
+        });
+      });
+  
+      observer.observe(target);
+    });
+</script>
 </html>

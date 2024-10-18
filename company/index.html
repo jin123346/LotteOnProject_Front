@@ -39,7 +39,8 @@
 					<p>쇼핑 좀 해본 사람들이 만든 플랫폼,<br>
 						롯데ON은 풍부한 오프라인 쇼핑 인프라, 온라인 쇼핑 노하우,<br>
 						IT기술로 세상에 없던 새로운 쇼핑 경험을 제공하고<br>
-						꼭 이용하고 싶은 온라인 쇼핑 플랫폼으로 발전하고 있어요.<br></p>
+						꼭 이용하고 싶은 온라인 쇼핑 플랫폼으로 발전하고 있어요.
+					</p>
 				</div>
 
 				<div class="space"></div>
@@ -54,10 +55,10 @@
 							<div>
 								<h3>함께하는 성장,<br>세상을 더 이롭게 만들어요</h3>
 								<p>
-									'Dream Together for a Better Earth'를 목표로<br>
-									ESG를 실천해나가고 있으며, 롯데ON 플랫폼을 활용한<br>
-									크라우드 펀딩 기부 릴레이, 상품기부 등 이로운 세상을 위한<br>
-									다양한 사회공헌 활동들을 진행하고 있어요.<br>
+									'Dream Together for a Better Earth'를 목표로
+									ESG를 실천해나가고 있으며, 롯데ON 플랫폼을 활용한
+									크라우드 펀딩 기부 릴레이, 상품기부 등 이로운 세상을 위한
+									다양한 사회공헌 활동들을 진행하고 있어요.
 								</p>
 							</div>
 						</div>
@@ -67,10 +68,10 @@
 							<div>
 								<h3>고객이 원하고 만족하는<br>서비스를 만들어요</h3>
 								<p>
-									롯데ON은 단순히 상품만을 판매하는 플랫폼이 아니라,<br>
-									상품에 대한 경험을 함께 제공할 수 있는 플랫폼을 목표로 하고 있어요<br>
-									해외직구, 뷰티, 그로서리, 선물하기 등 다양한 영역에서<br>
-									새로운 서비스를 만들어가고 있어요.<br>
+									롯데ON은 단순히 상품만을 판매하는 플랫폼이 아니라,
+									상품에 대한 경험을 함께 제공할 수 있는 플랫폼을 목표로 하고 있어요
+									해외직구, 뷰티, 그로서리, 선물하기 등 다양한 영역에서
+									새로운 서비스를 만들어가고 있어요.
 								</p>
 							</div>
 						</div>
@@ -82,10 +83,10 @@
 									하이앤드테크로 온/오프라인<br>
 									시너지를 만들어요</h3>
 								<p>
-									많은 전문가들이 MSA, AWS 등 최신 기술을 운영하고 있으며,<br>
-									최신기술과 롯데의 온/오프라인 4000만+ 고객 데이터를 결합하여<br>
-									롯데 오프라인 매장과 연계한 다양한 서비스로<br>
-									고객들에게 온-오프라인을 넘나드는 새로운 쇼핑 경험을 드려요.<br>
+									많은 전문가들이 MSA, AWS 등 최신 기술을 운영하고 있으며,
+									최신기술과 롯데의 온/오프라인 4000만+ 고객 데이터를 결합하여
+									롯데 오프라인 매장과 연계한 다양한 서비스로
+									고객들에게 온-오프라인을 넘나드는 새로운 쇼핑 경험을 드려요.
 								</p>
 							</div>
 						</div>
@@ -167,5 +168,20 @@
 		</footer>
 	</div>
 </body>
-
+<!-- JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const target = document.querySelector('.mainbackgoroud');
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            target.classList.add('show');
+          }
+        });
+      });
+  
+      observer.observe(target);
+    });
+</script>
 </html>
