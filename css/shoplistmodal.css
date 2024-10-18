@@ -16,19 +16,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* 화면 중앙에 정렬 */
-    padding: 20px;
     border: 1px solid #888;
     width: 700px; 
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 .modal-content .header{
-    background-color: #e23;
+    background-color: rgb(35, 63, 99);
 }
 .modal-content .header h3{
     padding: 10px 20px;
     font-size: 20px;
-    color: #000000;
+    color: #FFFFFF;
     font-weight: 500;
 }
 .modaltable {
@@ -87,8 +86,7 @@ padding: 10px;
  button[type="submit"] {
     width: 130px;
     height: 40px;
-    margin-top: 30px;
-    margin-left: 290px;
+    margin: 30px 290px 20px ;
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
