@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>shop list</title>
     <link rel="stylesheet" href="/css/shoplistmodal.css">
+    <script src=""></script>
 </head>
 <style>
         *{margin: 0; padding:0; font-family: '고딕', sans-serif; box-sizing: border-box; font-size: 12px;}
@@ -421,7 +422,7 @@ a:hover {font-weight: bold; text-decoration: underline;}
                             <th>배송</th>
                         </tr>
                         <tr>
-                            <td><a href="#">10101212121</a></td>
+                            <td><a id="order-modal-btn">10101212121</a></td>
                             <td>wlgus5946</td>
                             <td>챱챱김</td>
                             <td>초코틴틴</td>
@@ -495,6 +496,9 @@ a:hover {font-weight: bold; text-decoration: underline;}
  
                 
             </div>
+
+            <div id="order-modal-div"></div>
+
             <div id="productModal" class="modal">
                 <div class="modal-content">
                     <div class="header">
