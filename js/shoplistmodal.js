@@ -115,3 +115,40 @@ fetch('../../include/admin-shipping-modal/shipping-modal.html')
     .catch(err => {
         console.error("Error loading shipping modal:", err);
     });
+
+
+// 배달 상세 모달 로드
+fetch('../../include/admin-order-modal/delivery-modal.html')
+.then(resp => resp.text())
+.then(data => {
+    document.getElementById('delivery-modal-div').innerHTML = data;
+
+    // HTML이 로드된 후 배송 버튼 클릭 이벤트 설정
+    const shipping_btn = document.getElementBy('shipping-modal-btn');
+    const shipping_modal = document.querySelector('.shipping-section'); // .shipping-section 선택
+    const shipping_close_btn = document.getElementsByClassName('shipping-close')[0]; // "X" 버튼 선택
+
+    // 배송 상세 모달 열기
+    shipping_btn.onclick = function () {
+        if (shipping_modal) {
+            shipping_modal.style.display = "flex"; // 중앙 정렬을 위해 flex 사용
+        }
+    };
+
+    // "X" 버튼 클릭 시 모달 닫기
+    shipping_close_btn.onclick = function () {
+        if (shipping_modal) {
+            shipping_modal.style.display = "none"; // 모달 닫기
+        }
+    };
+
+    // 모달 외부 클릭 시 닫기
+    window.onclick = function(event) {
+        if (event.target === shipping_modal) {
+            shipping_modal.style.display = "none"; // 모달 닫기
+        }
+    };
+})
+.catch(err => {
+    console.error("Error loading shipping modal:", err);
+});
