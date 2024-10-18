@@ -1,5 +1,5 @@
 .modal-section {
-    /* display: none; */
+    display: none;
     justify-content: center !important;  /* 수평 중앙 정렬 */
     align-items: center; /* 수직 중앙 정렬 */
     position: fixed; /* 고정 위치 */
