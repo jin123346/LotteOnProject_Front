@@ -8,10 +8,7 @@
     justify-content: space-between;
 
 }
-.navi , a{
-    font-size: 15px;
-    margin-right: 20px;
-}
+
 /* qnaList css */
 .admin-articleList {
     width: 1200px;
@@ -147,7 +144,7 @@
     align-items: center;        /* 세로 방향 중앙 정렬 */
     width: 100px;
     height: 40px;
-    font-size: 18px;
+    font-size: 12px;
     margin: 100px 30px 50px 30px;
     background: #ddd;
     text-decoration: none; 
@@ -159,7 +156,7 @@
     align-items: center;        /* 세로 방향 중앙 정렬 */
     width: 100px;
     height: 40px;
-    font-size: 18px;
+    font-size: 12px;
     margin: 100px 0px 50px 5px;
     background: #ddd;
     text-decoration: none; 
@@ -237,7 +234,7 @@
 .content-view {
     flex: 5; /* 뷰가 박스보다 더 많은 공간을 차지하도록 설정 */
     padding: 20px;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 1.5;
 }
 .btn-controller{
@@ -248,7 +245,7 @@
 .delete-btn, .register-btn{
     width: 100px;
     height: 40px;
-    font-size: 18px;
+    font-size: 12px;
     margin: 100px 10px 50px 5px;
     background: #ddd;
     
@@ -262,7 +259,7 @@
     justify-content: center;
     width: 100px;
     height: 40px;
-    font-size: 18px;
+    font-size: 12px;
     margin: 100px 10px 50px 5px;
     background: #ddd;
 }
@@ -370,7 +367,7 @@
     align-items: center;        /* 세로 방향 중앙 정렬 */
     width: 100px;
     height: 40px;
-    font-size: 18px;
+    font-size: 12px;
     border: 1px solid #ccc;
     background: #ccc;
     margin-right: 10px;
@@ -430,7 +427,7 @@
 .write-title div:nth-child(1),
 .write-content div:nth-child(1),
 .write-input div:nth-child(1) {
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
     width: 100px/* 원하는 너비 설정 */;
 }
@@ -452,7 +449,7 @@
     align-items: center;        /* 세로 방향 중앙 정렬 */
     width: 100px;
     height: 40px;
-    font-size: 18px;
+    font-size: 12px;
     border: 1px solid #ccc;
     background: #ccc;
     margin-right: 10px;
