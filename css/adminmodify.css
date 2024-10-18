@@ -310,7 +310,6 @@
 .coment-box{    
     width: 100%;
     height: auto;
-    margin-top: 20px;
     
 }
 .reply-coment{
@@ -388,18 +387,15 @@
 .coment-box{    
     width: 100%;
     height: auto;
-    margin-top: 20px;
     
 }
 .write-coment{
-    margin-top: 40px;
     margin-left: 30px;
 }
 .write-table{
     width: 100%;
     align-items: center;
-    border-top: 2px solid;
-    margin-top: 80px;
+    border-top: 1px solid #D9D9D9;
 }
 
 .write-type,
@@ -421,8 +417,8 @@
     padding: 15px 0 15px 10px  ; 
 
 }
-.first_choice{width: 100px; height: 30px; font-size: 12px;}
-.second_choice{width: 100px; height: 30px; margin-left: 10px; font-size: 12px;}
+.first_choice{width: 100px; height: 30px; font-size: 12px; border: 1px solid #ccc}
+.second_choice{width: 100px; height: 30px; margin-left: 10px; font-size: 12px; border: 1px solid #ccc}
 .write-type div:nth-child(1),
 .write-title div:nth-child(1),
 .write-content div:nth-child(1),
@@ -431,15 +427,15 @@
     font-weight: bold;
     width: 100px/* 원하는 너비 설정 */;
 }
-.write-title input{width: 600px; height: 40px; font-size: 12px; border: 2px solid #D9D9D9;}
+.write-title input{width: 600px; height: 40px; font-size: 12px; border: 1px solid #D9D9D9;}
 
 
 .write-btn-controoler{
-    width: 100%;
+    width: 900px;
     height: auto;
     justify-content: center;
     display: flex;
-    margin: 80px 0 0 0 ;
+    margin: 20px ;
 }
 .write-btn-cancel,
 .write-btn-regip,
@@ -470,12 +466,12 @@
     width: 600px;
     min-height: 250px;
     max-height: 500px;
-    border: 2px solid #D9D9D9;
+    border: 1px solid #D9D9D9;
 }
 .faq-contents{
     resize: none;
     width: 600px;
     min-height: 250px;
     max-height: 500px;
-    border: 2px solid #D9D9D9;
+    border: 1px solid #D9D9D9;
 }

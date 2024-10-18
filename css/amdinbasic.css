@@ -21,7 +21,7 @@
 
 #copy_light div {width: 900px; margin: 3px auto;  padding: 3px;}
 .copy_light_table {width: 900px; margin: 0 auto; padding: 3px; margin-top: 5px}
-#copy_light div:nth-of-type(3)  {margin-bottom: 60px; padding: 3px;}
+#copy_light div:nth-of-type(3)  {margin-bottom: 20px; padding: 3px;}
 
 input[type="text"] {width: 450px;     border-radius: 4px; /* 모서리 둥글게 하기 */
     border: 0.3px solid #424242; /* 경계선 색상 */ padding: 3px;}
