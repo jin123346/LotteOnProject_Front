@@ -41,3 +41,5 @@ fetch('../../include/adminAside.html') // 헤더 파일 경로
         document.getElementById('adminAside').innerHTML = data;
     })
     .catch(error);
+
+
