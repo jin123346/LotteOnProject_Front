@@ -81,7 +81,7 @@
 }
 
 h3{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
 }
 /* !!!!!!!!!!!!!!!!!!order!!!!!!!!!!!!!!!!! */
@@ -89,7 +89,7 @@ h3{
     width: auto;
     height: auto;
     max-height: 600px;
-    background-color: black;
+    background-color:  #293042;
     color: white;
     padding: 1px 15px;
 }
@@ -119,7 +119,8 @@ h3{
     width: auto;
     height: auto;
     display: flex;
-    border-top: 2.5px solid;
+    border-top: 2.5px solid #bfbfbf;
+    font-weight: bold;
 
 }
 .details{
@@ -148,7 +149,7 @@ h3{
     display: flex;
     flex-direction: column; /* 세로 방향으로 정렬 */
     justify-content: center;
-    background-color: #ddd;
+    background-color: rgb(226,232,238);
     margin-left: auto;
 }
 
@@ -168,7 +169,7 @@ h3{
 .shipping-flex,
 .payment-flex{
     display: flex;
-    border-top: 2.5px solid ;
+    border-top: 2.5px solid #bfbfbf;;
    
 }
 .pay-total-details {
@@ -191,9 +192,10 @@ h3{
     width: 150px;
     height: auto;
     padding: 2px 0;
-    background: #ddd;
-    line-height: 1.5; /* 줄 간격 조정 */
+    background: rgb(226,232,238);
+    line-height: 2; /* 줄 간격 조정 */
     padding: 10px;
+    font-weight: bold;
 
 }
 
@@ -201,14 +203,14 @@ h3{
     width: 100%;
     height: auto; /* 자동 높이 */
     padding: 10px;
-    background: #f0e7e7;
+    background: #fbfdff;
 }
 
 .pay-details,
 .pay-id-details,
 .pay-user-details,
 .pay-total-details {
-    line-height: 1.5; /* 줄 간격 조정 */
+    line-height: 2; /* 줄 간격 조정 */
     width: 100%;
     display: flex; /* 내용을 수직으로 중앙 정렬 */
     align-items: center; /* 수직 중앙 정렬 */
@@ -218,12 +220,12 @@ h3{
     width: 100%;
     height: auto;
     padding: 10px;
-    background: #f0e7e7;
+    background: #fbfdff;
 }
 .user-name-details,
 .user-hp-details,
 .user-addr-details{
-    line-height: 1.5; /* 줄 간격 조정 */
+    line-height: 2; /* 줄 간격 조정 */
     width: 100%;
     height: auto;
 }
@@ -247,7 +249,7 @@ h3{
 .pro-ship-details,
 .total-pay-details,
 .pro-img-details{
-    font-size: 15px;
+    font-size: 12px;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -278,7 +280,7 @@ img{
 .pro-ship,
 .total-pay,
 .pro-img {
-    font-size: 15px;
+    font-size: 12px;
     height: 40px;
     display: flex;
     justify-content: center;
