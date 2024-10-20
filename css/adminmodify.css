@@ -432,7 +432,7 @@
     height: auto;
     justify-content: center;
     display: flex;
-    margin: 20px ;
+    margin: 40px auto ;
 }
 .write-btn-cancel,
 .write-btn-regip,
@@ -446,8 +446,8 @@
     border: none;
     background-color: #81a6d3;
     color: white;
-    margin-right: 10px;
-    border-radius: 7px;
+    margin-right: 20px;
+    border-radius: 4px;
 
 }
 .write-btn-cancel {background-color: rgb(200, 200, 200);}
