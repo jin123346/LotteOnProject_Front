@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>faqwrite</title>
     <link rel="stylesheet" href="/css/admin.css">
     <link rel="stylesheet" href="/css/adminaside.css">
 
@@ -16,7 +16,7 @@
                   <div id="admin_aside_list">
                       <img class="top_log" src="/images/sample/lotte로고(white).png" alt="로고사진">
                       <div class="aside_first">
-                          <h2>관리자 메인</h2>
+                          <h2>고객센터</h2>
                       </div>
                       <div class="aside_second">
                         <ul class="admin_menu">
@@ -97,8 +97,14 @@
                       </div>
                   </div>
                   <section id="admin_navi">
-                          <p>관리자 메인</p>
-                          <p><a href="#">HOME</a> > 관리자 메인</p>
+                          <p>고객센터</p>
+                          <p>
+                            <a href="#">HOME</a>
+                            <span>></span>
+                            <a href="#">고객센터</a>
+                            <span>></span>
+                            <a href="#">자주묻는질문</a>
+                        </p>
                   </section>
                   <div class="write-box">
                     <div class="coment-box">
@@ -154,4 +160,52 @@
       </main>
       </div>
 </body>
+<script>
+    document.querySelectorAll('.admin_menu > li').forEach(menu => {
+        const submenu = menu.querySelector('.admin_sub_menu');
+        
+        menu.addEventListener('click', function(e) {
+            e.stopPropagation();
+
+            
+            if(submenu) {
+                submenu.classList.toggle('open');
+
+            }
+        });
+
+        // 서브 메뉴 항목 클릭 이벤트
+        if(submenu){
+            submenu.querySelectorAll('li').forEach(subLi => {
+                subLi.addEventListener('click', function(e){
+                    e.stopPropagation();       
+                })
+            })
+        }
+
+
+    })
+
+
+</script>
+<script>
+document.getElementById('toggle-aside').addEventListener('click', function(e) {
+    e.preventDefault(); // 기본 링크 동작 방지
+    
+    const aside = document.getElementById('admin_aside');
+    const main = document.getElementById('admin_service');
+    const gate = document.getElementById('admin_gate'); // admin_gate 추가
+    
+    // aside가 숨겨져 있는지 여부에 따라 클래스 조정
+    if (aside.classList.contains('hidden')) {
+        aside.classList.remove('hidden'); // aside 보이기
+        main.classList.remove('expanded'); // main 원래 너비로
+        gate.classList.remove('expanded'); // gate도 원래 너비로
+    } else {
+        aside.classList.add('hidden'); // aside 숨기기
+        main.classList.add('expanded'); // main 너비 늘리기
+        gate.classList.add('expanded'); // gate도 너비 늘리기
+    }
+});
+</script>
 </html>
