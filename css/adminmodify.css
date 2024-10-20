@@ -376,8 +376,7 @@
 
 /* 통합 write css */
 .write-box{
-    width: calc(100%-200px);
-    max-width: 1200px;
+    width: 900px;
     height: auto;
     margin: 0 auto;
     display: flex;
@@ -389,9 +388,7 @@
     height: auto;
     
 }
-.write-coment{
-    margin-left: 30px;
-}
+
 .write-table{
     width: 100%;
     align-items: center;
