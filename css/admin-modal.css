@@ -45,7 +45,7 @@
     width: 100%; /* 전체 너비 */
     height: 100%; /* 전체 높이 */
     background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
-    display: flex; /* flexbox로 설정 */
+    display: none; /* flexbox로 설정 */
     justify-content: center; /* 수평 중앙 정렬 */
     align-items: center; /* 수직 중앙 정렬 */
     z-index: 1001; /* 모달이 그림자 위에 있도록 설정 */
@@ -89,7 +89,7 @@ h3{
     width: auto;
     height: auto;
     max-height: 600px;
-    background-color: black;
+    background-color: rgb(35, 63, 99);;
     color: white;
     padding: 1px 15px;
 }
@@ -497,7 +497,7 @@ img{
 .shipping-info-items{
     width: auto;
     height: auto;
-    background-color: black;
+    background-color:  rgb(35, 63, 99);
     color: white;
     padding: 1px 15px;
 }
@@ -522,7 +522,7 @@ img{
     display: flex;
     align-items: center;
     padding: 20px 0 10px 20px;
-    background: #e4d2d2;
+    background: #ddd;
     width: 200px;
     height: auto;
     font-weight: bold;
@@ -533,7 +533,7 @@ img{
 .addr2-info{
     width: 200px; 
     height: 10px;
-    background: #e4d2d2;
+    background: #ddd;
     padding: 20px 0 10px 20px;
 }
 
