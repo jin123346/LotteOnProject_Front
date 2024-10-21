@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adminAside</title>
+    <script src="../js/admin.js"></script>
+    <style>
+       #admin_aside {
+            width: 200px;
+            border-right: 1px solid rgb(199, 199, 199);
+            box-sizing: border-box;
+            background-color: #f9f9f9; /* 배경색 추가 */
+            padding: 10px; /* 내부 여백 추가 */
+        }
+
+        /* 어사이드 - 관리자 메인 */
+        .aside_first {
+            border-top: 2px solid rgb(167, 167, 167);
+            margin: 55px 0 10px 20px;
+        }
+
+        .aside_first > h2 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 15px;
+            color: #333; /* 글자색 조정 */
+            text-align: center; /* 중앙 정렬 */
+        }
+
+        /* 어사이드 - 메뉴 */
+        .aside_second {
+            border-top: 1px solid rgb(196, 196, 196);
+            border-bottom: 1px solid rgb(196, 196, 196);
+            margin: 40px 0 10px 20px;
+        }
+
+        .admin_menu {
+            margin-top: 10px;  /* 위쪽 간격 줄이기 */
+            margin-bottom: 10px; /* 아래쪽 간격 줄이기 */
+        }
+
+        .admin_menu > li {
+            cursor: pointer;
+            padding: 10px; /* 항목 여백 추가 */
+            border-radius: 5px; /* 항목 둥글게 */
+            transition: background 0.3s; /* 배경 변화 효과 */
+        }
+
+        .admin_menu > li:hover {
+            background-color: #e0e0e0; /* 호버 시 배경색 변경 */
+        }
+
+        /* 서브 메뉴 */
+        .admin_sub_menu {
+            visibility: hidden;
+            padding: 5px;
+            padding-left: 20px;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+            overflow: hidden;
+            /* background-color: #f0f0f0; 서브 메뉴 배경색 */
+            border-radius: 5px; /* 둥글게 */
+        }
+
+        .admin_sub_menu.open {
+            max-height: 196px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .admin_sub_menu > li {
+            margin: 5px;
+            padding: 5px 10px; /* 서브 메뉴 항목 여백 추가 */
+            border-radius: 3px; /* 서브 메뉴 항목 둥글게 */
+            transition: background 0.3s; /* 서브 메뉴 항목 배경 변화 효과 */
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="admin_aside">
+        <div id="admin_aside_list">
+            <div class="aside_first">
+                <h2>관리자 메인</h2>
+            </div>
+            <div class="aside_second">
+                <ul class="admin_menu">
+                    <li><a href="#">환경설정</a>
+                        <ul class="admin_sub_menu">
+                            <li><a href="#" class="active">기본설정</a></li>
+                            <li><a href="#" class="active">배너관리</a></li>
+                            <li><a href="#" class="active">약관관리</a></li>
+                            <li><a href="#" class="active">버전이력</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">상점관리</a>
+                        <ul class="admin_sub_menu">
+                            <li><a href="#" class="active">기본설정</a></li>
+                            <li><a href="#" class="active">배너관리</a></li>
+                            <li><a href="#" class="active">약관관리</a></li>
+                            <li><a href="#" class="active">버전이력</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">회원관리</a>
+                        <ul class="admin_sub_menu">
+                            <li><a href="#" class="active">기본설정</a></li>
+                            <li><a href="#" class="active">배너관리</a></li>
+                            <li><a href="#" class="active">약관관리</a></li>
+                            <li><a href="#" class="active">버전이력</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">상품관리</a>
+                        <ul class="admin_sub_menu">
+                            <li><a href="#" class="active">기본설정</a></li>
+                            <li><a href="#" class="active">배너관리</a></li>
+                            <li><a href="#" class="active">약관관리</a></li>
+                            <li><a href="#" class="active">버전이력</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">주문관리</a>
+                        <ul class="admin_sub_menu">
+                            <li><a href="#" class="active">기본설정</a></li>
+                            <li><a href="#" class="active">배너관리</a></li>
+                            <li><a href="#" class="active">약관관리</a></li>
+                            <li><a href="#" class="active">버전이력</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객센터</a>
+                        <ul class="admin_sub_menu">
+                            <li><a href="#" class="active">기본설정</a></li>
+                            <li><a href="#" class="active">배너관리</a></li>
+                            <li><a href="#" class="active">약관관리</a></li>
+                            <li><a href="#" class="active">버전이력</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    console.log("script.js 파일이 정상적으로 로드되었습니다.");
+    console.log("admin.js 파일이 정상적으로 로드되었습니다.");
+
+</script>
+</html>

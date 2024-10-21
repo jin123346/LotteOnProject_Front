@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Management</title>
+    <style>
+        .category {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .category > li {
+            margin-bottom: 5px;
+        }
+
+        .sortable {
+            border: 1px solid #ccc;
+            padding: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .subcategory {
+            display: none;
+        }
+    </style>
+    <!-- Include jQuery and jQuery UI -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <h2>Category Management</h2>
+
+    <ul class="category" id="categoryList">
+        <!-- Categories will be loaded here -->
+    </ul>
+
+    <button id="saveChangesBtn">수정하기</button>
+
+    <script>
+        // Load categories from backend
+        function loadCategories() {
+            $.get('/api/categories', function (data) {
+                renderCategories(data);
+            });
+        }
+
+        // Render categories as a list with subcategories
+        function renderCategories(categories) {
+            const categoryList = $('#categoryList');
+            categoryList.empty();
+
+            categories.forEach(category => {
+                const listItem = createCategoryItem(category);
+                categoryList.append(listItem);
+            });
+
+            // Initialize sortable for drag and drop
+            $(".sortable-list").sortable({
+                connectWith: ".sortable-list",
+                stop: function (event, ui) {
+                    // Category order will be updated on stop
+                }
+            });
+        }
+
+        // Create a category list item
+        function createCategoryItem(category) {
+            const li = $('<li>', {
+                'class': 'sortable',
+                'data-id': category.id,
+                'data-level': category.level
+            }).append(
+                $('<span>').text(category.name),
+                $('<button>').text('삭제').on('click', () => deleteCategory(category.id)),
+                $('<button>').text('편집').on('click', () => editCategory(category))
+            );
+
+            const subCategories = category.subCategories;
+            if (subCategories && subCategories.length > 0) {
+                const subUl = $('<ul>', { 'class': 'subcategory sortable-list' });
+                subCategories.forEach(subCategory => {
+                    const subLi = createCategoryItem(subCategory);
+                    subUl.append(subLi);
+                });
+                li.append(subUl);
+                li.on('click', () => subUl.toggle());
+            }
+
+            return li;
+        }
+
+        // Add new category
+        function addCategory(parentId, level) {
+            const name = prompt('Enter category name:');
+            if (name) {
+                $.post('/api/categories/save', JSON.stringify({ name, parentId, level }), function () {
+                    loadCategories();
+                });
+            }
+        }
+
+        // Edit category
+        function editCategory(category) {
+            const newName = prompt('Enter new category name:', category.name);
+            if (newName) {
+                $.post('/api/categories/save', JSON.stringify({ ...category, name: newName }), function () {
+                    loadCategories();
+                });
+            }
+        }
+
+        // Delete category
+        function deleteCategory(id) {
+            if (confirm('Are you sure you want to delete this category?')) {
+                $.ajax({
+                    url: '/api/categories/delete/' + id,
+                    type: 'DELETE',
+                    success: function () {
+                        loadCategories();
+                    }
+                });
+            }
+        }
+
+        // Save updated category order
+        $('#saveChangesBtn').on('click', function () {
+            const orderedCategories = [];
+            $('#categoryList > li').each(function () {
+                const id = $(this).data('id');
+                const level = $(this).data('level');
+                orderedCategories.push({ id, level });
+            });
+
+            $.post('/api/categories/updateOrder', JSON.stringify(orderedCategories), function () {
+                alert('Order updated!');
+            });
+        });
+
+        // Initial load
+        loadCategories();
+    </script>
+</body>
+</html>

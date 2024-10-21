@@ -1,6 +1,8 @@
 #mainArea > .mainWrapper.order  .orderSection{
     display: flex;
-   
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 40px;
     width: 1200px;
 }
 
@@ -16,15 +18,15 @@
 }
 #mainArea .mainWrapper .section{
     /* Subtract the aside's width and some padding/margin */
-    
+
     width: 100%; /* Subtract the aside's width and some padding/margin */
     box-sizing: border-box; /* Ensure proper width calculation */
 
-     /* Ensure proper width calculation */
+    /* Ensure proper width calculation */
 }
 
 #mainArea .section .sectionWrapper{
- 
+
     width: 100%;
 }
 
@@ -34,19 +36,19 @@
 
 #product_order{
     box-sizing: border-box;
-    width: 100%;    
+    width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
 
 }
 #product_order table{
     border-spacing: 0px;
-    width: calc(100%-10px);
-    margin: 0 5px;
-    border: 1px;
+    width: 1155px;
     border-collapse: collapse;
+    border-radius: 4px;
+    box-shadow: 2px 1px 1px 1px #ddd;
 
-
+    border: 1px solid #ddd;
 }
 
 #product_order table tr:nth-child(1){
@@ -69,12 +71,12 @@
     /* text-indent: 10px; */
     border: 1px;
     height: 100px;
-  
+
 
 }
 
 #product_order .productOrder tr td{
-    
+
     margin-top: 10px;
 }
 #product_order .productOrder input[type=number]{
@@ -89,8 +91,8 @@
     text-align: center;
     /* background-color: #f5f5f5; */
     border-bottom: 1px solid #000000;
-   padding-bottom: 5px;
-   box-sizing: border-box;
+    padding-bottom: 5px;
+    box-sizing: border-box;
 }
 
 #product_order .productOrder tr:last-child{
@@ -134,15 +136,15 @@
 }
 
 .finalOrder_window{
-    width: calc(100% - 900px); /* Subtract the aside's width and some padding/margin */
+    width: 300px; /* Subtract the aside's width and some padding/margin */
     height: auto;
     /* position: sti; */
     border: 1px solid #cccccc;
-    margin-top: 10px;
     margin-left: 10px;
     box-sizing: border-box;
     position: relative;
-    transition: top 0.3s ease; 
+    transition: top 0.3s ease;
+    border-radius: 4px;
 }
 
 
@@ -162,7 +164,7 @@
     padding-bottom: 10px;
     border-bottom: 2px solid #494949;
     margin-bottom: 20px;
-    
+
 }
 
 
@@ -172,7 +174,7 @@
     justify-content: space-between;
     height: 30px;
     padding: 0 10px;
-    
+
 
 }
 .finalOrderAsideWrapper div label{
@@ -223,6 +225,7 @@
     border: 1px solid #999;
     background-color: #ffff;
     border-radius: 2px;
+
 }
 
 .btn-group .returnCart:hover{
@@ -239,18 +242,26 @@
     display: flex;
 }
 
-.orderSection .orderInfo{
+.orderSection .infoWrap{
     width:900px;
     padding-top: 0px;
-    margin-right: 40px;
     box-sizing: border-box;
     border-left: 1px solid #eee;
     height: auto;
+    margin-bottom: 20px;
+}
+
+.orderSection .orderInfo{
+    width: 95%;
+    border: 1px solid #ddd;
+    margin-left: 20px;
+    border-radius: 4px;
+    
 }
 
 .orderSection .orderInfo h4{
     margin-left: 20px;
-
+    margin-right: 10px;
     font-size: 18px;
     margin-top: 10px;
     padding-bottom: 10px;
@@ -340,7 +351,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    
+
 }
 
 .point_wrap .point_info{
@@ -414,7 +425,7 @@
 
 .totalSalePrice .totalDiscount{
     border-top: 1px solid #dfdcdc;
-    
+
 }
 
 
@@ -525,6 +536,7 @@
     margin-left: 60px;
     margin-top: 20px;
     width: 300px;
+    margin-bottom: 40px;
 }
 
 .payment-option {
